@@ -1,0 +1,3464 @@
+#! E:/Nuke/nuke-14.0.3.dll -nx
+version 14.0 v3
+define_window_layout_xml {<?xml version="1.0" encoding="UTF-8"?>
+<layout version="1.0">
+    <window x="0" y="0" w="1917" h="1000" screen="0">
+        <splitter orientation="1">
+            <split size="40"/>
+            <dock id="" hideTitles="1" activePageId="Toolbar.1">
+                <page id="Toolbar.1"/>
+            </dock>
+            <split size="1254" stretch="1"/>
+            <splitter orientation="2">
+                <split size="562"/>
+                <dock id="" activePageId="Viewer.20">
+                    <page id="Viewer.1"/>
+                    <page id="Viewer.2"/>
+                    <page id="Viewer.3"/>
+                    <page id="Viewer.4"/>
+                    <page id="Viewer.5"/>
+                    <page id="Viewer.6"/>
+                    <page id="Viewer.7"/>
+                    <page id="Viewer.8"/>
+                    <page id="Viewer.9"/>
+                    <page id="Viewer.10"/>
+                    <page id="Viewer.11"/>
+                    <page id="Viewer.12"/>
+                    <page id="Viewer.13"/>
+                    <page id="Viewer.15"/>
+                    <page id="Viewer.14"/>
+                    <page id="Viewer.16"/>
+                    <page id="Viewer.17"/>
+                    <page id="Viewer.18"/>
+                    <page id="Viewer.19"/>
+                    <page id="Viewer.20"/>
+                </dock>
+                <split size="396"/>
+                <dock id="" activePageId="DAG.1">
+                    <page id="DAG.1"/>
+                    <page id="Curve Editor.1"/>
+                    <page id="DopeSheet.1"/>
+                </dock>
+            </splitter>
+            <split size="615"/>
+            <dock id="" activePageId="Properties.1" focus="true">
+                <page id="Properties.1"/>
+                <page id="uk.co.thefoundry.backgroundrenderview.1"/>
+                <page id="Scenegraph.1"/>
+            </dock>
+        </splitter>
+    </window>
+</layout>
+}
+Root {
+ inputs 0
+ name D:/DESKTOP/Motion/Haohan_Zhu/Haohan_Zhu.nk
+ frame 47
+ first_frame 46
+ last_frame 50
+ lock_range true
+ format "2048 1556 0 0 2048 1556 1 2K_Super_35(full-ap)"
+ proxy_type scale
+ proxy_format "1024 778 0 0 1024 778 1 1K_Super_35(full-ap)"
+ colorManagement Nuke
+ workingSpaceLUT linear
+ monitorLut sRGB
+ monitorOutLUT rec709
+ int8Lut sRGB
+ int16Lut sRGB
+ logLut Cineon
+ floatLut linear
+}
+BackdropNode {
+ inputs 0
+ name Cliques4
+ xpos 5943
+ ypos -19
+ bdwidth 1750
+ bdheight 1500
+}
+BackdropNode {
+ inputs 0
+ name MC
+ xpos 7181
+ ypos 334
+ bdwidth 358
+ bdheight 236
+}
+BackdropNode {
+ inputs 0
+ name MLK_MC_3DMRF
+ tile_color 0x886862ff
+ xpos 7155
+ ypos 146
+ bdwidth 450
+ bdheight 1217
+}
+BackdropNode {
+ inputs 0
+ name MLKeyer2
+ tile_color 0x8b818eff
+ gl_color 0x593fccff
+ note_font_size 42
+ xpos 4480
+ ypos 172
+ bdwidth 267
+ bdheight 188
+}
+BackdropNode {
+ inputs 0
+ name MLKeyer3
+ tile_color 0x8b818eff
+ gl_color 0x593fccff
+ note_font_size 42
+ xpos 4914
+ ypos 170
+ bdwidth 267
+ bdheight 188
+}
+BackdropNode {
+ inputs 0
+ name MLKeyer4
+ tile_color 0x8b818eff
+ gl_color 0x593fccff
+ note_font_size 42
+ xpos 5324
+ ypos 168
+ bdwidth 324
+ bdheight 188
+}
+BackdropNode {
+ inputs 0
+ name Pairwise_4_3D_MRF_with_MC
+ tile_color 0x1e3e88ff
+ xpos 5242
+ ypos 366
+ bdwidth 402
+ bdheight 938
+}
+BackdropNode {
+ inputs 0
+ name Pairwise_8_within_neighborhood
+ tile_color 0x16886cff
+ xpos 4005
+ ypos -2
+ bdwidth 1779
+ bdheight 1443
+}
+BackdropNode {
+ inputs 0
+ name TestDataFor1IterMRF1
+ tile_color 0x8804ff
+ gl_color 0x70cc14ff
+ xpos 4121
+ ypos 613
+ bdwidth 283
+ bdheight 203
+}
+BackdropNode {
+ inputs 0
+ name TestDataFor1IterMRF2
+ tile_color 0x8804ff
+ gl_color 0x70cc14ff
+ xpos 6032
+ ypos 607
+ bdwidth 283
+ bdheight 203
+}
+BackdropNode {
+ inputs 0
+ name TestDataFor1stIterMRF
+ tile_color 0x8804ff
+ gl_color 0x70cc14ff
+ xpos 4119
+ ypos 373
+ bdwidth 287
+ bdheight 200
+}
+BackdropNode {
+ inputs 0
+ name TestDataFor1stIterMRF1
+ tile_color 0x8804ff
+ gl_color 0x70cc14ff
+ xpos 6030
+ ypos 367
+ bdwidth 287
+ bdheight 200
+}
+BackdropNode {
+ inputs 0
+ name TestDataForMLKeyer1
+ tile_color 0x8804ff
+ gl_color 0x70cc14ff
+ xpos 4126
+ ypos 156
+ bdwidth 286
+ bdheight 187
+}
+BackdropNode {
+ inputs 0
+ name TestDataForMLKeyer2
+ tile_color 0x8804ff
+ gl_color 0x70cc14ff
+ xpos 6037
+ ypos 150
+ bdwidth 286
+ bdheight 187
+}
+BackdropNode {
+ inputs 0
+ name pairwise_4_2D_MRF
+ tile_color 0x7c4788ff
+ xpos 4456
+ ypos 388
+ bdwidth 249
+ bdheight 798
+}
+BackdropNode {
+ inputs 0
+ name pairwise_4_2D_MRF1
+ tile_color 0x7c4788ff
+ xpos 6367
+ ypos 382
+ bdwidth 249
+ bdheight 798
+}
+BackdropNode {
+ inputs 0
+ name pairwise_4_2D_MRF2
+ tile_color 0x7c4788ff
+ xpos 8556
+ ypos 764
+ bdwidth 249
+ bdheight 798
+}
+BackdropNode {
+ inputs 0
+ name pairwise_4_3D_MRF
+ xpos 4766
+ ypos 376
+ bdwidth 420
+ bdheight 859
+}
+BackdropNode {
+ inputs 0
+ name pairwise_4_3D_MRF1
+ tile_color 0x4b881aff
+ xpos 6677
+ ypos 370
+ bdwidth 420
+ bdheight 859
+}
+Read {
+ inputs 0
+ file_type tiff
+ file "D:/DESKTOP/Motion/Haohan_Zhu/frames/Hula.MLKey.  ##.tiff"
+ format "2048 1080 0 0 2048 1080 1 2K_DCP"
+ first 46
+ last 50
+ origfirst 46
+ origlast 50
+ origset true
+ name Read6
+ xpos 4151
+ ypos 165
+}
+Read {
+ inputs 0
+ file_type tiff
+ file D:/DESKTOP/Motion/Haohan_Zhu/frames/Hula.#####.tiff
+ format "2048 1080 0 0 2048 1080 1 2K_DCP"
+ first 46
+ last 50
+ origfirst 46
+ origlast 50
+ origset true
+ colorspace linear
+ name Read4
+ xpos 4490
+ ypos 49
+}
+set N97a8e400 [stack 0]
+Expression {
+ temp_name0 Rb
+ temp_expr0 0.3217
+ temp_name1 Gb
+ temp_expr1 0.6276
+ temp_name2 Bb
+ temp_expr2 0.5150
+ expr0 "(r - Rb)"
+ expr1 "(g - Gb)"
+ expr2 "(b - Bb)"
+ name remove_background2
+ xpos 4490
+ ypos 196
+}
+Expression {
+ temp_name0 R_gaus
+ temp_expr0 0.00193
+ temp_name1 G_gaus
+ temp_expr1 0.00021
+ temp_name2 B_gaus
+ temp_expr2 0.000251
+ expr0 r**2/R_gaus
+ expr1 g**2/G_gaus
+ expr2 b**2/B_gaus
+ name gaussian_distribution2
+ xpos 4490
+ ypos 250
+}
+set N97a8ec00 [stack 0]
+Expression {
+ temp_name0 Et
+ temp_expr0 60
+ expr0 "step(60, r + g + b)"
+ expr1 "step(60, r + g + b)"
+ expr2 "step(60, r + g + b)"
+ name Energy_threshold2
+ xpos 4490
+ ypos 313
+}
+set N97a8f000 [stack 0]
+Dot {
+ name Dot60
+ xpos 4443
+ ypos 316
+}
+Dot {
+ name Dot61
+ xpos 4443
+ ypos 198
+}
+BlinkScript {
+ inputs 2
+ recompileCount 3
+ ProgramGroup 1
+ KernelDescription "2 \"EqualsTo\" iterate pixelWise bcd1be60cea15d2194548ece8f665c5b1fc4d609d87773aaf7743543845fc1e4 3 \"src\" Read Point \"ref\" Read Point \"dst\" Write Point 0 0 0"
+ kernelSource "kernel EqualsTo: ImageComputationKernel<ePixelWise> \{\n  Image<eRead, eAccessPoint, eEdgeClamped> src; // the input image (binary)\n  Image<eRead, eAccessPoint, eEdgeClamped> ref; // the reference image\n  // Checks if differences between two images is more than 1e6\n  // If it is .. that pel is coloured RED, otherwise its GREEN\n\n  Image<eWrite> dst; // the output image\n  \n  // pos gives the position of the kernel in the output image\n  void process(int2 pos) \{\n    SampleType(dst) sample(0.0f);\n    SampleType(src) input = src();\n    SampleType(ref) ref_input = ref();\n    float error = fabs(input.x - ref_input.x);\n                   + fabs(input.y - ref_input.y)\n                   + fabs(input.z - ref_input.z);\n    if (error >0.000001)\n      sample.x = 1.0f;\n    else\n      sample.y = 1.0f;\n\n    dst() = sample;\n  \}\n\};"
+ rebuild ""
+ rebuild_finalise ""
+ name BlinkScript5
+ xpos 4317
+ ypos 189
+}
+PostageStamp {
+ name PostageStamp1
+ xpos 4317
+ ypos 267
+ postage_stamp true
+}
+Viewer {
+ frame 47
+ frame_range 46-50
+ monitorOutOutputTransform rec709
+ name Viewer8
+ xpos 4156
+ ypos 291
+}
+Read {
+ inputs 0
+ file_type tiff
+ file "D:/DESKTOP/Motion/Haohan_Zhu/frames/test/Hula.MRF-1.  ##.tiff"
+ format "2048 1080 0 0 2048 1080 1 2K_DCP"
+ first 46
+ last 50
+ origfirst 46
+ origlast 50
+ origset true
+ name Read7
+ xpos 4149
+ ypos 390
+}
+push $N97a8f000
+push $N97a8ec00
+Expression {
+ expr0 r+g+b
+ channel1 {-rgba.red rgba.green -rgba.blue none}
+ expr1 r+g+b
+ channel2 {-rgba.red -rgba.green rgba.blue none}
+ expr2 r+g+b
+ name luminance2
+ xpos 4636
+ ypos 250
+}
+Dot {
+ name Dot16
+ xpos 4670
+ ypos 423
+}
+set Nfd8f3000 [stack 0]
+BlinkScript {
+ inputs 2
+ recompileCount 23
+ ProgramGroup 1
+ KernelDescription "2 \"MAP2D\" iterate componentWise 21df4a1af35a02d9630705e32b63a8c715d822b5f95f2b5a9ab3ff5c08635d4c 3 \"src_benergy\" Read Point \"alpha\" Read Random \"dst_alpha\" Write Point 0 0 0"
+ kernelSource "kernel MAP2D : ImageComputationKernel<eComponentWise>\n\{\n  Image<eRead, eAccessPoint, eEdgeClamped> src_benergy;\n  Image<eRead, eAccessRandom, eEdgeClamped> alpha;\n  Image<eWrite> dst_alpha;\n  \n  void process(int2 pos) \{\n    int x = pos.x;\n    int y = pos.y;\n\n    float lambda = 20.0f;\n    float El = src_benergy();\n\n    float Et = 60;\n\n    float Es_0 = 0;\n    for (int x_pos = -1; x_pos < 1; x_pos++)\{\n      for (int y_pos = -1; y_pos < 1; y_pos++)\{\n        if (x_pos != 0 && y_pos != 0)\{\n        int MRF_X = x + x_pos;\n        int MRF_Y = y + y_pos;\n        float current_point = alpha(MRF_X, MRF_Y);\n        Es_0 += current_point;\}      \n      \}\n    \}\n    float Es_1 = 0;\n    for (int x_pos = -1; x_pos < 1; x_pos++)\{\n      for (int y_pos = -1; y_pos < 1; y_pos++)\{\n        if  (x_pos != 0 && y_pos != 0)\{\n        int MRF_X = x + x_pos;\n        int MRF_Y = y + y_pos;\n        float current_point = alpha(MRF_X, MRF_Y);\n        Es_1 += fabs(current_point - 1.0f);     \} \n      \}\n    \}\n    \n    float E0 = El + lambda * Es_0;\n    float E1 = Et + lambda * Es_1;\n\n    if (E1 < E0)\n        \n        dst_alpha() = 1.0f;\n    else\n        dst_alpha() = 0.0f;\n        \n  \}\n    \n\};\n"
+ rebuild ""
+ rebuild_finalise ""
+ name MRF_2D_Iteration1
+ xpos 4490
+ ypos 414
+}
+set Nfd8f3400 [stack 0]
+BlinkScript {
+ inputs 2
+ recompileCount 3
+ ProgramGroup 1
+ KernelDescription "2 \"EqualsTo\" iterate pixelWise bcd1be60cea15d2194548ece8f665c5b1fc4d609d87773aaf7743543845fc1e4 3 \"src\" Read Point \"ref\" Read Point \"dst\" Write Point 0 0 0"
+ kernelSource "kernel EqualsTo: ImageComputationKernel<ePixelWise> \{\n  Image<eRead, eAccessPoint, eEdgeClamped> src; // the input image (binary)\n  Image<eRead, eAccessPoint, eEdgeClamped> ref; // the reference image\n  // Checks if differences between two images is more than 1e6\n  // If it is .. that pel is coloured RED, otherwise its GREEN\n\n  Image<eWrite> dst; // the output image\n  \n  // pos gives the position of the kernel in the output image\n  void process(int2 pos) \{\n    SampleType(dst) sample(0.0f);\n    SampleType(src) input = src();\n    SampleType(ref) ref_input = ref();\n    float error = fabs(input.x - ref_input.x);\n                   + fabs(input.y - ref_input.y)\n                   + fabs(input.z - ref_input.z);\n    if (error >0.000001)\n      sample.x = 1.0f;\n    else\n      sample.y = 1.0f;\n\n    dst() = sample;\n  \}\n\};"
+ rebuild ""
+ rebuild_finalise ""
+ name BlinkScript6
+ xpos 4315
+ ypos 414
+}
+PostageStamp {
+ name PostageStamp5
+ xpos 4315
+ ypos 492
+ postage_stamp true
+}
+Viewer {
+ frame 47
+ frame_range 46-50
+ monitorOutOutputTransform rec709
+ name Viewer9
+ xpos 4149
+ ypos 516
+}
+Read {
+ inputs 0
+ file_type tiff
+ file "D:/DESKTOP/Motion/Haohan_Zhu/frames/test/Hula.MRF-2.  ##.tiff"
+ format "2048 1080 0 0 2048 1080 1 2K_DCP"
+ first 46
+ last 50
+ origfirst 46
+ origlast 50
+ origset true
+ name Read8
+ xpos 4152
+ ypos 629
+}
+push $Nfd8f3400
+push $Nfd8f3000
+Dot {
+ name Dot3
+ xpos 4670
+ ypos 495
+}
+set Nfd970800 [stack 0]
+BlinkScript {
+ inputs 2
+ recompileCount 22
+ ProgramGroup 1
+ KernelDescription "2 \"MAP2D\" iterate componentWise 21df4a1af35a02d9630705e32b63a8c715d822b5f95f2b5a9ab3ff5c08635d4c 3 \"src_benergy\" Read Point \"alpha\" Read Random \"dst_alpha\" Write Point 0 0 0"
+ kernelSource "kernel MAP2D : ImageComputationKernel<eComponentWise>\n\{\n  Image<eRead, eAccessPoint, eEdgeClamped> src_benergy;\n  Image<eRead, eAccessRandom, eEdgeClamped> alpha;\n  Image<eWrite> dst_alpha;\n  \n  void process(int2 pos) \{\n    int x = pos.x;\n    int y = pos.y;\n\n    float lambda = 20.0f;\n    float El = src_benergy();\n\n    float Et = 60;\n\n    float Es_0 = 0;\n    for (int x_pos = -1; x_pos < 1; x_pos++)\{\n      for (int y_pos = -1; y_pos < 1; y_pos++)\{\n        if (x_pos != 0 && y_pos != 0)\{\n        int MRF_X = x + x_pos;\n        int MRF_Y = y + y_pos;\n        float current_point = alpha(MRF_X, MRF_Y);\n        Es_0 += current_point;\}      \n      \}\n    \}\n    float Es_1 = 0;\n    for (int x_pos = -1; x_pos < 1; x_pos++)\{\n      for (int y_pos = -1; y_pos < 1; y_pos++)\{\n        if  (x_pos != 0 && y_pos != 0)\{\n        int MRF_X = x + x_pos;\n        int MRF_Y = y + y_pos;\n        float current_point = alpha(MRF_X, MRF_Y);\n        Es_1 += fabs(current_point - 1.0f);     \} \n      \}\n    \}\n    \n    float E0 = El + lambda * Es_0;\n    float E1 = Et + lambda * Es_1;\n\n    if (E1 < E0)\n        \n        dst_alpha() = 1.0f;\n    else\n        dst_alpha() = 0.0f;\n        \n  \}\n    \n\};\n"
+ rebuild ""
+ rebuild_finalise ""
+ name MRF_2D_Iteration2
+ xpos 4490
+ ypos 486
+}
+set Nfd970c00 [stack 0]
+Dot {
+ name Dot62
+ xpos 4439
+ ypos 495
+}
+Dot {
+ name Dot63
+ xpos 4439
+ ypos 662
+}
+BlinkScript {
+ inputs 2
+ recompileCount 2
+ ProgramGroup 1
+ KernelDescription "2 \"EqualsTo\" iterate pixelWise bcd1be60cea15d2194548ece8f665c5b1fc4d609d87773aaf7743543845fc1e4 3 \"src\" Read Point \"ref\" Read Point \"dst\" Write Point 0 0 0"
+ kernelSource "kernel EqualsTo: ImageComputationKernel<ePixelWise> \{\n  Image<eRead, eAccessPoint, eEdgeClamped> src; // the input image (binary)\n  Image<eRead, eAccessPoint, eEdgeClamped> ref; // the reference image\n  // Checks if differences between two images is more than 1e6\n  // If it is .. that pel is coloured RED, otherwise its GREEN\n\n  Image<eWrite> dst; // the output image\n  \n  // pos gives the position of the kernel in the output image\n  void process(int2 pos) \{\n    SampleType(dst) sample(0.0f);\n    SampleType(src) input = src();\n    SampleType(ref) ref_input = ref();\n    float error = fabs(input.x - ref_input.x);\n                   + fabs(input.y - ref_input.y)\n                   + fabs(input.z - ref_input.z);\n    if (error >0.000001)\n      sample.x = 1.0f;\n    else\n      sample.y = 1.0f;\n\n    dst() = sample;\n  \}\n\};"
+ rebuild ""
+ rebuild_finalise ""
+ name BlinkScript7
+ xpos 4318
+ ypos 653
+}
+PostageStamp {
+ name PostageStamp6
+ xpos 4318
+ ypos 731
+ postage_stamp true
+}
+Viewer {
+ frame 47
+ frame_range 46-50
+ monitorOutOutputTransform rec709
+ name Viewer10
+ xpos 4155
+ ypos 755
+}
+push $N97a8e400
+Dot {
+ name Dot48
+ xpos 4958
+ ypos 88
+}
+set Nfe9bc400 [stack 0]
+Dot {
+ name Dot49
+ xpos 5368
+ ypos 88
+}
+Expression {
+ temp_name0 Rb
+ temp_expr0 0.3217
+ temp_name1 Gb
+ temp_expr1 0.6276
+ temp_name2 Bb
+ temp_expr2 0.5150
+ expr0 "(r - Rb)"
+ expr1 "(g - Gb)"
+ expr2 "(b - Bb)"
+ name remove_background4
+ xpos 5334
+ ypos 192
+}
+Expression {
+ temp_name0 R_gaus
+ temp_expr0 0.00193
+ temp_name1 G_gaus
+ temp_expr1 0.00021
+ temp_name2 B_gaus
+ temp_expr2 0.000251
+ expr0 r**2/R_gaus
+ expr1 g**2/G_gaus
+ expr2 b**2/B_gaus
+ name gaussian_distribution4
+ xpos 5334
+ ypos 246
+}
+set Nfe9bd000 [stack 0]
+Expression {
+ temp_name0 Et
+ temp_expr0 60
+ expr0 "step(60, r + g + b)"
+ expr1 "step(60, r + g + b)"
+ expr2 "step(60, r + g + b)"
+ name Energy_threshold4
+ xpos 5334
+ ypos 309
+}
+set Nfe9bd400 [stack 0]
+TimeOffset {
+ time ""
+ name TimeOffset20
+ xpos 5334
+ ypos 403
+}
+push $Nfe9bd400
+VectorGenerator {
+ motionEstimation Regularized
+ name VectorGenerator2
+ xpos 5452
+ ypos 396
+}
+ShuffleCopy {
+ inputs 2
+ in2 motion
+ red red
+ green green
+ blue blue
+ black blue2
+ white alpha2
+ out2 backward
+ name ShuffleCopy2
+ xpos 5410
+ ypos 490
+}
+IDistort {
+ uv backward
+ filter Simon
+ name IDistort1
+ xpos 5410
+ ypos 538
+}
+set Nfea12000 [stack 0]
+TimeOffset {
+ time ""
+ name TimeOffset21
+ xpos 5282
+ ypos 604
+}
+push $Nfea12000
+push $Nfe9bd000
+Expression {
+ expr0 r+g+b
+ channel1 {-rgba.red rgba.green -rgba.blue none}
+ expr1 r+g+b
+ channel2 {-rgba.red -rgba.green rgba.blue none}
+ expr2 r+g+b
+ name luminance4
+ xpos 5556
+ ypos 246
+}
+Dot {
+ name Dot50
+ xpos 5590
+ ypos 607
+}
+set Nfea12800 [stack 0]
+BlinkScript {
+ inputs 3
+ recompileCount 24
+ ProgramGroup 1
+ KernelDescription "2 \"MAP\" iterate componentWise 249f9c8bc31086021d691a228d11e5e118cc0ffb83ca65cd5a481dec773df2a5 4 \"src_benergy\" Read Point \"alpha\" Read Random \"prev_alpha\" Read Random \"dst_alpha\" Write Point 0 0 0"
+ kernelSource "kernel MAP : ImageComputationKernel<eComponentWise>\n\{\n  Image<eRead, eAccessPoint, eEdgeClamped> src_benergy; // the input image\n  Image<eRead, eAccessRandom, eEdgeClamped> alpha;\n\nImage<eRead, eAccessRandom, eEdgeClamped> prev_alpha;\n  Image<eWrite> dst_alpha;\n  \n  void process(int2 pos) \{\n    int x = pos.x;\n    int y = pos.y;\n\n    float lambda = 20.0f;\n    float El = src_benergy();\n\n    float Et = 60;\n\n    float Es_0 = 0;\n    for (int x_pos = -1; x_pos < 1; x_pos++)\{\n      for (int y_pos = -1; y_pos < 1; y_pos++)\{\n        if (x_pos != 0 && y_pos != 0)\{\n        int MRF_X = x + x_pos;\n        int MRF_Y = y + y_pos;\n        float current_point = alpha(MRF_X, MRF_Y);\n        float prev_point = prev_alpha(MRF_X, MRF_Y);\n        Es_0 += current_point + prev_point;\}      \n      \}\n    \}\n    float Es_1 = 0;\n    for (int x_pos = -1; x_pos < 1; x_pos++)\{\n      for (int y_pos = -1; y_pos < 1; y_pos++)\{\n        if (x_pos != 0 && y_pos != 0)\{\n        int MRF_X = x + x_pos;\n        int MRF_Y = y + y_pos;\n        float current_point = alpha(MRF_X, MRF_Y);\n        float prev_point = prev_alpha(MRF_X, MRF_Y);\n        Es_1 += fabs(current_point - 1.0f) + fabs(prev_point - 1.0f);\}      \n      \}\n    \}\n    \n    float E0 = El + lambda * Es_0;\n    float E1 = Et + lambda * Es_1;\n\n    if (E1 < E0)\n        \n        dst_alpha() = 1.0f;\n    else\n        dst_alpha() = 0.0f;\n        \n  \}\n    \n\};\n"
+ rebuild ""
+ rebuild_finalise ""
+ name MC_and_MRF_3D_Iteration1
+ xpos 5410
+ ypos 598
+}
+set Nfea12c00 [stack 0]
+TimeOffset {
+ time ""
+ name TimeOffset22
+ xpos 5286
+ ypos 671
+}
+push $Nfea12c00
+push $Nfea12800
+Dot {
+ name Dot51
+ xpos 5590
+ ypos 674
+}
+set Nfea13000 [stack 0]
+BlinkScript {
+ inputs 3
+ recompileCount 24
+ ProgramGroup 1
+ KernelDescription "2 \"MAP\" iterate componentWise 249f9c8bc31086021d691a228d11e5e118cc0ffb83ca65cd5a481dec773df2a5 4 \"src_benergy\" Read Point \"alpha\" Read Random \"prev_alpha\" Read Random \"dst_alpha\" Write Point 0 0 0"
+ kernelSource "kernel MAP : ImageComputationKernel<eComponentWise>\n\{\n  Image<eRead, eAccessPoint, eEdgeClamped> src_benergy; // the input image\n  Image<eRead, eAccessRandom, eEdgeClamped> alpha;\n\nImage<eRead, eAccessRandom, eEdgeClamped> prev_alpha;\n  Image<eWrite> dst_alpha;\n  \n  void process(int2 pos) \{\n    int x = pos.x;\n    int y = pos.y;\n\n    float lambda = 20.0f;\n    float El = src_benergy();\n\n    float Et = 60;\n\n    float Es_0 = 0;\n    for (int x_pos = -1; x_pos < 1; x_pos++)\{\n      for (int y_pos = -1; y_pos < 1; y_pos++)\{\n        if (x_pos != 0 && y_pos != 0)\{\n        int MRF_X = x + x_pos;\n        int MRF_Y = y + y_pos;\n        float current_point = alpha(MRF_X, MRF_Y);\n        float prev_point = prev_alpha(MRF_X, MRF_Y);\n        Es_0 += current_point + prev_point;\}      \n      \}\n    \}\n    float Es_1 = 0;\n    for (int x_pos = -1; x_pos < 1; x_pos++)\{\n      for (int y_pos = -1; y_pos < 1; y_pos++)\{\n        if (x_pos != 0 && y_pos != 0)\{\n        int MRF_X = x + x_pos;\n        int MRF_Y = y + y_pos;\n        float current_point = alpha(MRF_X, MRF_Y);\n        float prev_point = prev_alpha(MRF_X, MRF_Y);\n        Es_1 += fabs(current_point - 1.0f) + fabs(prev_point - 1.0f);\}      \n      \}\n    \}\n    \n    float E0 = El + lambda * Es_0;\n    float E1 = Et + lambda * Es_1;\n\n    if (E1 < E0)\n        \n        dst_alpha() = 1.0f;\n    else\n        dst_alpha() = 0.0f;\n        \n  \}\n    \n\};\n"
+ rebuild ""
+ rebuild_finalise ""
+ name MC_and_MRF_3D_Iteration2
+ xpos 5410
+ ypos 665
+}
+set Nfea13400 [stack 0]
+TimeOffset {
+ time ""
+ name TimeOffset23
+ xpos 5281
+ ypos 732
+}
+push $Nfea13400
+push $Nfea13000
+Dot {
+ name Dot52
+ xpos 5590
+ ypos 735
+}
+set Nfea13800 [stack 0]
+BlinkScript {
+ inputs 3
+ recompileCount 24
+ ProgramGroup 1
+ KernelDescription "2 \"MAP\" iterate componentWise 249f9c8bc31086021d691a228d11e5e118cc0ffb83ca65cd5a481dec773df2a5 4 \"src_benergy\" Read Point \"alpha\" Read Random \"prev_alpha\" Read Random \"dst_alpha\" Write Point 0 0 0"
+ kernelSource "kernel MAP : ImageComputationKernel<eComponentWise>\n\{\n  Image<eRead, eAccessPoint, eEdgeClamped> src_benergy; // the input image\n  Image<eRead, eAccessRandom, eEdgeClamped> alpha;\n\nImage<eRead, eAccessRandom, eEdgeClamped> prev_alpha;\n  Image<eWrite> dst_alpha;\n  \n  void process(int2 pos) \{\n    int x = pos.x;\n    int y = pos.y;\n\n    float lambda = 20.0f;\n    float El = src_benergy();\n\n    float Et = 60;\n\n    float Es_0 = 0;\n    for (int x_pos = -1; x_pos < 1; x_pos++)\{\n      for (int y_pos = -1; y_pos < 1; y_pos++)\{\n        if (x_pos != 0 && y_pos != 0)\{\n        int MRF_X = x + x_pos;\n        int MRF_Y = y + y_pos;\n        float current_point = alpha(MRF_X, MRF_Y);\n        float prev_point = prev_alpha(MRF_X, MRF_Y);\n        Es_0 += current_point + prev_point;\}      \n      \}\n    \}\n    float Es_1 = 0;\n    for (int x_pos = -1; x_pos < 1; x_pos++)\{\n      for (int y_pos = -1; y_pos < 1; y_pos++)\{\n        if (x_pos != 0 && y_pos != 0)\{\n        int MRF_X = x + x_pos;\n        int MRF_Y = y + y_pos;\n        float current_point = alpha(MRF_X, MRF_Y);\n        float prev_point = prev_alpha(MRF_X, MRF_Y);\n        Es_1 += fabs(current_point - 1.0f) + fabs(prev_point - 1.0f);\}      \n      \}\n    \}\n    \n    float E0 = El + lambda * Es_0;\n    float E1 = Et + lambda * Es_1;\n\n    if (E1 < E0)\n        \n        dst_alpha() = 1.0f;\n    else\n        dst_alpha() = 0.0f;\n        \n  \}\n    \n\};\n"
+ rebuild ""
+ rebuild_finalise ""
+ name MC_and_MRF_3D_Iteration3
+ xpos 5410
+ ypos 726
+}
+set Nfea13c00 [stack 0]
+TimeOffset {
+ time ""
+ name TimeOffset24
+ xpos 5287
+ ypos 801
+}
+push $Nfea13c00
+push $Nfea13800
+Dot {
+ name Dot53
+ xpos 5590
+ ypos 804
+}
+set Nfea5c000 [stack 0]
+BlinkScript {
+ inputs 3
+ recompileCount 24
+ ProgramGroup 1
+ KernelDescription "2 \"MAP\" iterate componentWise 249f9c8bc31086021d691a228d11e5e118cc0ffb83ca65cd5a481dec773df2a5 4 \"src_benergy\" Read Point \"alpha\" Read Random \"prev_alpha\" Read Random \"dst_alpha\" Write Point 0 0 0"
+ kernelSource "kernel MAP : ImageComputationKernel<eComponentWise>\n\{\n  Image<eRead, eAccessPoint, eEdgeClamped> src_benergy; // the input image\n  Image<eRead, eAccessRandom, eEdgeClamped> alpha;\n\nImage<eRead, eAccessRandom, eEdgeClamped> prev_alpha;\n  Image<eWrite> dst_alpha;\n  \n  void process(int2 pos) \{\n    int x = pos.x;\n    int y = pos.y;\n\n    float lambda = 20.0f;\n    float El = src_benergy();\n\n    float Et = 60;\n\n    float Es_0 = 0;\n    for (int x_pos = -1; x_pos < 1; x_pos++)\{\n      for (int y_pos = -1; y_pos < 1; y_pos++)\{\n        if (x_pos != 0 && y_pos != 0)\{\n        int MRF_X = x + x_pos;\n        int MRF_Y = y + y_pos;\n        float current_point = alpha(MRF_X, MRF_Y);\n        float prev_point = prev_alpha(MRF_X, MRF_Y);\n        Es_0 += current_point + prev_point;\}      \n      \}\n    \}\n    float Es_1 = 0;\n    for (int x_pos = -1; x_pos < 1; x_pos++)\{\n      for (int y_pos = -1; y_pos < 1; y_pos++)\{\n        if (x_pos != 0 && y_pos != 0)\{\n        int MRF_X = x + x_pos;\n        int MRF_Y = y + y_pos;\n        float current_point = alpha(MRF_X, MRF_Y);\n        float prev_point = prev_alpha(MRF_X, MRF_Y);\n        Es_1 += fabs(current_point - 1.0f) + fabs(prev_point - 1.0f);\}      \n      \}\n    \}\n    \n    float E0 = El + lambda * Es_0;\n    float E1 = Et + lambda * Es_1;\n\n    if (E1 < E0)\n        \n        dst_alpha() = 1.0f;\n    else\n        dst_alpha() = 0.0f;\n        \n  \}\n    \n\};\n"
+ rebuild ""
+ rebuild_finalise ""
+ name MC_and_MRF_3D_Iteration4
+ xpos 5410
+ ypos 795
+}
+set Nfea5c400 [stack 0]
+TimeOffset {
+ time ""
+ name TimeOffset25
+ xpos 5289
+ ypos 871
+}
+push $Nfea5c400
+push $Nfea5c000
+Dot {
+ name Dot54
+ xpos 5590
+ ypos 874
+}
+set Nfea5c800 [stack 0]
+BlinkScript {
+ inputs 3
+ recompileCount 24
+ ProgramGroup 1
+ KernelDescription "2 \"MAP\" iterate componentWise 249f9c8bc31086021d691a228d11e5e118cc0ffb83ca65cd5a481dec773df2a5 4 \"src_benergy\" Read Point \"alpha\" Read Random \"prev_alpha\" Read Random \"dst_alpha\" Write Point 0 0 0"
+ kernelSource "kernel MAP : ImageComputationKernel<eComponentWise>\n\{\n  Image<eRead, eAccessPoint, eEdgeClamped> src_benergy; // the input image\n  Image<eRead, eAccessRandom, eEdgeClamped> alpha;\n\nImage<eRead, eAccessRandom, eEdgeClamped> prev_alpha;\n  Image<eWrite> dst_alpha;\n  \n  void process(int2 pos) \{\n    int x = pos.x;\n    int y = pos.y;\n\n    float lambda = 20.0f;\n    float El = src_benergy();\n\n    float Et = 60;\n\n    float Es_0 = 0;\n    for (int x_pos = -1; x_pos < 1; x_pos++)\{\n      for (int y_pos = -1; y_pos < 1; y_pos++)\{\n        if (x_pos != 0 && y_pos != 0)\{\n        int MRF_X = x + x_pos;\n        int MRF_Y = y + y_pos;\n        float current_point = alpha(MRF_X, MRF_Y);\n        float prev_point = prev_alpha(MRF_X, MRF_Y);\n        Es_0 += current_point + prev_point;\}      \n      \}\n    \}\n    float Es_1 = 0;\n    for (int x_pos = -1; x_pos < 1; x_pos++)\{\n      for (int y_pos = -1; y_pos < 1; y_pos++)\{\n        if (x_pos != 0 && y_pos != 0)\{\n        int MRF_X = x + x_pos;\n        int MRF_Y = y + y_pos;\n        float current_point = alpha(MRF_X, MRF_Y);\n        float prev_point = prev_alpha(MRF_X, MRF_Y);\n        Es_1 += fabs(current_point - 1.0f) + fabs(prev_point - 1.0f);\}      \n      \}\n    \}\n    \n    float E0 = El + lambda * Es_0;\n    float E1 = Et + lambda * Es_1;\n\n    if (E1 < E0)\n        \n        dst_alpha() = 1.0f;\n    else\n        dst_alpha() = 0.0f;\n        \n  \}\n    \n\};\n"
+ rebuild ""
+ rebuild_finalise ""
+ name MC_and_MRF_3D_Iteration5
+ xpos 5410
+ ypos 865
+}
+set Nfea5cc00 [stack 0]
+TimeOffset {
+ time ""
+ name TimeOffset26
+ xpos 5284
+ ypos 947
+}
+push $Nfea5cc00
+push $Nfea5c800
+Dot {
+ name Dot55
+ xpos 5590
+ ypos 950
+}
+set Nfea5d000 [stack 0]
+BlinkScript {
+ inputs 3
+ recompileCount 24
+ ProgramGroup 1
+ KernelDescription "2 \"MAP\" iterate componentWise 249f9c8bc31086021d691a228d11e5e118cc0ffb83ca65cd5a481dec773df2a5 4 \"src_benergy\" Read Point \"alpha\" Read Random \"prev_alpha\" Read Random \"dst_alpha\" Write Point 0 0 0"
+ kernelSource "kernel MAP : ImageComputationKernel<eComponentWise>\n\{\n  Image<eRead, eAccessPoint, eEdgeClamped> src_benergy; // the input image\n  Image<eRead, eAccessRandom, eEdgeClamped> alpha;\n\nImage<eRead, eAccessRandom, eEdgeClamped> prev_alpha;\n  Image<eWrite> dst_alpha;\n  \n  void process(int2 pos) \{\n    int x = pos.x;\n    int y = pos.y;\n\n    float lambda = 20.0f;\n    float El = src_benergy();\n\n    float Et = 60;\n\n    float Es_0 = 0;\n    for (int x_pos = -1; x_pos < 1; x_pos++)\{\n      for (int y_pos = -1; y_pos < 1; y_pos++)\{\n        if (x_pos != 0 && y_pos != 0)\{\n        int MRF_X = x + x_pos;\n        int MRF_Y = y + y_pos;\n        float current_point = alpha(MRF_X, MRF_Y);\n        float prev_point = prev_alpha(MRF_X, MRF_Y);\n        Es_0 += current_point + prev_point;\}      \n      \}\n    \}\n    float Es_1 = 0;\n    for (int x_pos = -1; x_pos < 1; x_pos++)\{\n      for (int y_pos = -1; y_pos < 1; y_pos++)\{\n        if (x_pos != 0 && y_pos != 0)\{\n        int MRF_X = x + x_pos;\n        int MRF_Y = y + y_pos;\n        float current_point = alpha(MRF_X, MRF_Y);\n        float prev_point = prev_alpha(MRF_X, MRF_Y);\n        Es_1 += fabs(current_point - 1.0f) + fabs(prev_point - 1.0f);\}      \n      \}\n    \}\n    \n    float E0 = El + lambda * Es_0;\n    float E1 = Et + lambda * Es_1;\n\n    if (E1 < E0)\n        \n        dst_alpha() = 1.0f;\n    else\n        dst_alpha() = 0.0f;\n        \n  \}\n    \n\};\n"
+ rebuild ""
+ rebuild_finalise ""
+ name MC_and_MRF_3D_Iteration6
+ xpos 5410
+ ypos 941
+}
+set Nfea5d400 [stack 0]
+TimeOffset {
+ time ""
+ name TimeOffset27
+ xpos 5281
+ ypos 1038
+}
+push $Nfea5d400
+push $Nfea5d000
+Dot {
+ name Dot56
+ xpos 5591
+ ypos 1041
+}
+set Nfea5d800 [stack 0]
+BlinkScript {
+ inputs 3
+ recompileCount 24
+ ProgramGroup 1
+ KernelDescription "2 \"MAP\" iterate componentWise 249f9c8bc31086021d691a228d11e5e118cc0ffb83ca65cd5a481dec773df2a5 4 \"src_benergy\" Read Point \"alpha\" Read Random \"prev_alpha\" Read Random \"dst_alpha\" Write Point 0 0 0"
+ kernelSource "kernel MAP : ImageComputationKernel<eComponentWise>\n\{\n  Image<eRead, eAccessPoint, eEdgeClamped> src_benergy; // the input image\n  Image<eRead, eAccessRandom, eEdgeClamped> alpha;\n\nImage<eRead, eAccessRandom, eEdgeClamped> prev_alpha;\n  Image<eWrite> dst_alpha;\n  \n  void process(int2 pos) \{\n    int x = pos.x;\n    int y = pos.y;\n\n    float lambda = 20.0f;\n    float El = src_benergy();\n\n    float Et = 60;\n\n    float Es_0 = 0;\n    for (int x_pos = -1; x_pos < 1; x_pos++)\{\n      for (int y_pos = -1; y_pos < 1; y_pos++)\{\n        if (x_pos != 0 && y_pos != 0)\{\n        int MRF_X = x + x_pos;\n        int MRF_Y = y + y_pos;\n        float current_point = alpha(MRF_X, MRF_Y);\n        float prev_point = prev_alpha(MRF_X, MRF_Y);\n        Es_0 += current_point + prev_point;\}      \n      \}\n    \}\n    float Es_1 = 0;\n    for (int x_pos = -1; x_pos < 1; x_pos++)\{\n      for (int y_pos = -1; y_pos < 1; y_pos++)\{\n        if (x_pos != 0 && y_pos != 0)\{\n        int MRF_X = x + x_pos;\n        int MRF_Y = y + y_pos;\n        float current_point = alpha(MRF_X, MRF_Y);\n        float prev_point = prev_alpha(MRF_X, MRF_Y);\n        Es_1 += fabs(current_point - 1.0f) + fabs(prev_point - 1.0f);\}      \n      \}\n    \}\n    \n    float E0 = El + lambda * Es_0;\n    float E1 = Et + lambda * Es_1;\n\n    if (E1 < E0)\n        \n        dst_alpha() = 1.0f;\n    else\n        dst_alpha() = 0.0f;\n        \n  \}\n    \n\};\n"
+ rebuild ""
+ rebuild_finalise ""
+ name MC_and_MRF_3D_Iteration7
+ xpos 5410
+ ypos 1032
+}
+set Nfea5dc00 [stack 0]
+TimeOffset {
+ time ""
+ name TimeOffset28
+ xpos 5282
+ ypos 1117
+}
+push $Nfea5dc00
+push $Nfea5d800
+Dot {
+ name Dot57
+ xpos 5591
+ ypos 1120
+}
+set Nfea9e000 [stack 0]
+BlinkScript {
+ inputs 3
+ recompileCount 24
+ ProgramGroup 1
+ KernelDescription "2 \"MAP\" iterate componentWise 249f9c8bc31086021d691a228d11e5e118cc0ffb83ca65cd5a481dec773df2a5 4 \"src_benergy\" Read Point \"alpha\" Read Random \"prev_alpha\" Read Random \"dst_alpha\" Write Point 0 0 0"
+ kernelSource "kernel MAP : ImageComputationKernel<eComponentWise>\n\{\n  Image<eRead, eAccessPoint, eEdgeClamped> src_benergy; // the input image\n  Image<eRead, eAccessRandom, eEdgeClamped> alpha;\n\nImage<eRead, eAccessRandom, eEdgeClamped> prev_alpha;\n  Image<eWrite> dst_alpha;\n  \n  void process(int2 pos) \{\n    int x = pos.x;\n    int y = pos.y;\n\n    float lambda = 20.0f;\n    float El = src_benergy();\n\n    float Et = 60;\n\n    float Es_0 = 0;\n    for (int x_pos = -1; x_pos < 1; x_pos++)\{\n      for (int y_pos = -1; y_pos < 1; y_pos++)\{\n        if (x_pos != 0 && y_pos != 0)\{\n        int MRF_X = x + x_pos;\n        int MRF_Y = y + y_pos;\n        float current_point = alpha(MRF_X, MRF_Y);\n        float prev_point = prev_alpha(MRF_X, MRF_Y);\n        Es_0 += current_point + prev_point;\}      \n      \}\n    \}\n    float Es_1 = 0;\n    for (int x_pos = -1; x_pos < 1; x_pos++)\{\n      for (int y_pos = -1; y_pos < 1; y_pos++)\{\n        if (x_pos != 0 && y_pos != 0)\{\n        int MRF_X = x + x_pos;\n        int MRF_Y = y + y_pos;\n        float current_point = alpha(MRF_X, MRF_Y);\n        float prev_point = prev_alpha(MRF_X, MRF_Y);\n        Es_1 += fabs(current_point - 1.0f) + fabs(prev_point - 1.0f);\}      \n      \}\n    \}\n    \n    float E0 = El + lambda * Es_0;\n    float E1 = Et + lambda * Es_1;\n\n    if (E1 < E0)\n        \n        dst_alpha() = 1.0f;\n    else\n        dst_alpha() = 0.0f;\n        \n  \}\n    \n\};\n"
+ rebuild ""
+ rebuild_finalise ""
+ name MC_and_MRF_3D_Iteration8
+ xpos 5410
+ ypos 1111
+}
+set Nfea9e400 [stack 0]
+TimeOffset {
+ time ""
+ name TimeOffset29
+ xpos 5282
+ ypos 1190
+}
+push $Nfea9e400
+push $Nfea9e000
+Dot {
+ name Dot58
+ xpos 5591
+ ypos 1193
+}
+set Nfea9e800 [stack 0]
+BlinkScript {
+ inputs 3
+ recompileCount 24
+ ProgramGroup 1
+ KernelDescription "2 \"MAP\" iterate componentWise 249f9c8bc31086021d691a228d11e5e118cc0ffb83ca65cd5a481dec773df2a5 4 \"src_benergy\" Read Point \"alpha\" Read Random \"prev_alpha\" Read Random \"dst_alpha\" Write Point 0 0 0"
+ kernelSource "kernel MAP : ImageComputationKernel<eComponentWise>\n\{\n  Image<eRead, eAccessPoint, eEdgeClamped> src_benergy; // the input image\n  Image<eRead, eAccessRandom, eEdgeClamped> alpha;\n\nImage<eRead, eAccessRandom, eEdgeClamped> prev_alpha;\n  Image<eWrite> dst_alpha;\n  \n  void process(int2 pos) \{\n    int x = pos.x;\n    int y = pos.y;\n\n    float lambda = 20.0f;\n    float El = src_benergy();\n\n    float Et = 60;\n\n    float Es_0 = 0;\n    for (int x_pos = -1; x_pos < 1; x_pos++)\{\n      for (int y_pos = -1; y_pos < 1; y_pos++)\{\n        if (x_pos != 0 && y_pos != 0)\{\n        int MRF_X = x + x_pos;\n        int MRF_Y = y + y_pos;\n        float current_point = alpha(MRF_X, MRF_Y);\n        float prev_point = prev_alpha(MRF_X, MRF_Y);\n        Es_0 += current_point + prev_point;\}      \n      \}\n    \}\n    float Es_1 = 0;\n    for (int x_pos = -1; x_pos < 1; x_pos++)\{\n      for (int y_pos = -1; y_pos < 1; y_pos++)\{\n        if (x_pos != 0 && y_pos != 0)\{\n        int MRF_X = x + x_pos;\n        int MRF_Y = y + y_pos;\n        float current_point = alpha(MRF_X, MRF_Y);\n        float prev_point = prev_alpha(MRF_X, MRF_Y);\n        Es_1 += fabs(current_point - 1.0f) + fabs(prev_point - 1.0f);\}      \n      \}\n    \}\n    \n    float E0 = El + lambda * Es_0;\n    float E1 = Et + lambda * Es_1;\n\n    if (E1 < E0)\n        \n        dst_alpha() = 1.0f;\n    else\n        dst_alpha() = 0.0f;\n        \n  \}\n    \n\};\n"
+ rebuild ""
+ rebuild_finalise ""
+ name MC_and_MRF_3D_Iteration9
+ xpos 5410
+ ypos 1184
+}
+set Nfea9ec00 [stack 0]
+TimeOffset {
+ time ""
+ name TimeOffset30
+ xpos 5280
+ ypos 1263
+}
+push $Nfea9ec00
+push $Nfea9e800
+Dot {
+ name Dot59
+ xpos 5591
+ ypos 1266
+}
+BlinkScript {
+ inputs 3
+ recompileCount 24
+ ProgramGroup 1
+ KernelDescription "2 \"MAP\" iterate componentWise 249f9c8bc31086021d691a228d11e5e118cc0ffb83ca65cd5a481dec773df2a5 4 \"src_benergy\" Read Point \"alpha\" Read Random \"prev_alpha\" Read Random \"dst_alpha\" Write Point 0 0 0"
+ kernelSource "kernel MAP : ImageComputationKernel<eComponentWise>\n\{\n  Image<eRead, eAccessPoint, eEdgeClamped> src_benergy; // the input image\n  Image<eRead, eAccessRandom, eEdgeClamped> alpha;\n\nImage<eRead, eAccessRandom, eEdgeClamped> prev_alpha;\n  Image<eWrite> dst_alpha;\n  \n  void process(int2 pos) \{\n    int x = pos.x;\n    int y = pos.y;\n\n    float lambda = 20.0f;\n    float El = src_benergy();\n\n    float Et = 60;\n\n    float Es_0 = 0;\n    for (int x_pos = -1; x_pos < 1; x_pos++)\{\n      for (int y_pos = -1; y_pos < 1; y_pos++)\{\n        if (x_pos != 0 && y_pos != 0)\{\n        int MRF_X = x + x_pos;\n        int MRF_Y = y + y_pos;\n        float current_point = alpha(MRF_X, MRF_Y);\n        float prev_point = prev_alpha(MRF_X, MRF_Y);\n        Es_0 += current_point + prev_point;\}      \n      \}\n    \}\n    float Es_1 = 0;\n    for (int x_pos = -1; x_pos < 1; x_pos++)\{\n      for (int y_pos = -1; y_pos < 1; y_pos++)\{\n        if (x_pos != 0 && y_pos != 0)\{\n        int MRF_X = x + x_pos;\n        int MRF_Y = y + y_pos;\n        float current_point = alpha(MRF_X, MRF_Y);\n        float prev_point = prev_alpha(MRF_X, MRF_Y);\n        Es_1 += fabs(current_point - 1.0f) + fabs(prev_point - 1.0f);\}      \n      \}\n    \}\n    \n    float E0 = El + lambda * Es_0;\n    float E1 = Et + lambda * Es_1;\n\n    if (E1 < E0)\n        \n        dst_alpha() = 1.0f;\n    else\n        dst_alpha() = 0.0f;\n        \n  \}\n    \n\};\n"
+ rebuild ""
+ rebuild_finalise ""
+ name MC_and_MRF_3D_Iteration10
+ xpos 5410
+ ypos 1257
+}
+set Nfea9f400 [stack 0]
+Viewer {
+ frame 47
+ frame_range 46-50
+ monitorOutOutputTransform rec709
+ name Viewer5
+ xpos 5410
+ ypos 1334
+}
+BlinkScript {
+ inputs 0
+ recompileCount 19
+ ProgramGroup 1
+ KernelDescription "2 \"MAP\" iterate componentWise ee06aa8a226fb319fb5bc9dcbaf2a0e2222d3cf4c355a3698548f1e3bdb20d13 3 \"src_benergy\" Read Point \"alpha\" Read Random \"dst_alpha\" Write Point 0 0 0"
+ kernelSource "kernel MAP : ImageComputationKernel<eComponentWise>\n\{\n  Image<eRead, eAccessPoint, eEdgeClamped> src_benergy; // the input image\n  Image<eRead, eAccessRandom, eEdgeClamped> alpha;\n  Image<eWrite> dst_alpha;\n  \n  void process(int2 pos) \{\n    int x = pos.x;\n    int y = pos.y;\n\n    float lambda = 20.0f;\n    float El = src_benergy();\n\n    float Et = 60;\n\n    float Es_0 = 0;\n    for (int x_pos = -1; x_pos < 1; x_pos++)\{\n      for (int y_pos = -1; y_pos < 1; y_pos++)\{\n        if (x_pos != 0 || y_pos !=0)\{\n        int MRF_X = x + x_pos;\n        int MRF_Y = y + y_pos;\n        float current_point = alpha(MRF_X, MRF_Y);\n        Es_0 += current_point;\}      \n      \}\n    \}\n    float Es_1 = 0;\n    for (int x_pos = -1; x_pos < 1; x_pos++)\{\n      for (int y_pos = -1; y_pos < 1; y_pos++)\{\n        if (x_pos != 0 || y_pos !=0)\{\n        int MRF_X = x + x_pos;\n        int MRF_Y = y + y_pos;\n        float current_point = alpha(MRF_X, MRF_Y);\n        Es_1 += fabs(current_point - 1.0f);     \} \n      \}\n    \}\n    \n    float E0 = El + lambda * Es_0;\n    float E1 = Et + lambda * Es_1;\n\n    if (E1 < E0)\n        \n        dst_alpha() = 1.0f;\n    else\n        dst_alpha() = 0.0f;\n        \n  \}\n    \n\};\n"
+ rebuild ""
+ rebuild_finalise ""
+ name MRF_2D_Iteration11
+ xpos 4263
+ ypos 78
+}
+Read {
+ inputs 0
+ file_type tiff
+ file "D:/DESKTOP/Motion/Haohan_Zhu/frames/Hula.MLKey.  ##.tiff"
+ format "2048 1080 0 0 2048 1080 1 2K_DCP"
+ first 46
+ last 50
+ origfirst 46
+ origlast 50
+ origset true
+ name Read1
+ xpos 6062
+ ypos 159
+}
+Read {
+ inputs 0
+ file_type tiff
+ file D:/DESKTOP/Motion/Haohan_Zhu/frames/Hula.#####.tiff
+ format "2048 1080 0 0 2048 1080 1 2K_DCP"
+ first 46
+ last 50
+ origfirst 46
+ origlast 50
+ origset true
+ colorspace linear
+ name Read2
+ xpos 6401
+ ypos 43
+}
+set Nfecc6c00 [stack 0]
+Expression {
+ temp_name0 Rb
+ temp_expr0 0.3217
+ temp_name1 Gb
+ temp_expr1 0.6276
+ temp_name2 Bb
+ temp_expr2 0.5150
+ expr0 "(r - Rb)"
+ expr1 "(g - Gb)"
+ expr2 "(b - Bb)"
+ name remove_background1
+ xpos 6401
+ ypos 190
+}
+Expression {
+ temp_name0 R_gaus
+ temp_expr0 0.00193
+ temp_name1 G_gaus
+ temp_expr1 0.00021
+ temp_name2 B_gaus
+ temp_expr2 0.000251
+ expr0 r**2/R_gaus
+ expr1 g**2/G_gaus
+ expr2 b**2/B_gaus
+ name gaussian_distribution1
+ xpos 6401
+ ypos 244
+}
+set Nfecc7400 [stack 0]
+Expression {
+ temp_name0 Et
+ temp_expr0 60
+ expr0 "step(60, r + g + b)"
+ expr1 "step(60, r + g + b)"
+ expr2 "step(60, r + g + b)"
+ name Energy_threshold1
+ xpos 6401
+ ypos 307
+}
+set Nfecc7800 [stack 0]
+Dot {
+ name Dot1
+ xpos 6354
+ ypos 310
+}
+Dot {
+ name Dot2
+ xpos 6354
+ ypos 192
+}
+BlinkScript {
+ inputs 2
+ recompileCount 3
+ ProgramGroup 1
+ KernelDescription "2 \"EqualsTo\" iterate pixelWise bcd1be60cea15d2194548ece8f665c5b1fc4d609d87773aaf7743543845fc1e4 3 \"src\" Read Point \"ref\" Read Point \"dst\" Write Point 0 0 0"
+ kernelSource "kernel EqualsTo: ImageComputationKernel<ePixelWise> \{\n  Image<eRead, eAccessPoint, eEdgeClamped> src; // the input image (binary)\n  Image<eRead, eAccessPoint, eEdgeClamped> ref; // the reference image\n  // Checks if differences between two images is more than 1e6\n  // If it is .. that pel is coloured RED, otherwise its GREEN\n\n  Image<eWrite> dst; // the output image\n  \n  // pos gives the position of the kernel in the output image\n  void process(int2 pos) \{\n    SampleType(dst) sample(0.0f);\n    SampleType(src) input = src();\n    SampleType(ref) ref_input = ref();\n    float error = fabs(input.x - ref_input.x);\n                   + fabs(input.y - ref_input.y)\n                   + fabs(input.z - ref_input.z);\n    if (error >0.000001)\n      sample.x = 1.0f;\n    else\n      sample.y = 1.0f;\n\n    dst() = sample;\n  \}\n\};"
+ rebuild ""
+ rebuild_finalise ""
+ name BlinkScript1
+ xpos 6228
+ ypos 183
+}
+PostageStamp {
+ name PostageStamp2
+ xpos 6228
+ ypos 261
+ postage_stamp true
+}
+Viewer {
+ frame 47
+ frame_range 46-50
+ monitorOutOutputTransform rec709
+ name Viewer2
+ xpos 6067
+ ypos 285
+}
+Read {
+ inputs 0
+ file_type tiff
+ file "D:/DESKTOP/Motion/Haohan_Zhu/frames/test/Hula.MRF-1.  ##.tiff"
+ format "2048 1080 0 0 2048 1080 1 2K_DCP"
+ first 46
+ last 50
+ origfirst 46
+ origlast 50
+ origset true
+ name Read3
+ xpos 6060
+ ypos 384
+}
+push $Nfecc7800
+push $Nfecc7400
+Expression {
+ expr0 r+g+b
+ channel1 {-rgba.red rgba.green -rgba.blue none}
+ expr1 r+g+b
+ channel2 {-rgba.red -rgba.green rgba.blue none}
+ expr2 r+g+b
+ name luminance1
+ xpos 6547
+ ypos 244
+}
+set Nfed45400 [stack 0]
+Dot {
+ name Dot4
+ xpos 6581
+ ypos 417
+}
+set Nfed45800 [stack 0]
+BlinkScript {
+ inputs 2
+ recompileCount 22
+ ProgramGroup 1
+ KernelDescription "2 \"MAP2D\" iterate componentWise ad22454c22faa8a4c50d1563469e2c512ef586e53e49cc5f4a877c4e7c526540 3 \"src_benergy\" Read Point \"alpha\" Read Random \"dst_alpha\" Write Point 0 0 0"
+ kernelSource "kernel MAP2D : ImageComputationKernel<eComponentWise>\n\{\n  Image<eRead, eAccessPoint, eEdgeClamped> src_benergy;\n  Image<eRead, eAccessRandom, eEdgeClamped> alpha;\n  Image<eWrite> dst_alpha;\n  \n  void process(int2 pos) \{\n    int x = pos.x;\n    int y = pos.y;\n\n    float lambda = 20.0f;\n    float El = src_benergy();\n\n    float Et = 60;\n\n    float Es_0 = 0;\n    for (int x_pos = -1; x_pos < 1; x_pos++)\{\n      for (int y_pos = -1; y_pos < 1; y_pos++)\{\n        if ((x_pos == -1 && y_pos ==0)||(x_pos == 1 && y_pos ==0)||(x_pos == 0 && y_pos == -1)||(x_pos == 0 && y_pos ==1))\{\n        int MRF_X = x + x_pos;\n        int MRF_Y = y + y_pos;\n        float current_point = alpha(MRF_X, MRF_Y);\n        Es_0 += current_point;\}      \n      \}\n    \}\n    float Es_1 = 0;\n    for (int x_pos = -1; x_pos < 1; x_pos++)\{\n      for (int y_pos = -1; y_pos < 1; y_pos++)\{\n        if ((x_pos == -1 && y_pos ==0)||(x_pos == 1 && y_pos ==0)||(x_pos == 0 && y_pos == -1)||(x_pos == 0 && y_pos ==1))\{\n        int MRF_X = x + x_pos;\n        int MRF_Y = y + y_pos;\n        float current_point = alpha(MRF_X, MRF_Y);\n        Es_1 += fabs(current_point - 1.0f);     \} \n      \}\n    \}\n    \n    float E0 = El + lambda * Es_0;\n    float E1 = Et + lambda * Es_1;\n\n    if (E1 < E0)\n        \n        dst_alpha() = 1.0f;\n    else\n        dst_alpha() = 0.0f;\n        \n  \}\n    \n\};\n"
+ rebuild ""
+ rebuild_finalise ""
+ name MRF_2D_Iteration12
+ tile_color 0xa39e94ff
+ gl_color 0xff
+ xpos 6401
+ ypos 408
+}
+set Nfed45c00 [stack 0]
+BlinkScript {
+ inputs 2
+ recompileCount 3
+ ProgramGroup 1
+ KernelDescription "2 \"EqualsTo\" iterate pixelWise bcd1be60cea15d2194548ece8f665c5b1fc4d609d87773aaf7743543845fc1e4 3 \"src\" Read Point \"ref\" Read Point \"dst\" Write Point 0 0 0"
+ kernelSource "kernel EqualsTo: ImageComputationKernel<ePixelWise> \{\n  Image<eRead, eAccessPoint, eEdgeClamped> src; // the input image (binary)\n  Image<eRead, eAccessPoint, eEdgeClamped> ref; // the reference image\n  // Checks if differences between two images is more than 1e6\n  // If it is .. that pel is coloured RED, otherwise its GREEN\n\n  Image<eWrite> dst; // the output image\n  \n  // pos gives the position of the kernel in the output image\n  void process(int2 pos) \{\n    SampleType(dst) sample(0.0f);\n    SampleType(src) input = src();\n    SampleType(ref) ref_input = ref();\n    float error = fabs(input.x - ref_input.x);\n                   + fabs(input.y - ref_input.y)\n                   + fabs(input.z - ref_input.z);\n    if (error >0.000001)\n      sample.x = 1.0f;\n    else\n      sample.y = 1.0f;\n\n    dst() = sample;\n  \}\n\};"
+ rebuild ""
+ rebuild_finalise ""
+ name BlinkScript2
+ xpos 6226
+ ypos 408
+}
+PostageStamp {
+ name PostageStamp3
+ xpos 6226
+ ypos 486
+ postage_stamp true
+}
+Viewer {
+ frame 47
+ frame_range 46-50
+ monitorOutOutputTransform rec709
+ name Viewer3
+ xpos 6060
+ ypos 510
+}
+Read {
+ inputs 0
+ file_type tiff
+ file "D:/DESKTOP/Motion/Haohan_Zhu/frames/test/Hula.MRF-2.  ##.tiff"
+ format "2048 1080 0 0 2048 1080 1 2K_DCP"
+ first 46
+ last 50
+ origfirst 46
+ origlast 50
+ origset true
+ name Read5
+ xpos 6063
+ ypos 623
+}
+push $Nfed45c00
+push $Nfed45800
+Dot {
+ name Dot5
+ xpos 6581
+ ypos 489
+}
+set Nfedc5000 [stack 0]
+BlinkScript {
+ inputs 2
+ recompileCount 21
+ ProgramGroup 1
+ KernelDescription "2 \"MAP2D\" iterate componentWise f5bf93f8bd4f901126cee239994b767790ea8e3b8e3726102e61940959434799 3 \"src_benergy\" Read Point \"alpha\" Read Random \"dst_alpha\" Write Point 0 0 0"
+ kernelSource "kernel MAP2D : ImageComputationKernel<eComponentWise>\n\{\n  Image<eRead, eAccessPoint, eEdgeClamped> src_benergy; // the input image\n  Image<eRead, eAccessRandom, eEdgeClamped> alpha;\n  Image<eWrite> dst_alpha;\n  \n  void process(int2 pos) \{\n    int x = pos.x;\n    int y = pos.y;\n\n    float lambda = 20.0f;\n    float El = src_benergy();\n\n    float Et = 60;\n\n    float Es_0 = 0;\n    for (int x_pos = -1; x_pos < 1; x_pos++)\{\n      for (int y_pos = -1; y_pos < 1; y_pos++)\{\n        if ((x_pos == -1 && y_pos ==0)||(x_pos == 1 && y_pos ==0)||(x_pos == 0 && y_pos == -1)||(x_pos == 0 && y_pos ==1))\{\n        int MRF_X = x + x_pos;\n        int MRF_Y = y + y_pos;\n        float current_point = alpha(MRF_X, MRF_Y);\n        Es_0 += current_point;\}      \n      \}\n    \}\n    float Es_1 = 0;\n    for (int x_pos = -1; x_pos < 1; x_pos++)\{\n      for (int y_pos = -1; y_pos < 1; y_pos++)\{\n        if ((x_pos == -1 && y_pos ==0)||(x_pos == 1 && y_pos ==0)||(x_pos == 0 && y_pos == -1)||(x_pos == 0 && y_pos ==1))\{\n        int MRF_X = x + x_pos;\n        int MRF_Y = y + y_pos;\n        float current_point = alpha(MRF_X, MRF_Y);\n        Es_1 += fabs(current_point - 1.0f);     \} \n      \}\n    \}\n    \n    float E0 = El + lambda * Es_0;\n    float E1 = Et + lambda * Es_1;\n\n    if (E1 < E0)\n        \n        dst_alpha() = 1.0f;\n    else\n        dst_alpha() = 0.0f;\n        \n  \}\n    \n\};\n"
+ rebuild ""
+ rebuild_finalise ""
+ name MRF_2D_Iteration13
+ xpos 6401
+ ypos 480
+}
+set Nfedc5400 [stack 0]
+Dot {
+ name Dot6
+ xpos 6350
+ ypos 489
+}
+Dot {
+ name Dot7
+ xpos 6350
+ ypos 656
+}
+BlinkScript {
+ inputs 2
+ recompileCount 2
+ ProgramGroup 1
+ KernelDescription "2 \"EqualsTo\" iterate pixelWise bcd1be60cea15d2194548ece8f665c5b1fc4d609d87773aaf7743543845fc1e4 3 \"src\" Read Point \"ref\" Read Point \"dst\" Write Point 0 0 0"
+ kernelSource "kernel EqualsTo: ImageComputationKernel<ePixelWise> \{\n  Image<eRead, eAccessPoint, eEdgeClamped> src; // the input image (binary)\n  Image<eRead, eAccessPoint, eEdgeClamped> ref; // the reference image\n  // Checks if differences between two images is more than 1e6\n  // If it is .. that pel is coloured RED, otherwise its GREEN\n\n  Image<eWrite> dst; // the output image\n  \n  // pos gives the position of the kernel in the output image\n  void process(int2 pos) \{\n    SampleType(dst) sample(0.0f);\n    SampleType(src) input = src();\n    SampleType(ref) ref_input = ref();\n    float error = fabs(input.x - ref_input.x);\n                   + fabs(input.y - ref_input.y)\n                   + fabs(input.z - ref_input.z);\n    if (error >0.000001)\n      sample.x = 1.0f;\n    else\n      sample.y = 1.0f;\n\n    dst() = sample;\n  \}\n\};"
+ rebuild ""
+ rebuild_finalise ""
+ name BlinkScript3
+ xpos 6229
+ ypos 647
+}
+PostageStamp {
+ name PostageStamp4
+ xpos 6229
+ ypos 725
+ postage_stamp true
+}
+Viewer {
+ frame 47
+ frame_range 46-50
+ monitorOutOutputTransform rec709
+ name Viewer6
+ xpos 6066
+ ypos 749
+}
+push $Nfecc6c00
+Dot {
+ name Dot8
+ xpos 6869
+ ypos 82
+}
+set Nfee38c00 [stack 0]
+Expression {
+ temp_name0 Rb
+ temp_expr0 0.3217
+ temp_name1 Gb
+ temp_expr1 0.6276
+ temp_name2 Bb
+ temp_expr2 0.5150
+ expr0 "(r - Rb)"
+ expr1 "(g - Gb)"
+ expr2 "(b - Bb)"
+ name remove_background7
+ xpos 6835
+ ypos 188
+}
+Expression {
+ temp_name0 R_gaus
+ temp_expr0 0.00193
+ temp_name1 G_gaus
+ temp_expr1 0.00021
+ temp_name2 B_gaus
+ temp_expr2 0.000251
+ expr0 r**2/R_gaus
+ expr1 g**2/G_gaus
+ expr2 b**2/B_gaus
+ name gaussian_distribution7
+ xpos 6835
+ ypos 242
+}
+set Nfef86800 [stack 0]
+Expression {
+ temp_name0 Et
+ temp_expr0 60
+ expr0 "step(60, r + g + b)"
+ expr1 "step(60, r + g + b)"
+ expr2 "step(60, r + g + b)"
+ name Energy_threshold7
+ xpos 6835
+ ypos 305
+}
+set Nfef86c00 [stack 0]
+TimeOffset {
+ time ""
+ name TimeOffset33
+ xpos 6707
+ ypos 412
+}
+push $Nfef86c00
+push $Nfef86800
+Expression {
+ expr0 r+g+b
+ channel1 {-rgba.red rgba.green -rgba.blue none}
+ expr1 r+g+b
+ channel2 {-rgba.red -rgba.green rgba.blue none}
+ expr2 r+g+b
+ name luminance7
+ xpos 6981
+ ypos 242
+}
+Dot {
+ name Dot28
+ xpos 7015
+ ypos 415
+}
+set Nfef87400 [stack 0]
+BlinkScript {
+ inputs 3
+ recompileCount 21
+ ProgramGroup 1
+ KernelDescription "2 \"MAP\" iterate componentWise 4394dc0ac07de9e76b346a3681933f2714703ff0618f1611d7b9814cd0d68e37 4 \"src_benergy\" Read Point \"alpha\" Read Random \"prev_alpha\" Read Random \"dst_alpha\" Write Point 0 0 0"
+ kernelSource "kernel MAP : ImageComputationKernel<eComponentWise>\n\{\n  Image<eRead, eAccessPoint, eEdgeClamped> src_benergy; // the input image\n  Image<eRead, eAccessRandom, eEdgeClamped> alpha;\n\nImage<eRead, eAccessRandom, eEdgeClamped> prev_alpha;\n  Image<eWrite> dst_alpha;\n  \n  void process(int2 pos) \{\n    int x = pos.x;\n    int y = pos.y;\n\n    float lambda = 20.0f;\n    float El = src_benergy();\n\n    float Et = 60;\n\n    float Es_0 = 0;\n    for (int x_pos = -1; x_pos < 1; x_pos++)\{\n      for (int y_pos = -1; y_pos < 1; y_pos++)\{\n        if ((x_pos == -1 && y_pos ==0)||(x_pos == 1 && y_pos ==0)||(x_pos == 0 && y_pos == -1)||(x_pos == 0 && y_pos ==1))\{\n        int MRF_X = x + x_pos;\n        int MRF_Y = y + y_pos;\n        float current_point = alpha(MRF_X, MRF_Y);\n        float prev_point = prev_alpha(MRF_X, MRF_Y);\n        Es_0 += current_point + prev_point;\}      \n      \}\n    \}\n    float Es_1 = 0;\n    for (int x_pos = -1; x_pos < 1; x_pos++)\{\n      for (int y_pos = -1; y_pos < 1; y_pos++)\{\n        if ((x_pos == -1 && y_pos ==0)||(x_pos == 1 && y_pos ==0)||(x_pos == 0 && y_pos == -1)||(x_pos == 0 && y_pos ==1))\{\n        int MRF_X = x + x_pos;\n        int MRF_Y = y + y_pos;\n        float current_point = alpha(MRF_X, MRF_Y);\n        float prev_point = prev_alpha(MRF_X, MRF_Y);\n        Es_1 += fabs(current_point - 1.0f) + fabs(prev_point - 1.0f);\}      \n      \}\n    \}\n    \n    float E0 = El + lambda * Es_0;\n    float E1 = Et + lambda * Es_1;\n\n    if (E1 < E0)\n        \n        dst_alpha() = 1.0f;\n    else\n        dst_alpha() = 0.0f;\n        \n  \}\n    \n\};\n"
+ rebuild ""
+ rebuild_finalise ""
+ name MRF_3D_Iteration11
+ xpos 6835
+ ypos 406
+}
+set Nfef87800 [stack 0]
+TimeOffset {
+ time ""
+ name TimeOffset34
+ xpos 6705
+ ypos 504
+}
+push $Nfef87800
+push $Nfef87400
+Dot {
+ name Dot29
+ xpos 7015
+ ypos 507
+}
+set Nfef87c00 [stack 0]
+BlinkScript {
+ inputs 3
+ recompileCount 21
+ ProgramGroup 1
+ KernelDescription "2 \"MAP\" iterate componentWise 4394dc0ac07de9e76b346a3681933f2714703ff0618f1611d7b9814cd0d68e37 4 \"src_benergy\" Read Point \"alpha\" Read Random \"prev_alpha\" Read Random \"dst_alpha\" Write Point 0 0 0"
+ kernelSource "kernel MAP : ImageComputationKernel<eComponentWise>\n\{\n  Image<eRead, eAccessPoint, eEdgeClamped> src_benergy; // the input image\n  Image<eRead, eAccessRandom, eEdgeClamped> alpha;\n\nImage<eRead, eAccessRandom, eEdgeClamped> prev_alpha;\n  Image<eWrite> dst_alpha;\n  \n  void process(int2 pos) \{\n    int x = pos.x;\n    int y = pos.y;\n\n    float lambda = 20.0f;\n    float El = src_benergy();\n\n    float Et = 60;\n\n    float Es_0 = 0;\n    for (int x_pos = -1; x_pos < 1; x_pos++)\{\n      for (int y_pos = -1; y_pos < 1; y_pos++)\{\n        if ((x_pos == -1 && y_pos ==0)||(x_pos == 1 && y_pos ==0)||(x_pos == 0 && y_pos == -1)||(x_pos == 0 && y_pos ==1))\{\n        int MRF_X = x + x_pos;\n        int MRF_Y = y + y_pos;\n        float current_point = alpha(MRF_X, MRF_Y);\n        float prev_point = prev_alpha(MRF_X, MRF_Y);\n        Es_0 += current_point + prev_point;\}      \n      \}\n    \}\n    float Es_1 = 0;\n    for (int x_pos = -1; x_pos < 1; x_pos++)\{\n      for (int y_pos = -1; y_pos < 1; y_pos++)\{\n        if ((x_pos == -1 && y_pos ==0)||(x_pos == 1 && y_pos ==0)||(x_pos == 0 && y_pos == -1)||(x_pos == 0 && y_pos ==1))\{\n        int MRF_X = x + x_pos;\n        int MRF_Y = y + y_pos;\n        float current_point = alpha(MRF_X, MRF_Y);\n        float prev_point = prev_alpha(MRF_X, MRF_Y);\n        Es_1 += fabs(current_point - 1.0f) + fabs(prev_point - 1.0f);\}      \n      \}\n    \}\n    \n    float E0 = El + lambda * Es_0;\n    float E1 = Et + lambda * Es_1;\n\n    if (E1 < E0)\n        \n        dst_alpha() = 1.0f;\n    else\n        dst_alpha() = 0.0f;\n        \n  \}\n    \n\};\n"
+ rebuild ""
+ rebuild_finalise ""
+ name MRF_3D_Iteration12
+ xpos 6835
+ ypos 498
+}
+set Nfefea000 [stack 0]
+TimeOffset {
+ time ""
+ name TimeOffset35
+ xpos 6705
+ ypos 574
+}
+push $Nfefea000
+push $Nfef87c00
+Dot {
+ name Dot35
+ xpos 7015
+ ypos 577
+}
+set Nfefea400 [stack 0]
+BlinkScript {
+ inputs 3
+ recompileCount 21
+ ProgramGroup 1
+ KernelDescription "2 \"MAP\" iterate componentWise 4394dc0ac07de9e76b346a3681933f2714703ff0618f1611d7b9814cd0d68e37 4 \"src_benergy\" Read Point \"alpha\" Read Random \"prev_alpha\" Read Random \"dst_alpha\" Write Point 0 0 0"
+ kernelSource "kernel MAP : ImageComputationKernel<eComponentWise>\n\{\n  Image<eRead, eAccessPoint, eEdgeClamped> src_benergy; // the input image\n  Image<eRead, eAccessRandom, eEdgeClamped> alpha;\n\nImage<eRead, eAccessRandom, eEdgeClamped> prev_alpha;\n  Image<eWrite> dst_alpha;\n  \n  void process(int2 pos) \{\n    int x = pos.x;\n    int y = pos.y;\n\n    float lambda = 20.0f;\n    float El = src_benergy();\n\n    float Et = 60;\n\n    float Es_0 = 0;\n    for (int x_pos = -1; x_pos < 1; x_pos++)\{\n      for (int y_pos = -1; y_pos < 1; y_pos++)\{\n        if ((x_pos == -1 && y_pos ==0)||(x_pos == 1 && y_pos ==0)||(x_pos == 0 && y_pos == -1)||(x_pos == 0 && y_pos ==1))\{\n        int MRF_X = x + x_pos;\n        int MRF_Y = y + y_pos;\n        float current_point = alpha(MRF_X, MRF_Y);\n        float prev_point = prev_alpha(MRF_X, MRF_Y);\n        Es_0 += current_point + prev_point;\}      \n      \}\n    \}\n    float Es_1 = 0;\n    for (int x_pos = -1; x_pos < 1; x_pos++)\{\n      for (int y_pos = -1; y_pos < 1; y_pos++)\{\n        if ((x_pos == -1 && y_pos ==0)||(x_pos == 1 && y_pos ==0)||(x_pos == 0 && y_pos == -1)||(x_pos == 0 && y_pos ==1))\{\n        int MRF_X = x + x_pos;\n        int MRF_Y = y + y_pos;\n        float current_point = alpha(MRF_X, MRF_Y);\n        float prev_point = prev_alpha(MRF_X, MRF_Y);\n        Es_1 += fabs(current_point - 1.0f) + fabs(prev_point - 1.0f);\}      \n      \}\n    \}\n    \n    float E0 = El + lambda * Es_0;\n    float E1 = Et + lambda * Es_1;\n\n    if (E1 < E0)\n        \n        dst_alpha() = 1.0f;\n    else\n        dst_alpha() = 0.0f;\n        \n  \}\n    \n\};\n"
+ rebuild ""
+ rebuild_finalise ""
+ name MRF_3D_Iteration13
+ xpos 6835
+ ypos 568
+}
+set Nfefea800 [stack 0]
+TimeOffset {
+ time ""
+ name TimeOffset36
+ xpos 6705
+ ypos 638
+}
+push $Nfefea800
+push $Nfefea400
+Dot {
+ name Dot36
+ xpos 7015
+ ypos 641
+}
+set Nfefeac00 [stack 0]
+BlinkScript {
+ inputs 3
+ recompileCount 21
+ ProgramGroup 1
+ KernelDescription "2 \"MAP\" iterate componentWise 4394dc0ac07de9e76b346a3681933f2714703ff0618f1611d7b9814cd0d68e37 4 \"src_benergy\" Read Point \"alpha\" Read Random \"prev_alpha\" Read Random \"dst_alpha\" Write Point 0 0 0"
+ kernelSource "kernel MAP : ImageComputationKernel<eComponentWise>\n\{\n  Image<eRead, eAccessPoint, eEdgeClamped> src_benergy; // the input image\n  Image<eRead, eAccessRandom, eEdgeClamped> alpha;\n\nImage<eRead, eAccessRandom, eEdgeClamped> prev_alpha;\n  Image<eWrite> dst_alpha;\n  \n  void process(int2 pos) \{\n    int x = pos.x;\n    int y = pos.y;\n\n    float lambda = 20.0f;\n    float El = src_benergy();\n\n    float Et = 60;\n\n    float Es_0 = 0;\n    for (int x_pos = -1; x_pos < 1; x_pos++)\{\n      for (int y_pos = -1; y_pos < 1; y_pos++)\{\n        if ((x_pos == -1 && y_pos ==0)||(x_pos == 1 && y_pos ==0)||(x_pos == 0 && y_pos == -1)||(x_pos == 0 && y_pos ==1))\{\n        int MRF_X = x + x_pos;\n        int MRF_Y = y + y_pos;\n        float current_point = alpha(MRF_X, MRF_Y);\n        float prev_point = prev_alpha(MRF_X, MRF_Y);\n        Es_0 += current_point + prev_point;\}      \n      \}\n    \}\n    float Es_1 = 0;\n    for (int x_pos = -1; x_pos < 1; x_pos++)\{\n      for (int y_pos = -1; y_pos < 1; y_pos++)\{\n        if ((x_pos == -1 && y_pos ==0)||(x_pos == 1 && y_pos ==0)||(x_pos == 0 && y_pos == -1)||(x_pos == 0 && y_pos ==1))\{\n        int MRF_X = x + x_pos;\n        int MRF_Y = y + y_pos;\n        float current_point = alpha(MRF_X, MRF_Y);\n        float prev_point = prev_alpha(MRF_X, MRF_Y);\n        Es_1 += fabs(current_point - 1.0f) + fabs(prev_point - 1.0f);\}      \n      \}\n    \}\n    \n    float E0 = El + lambda * Es_0;\n    float E1 = Et + lambda * Es_1;\n\n    if (E1 < E0)\n        \n        dst_alpha() = 1.0f;\n    else\n        dst_alpha() = 0.0f;\n        \n  \}\n    \n\};\n"
+ rebuild ""
+ rebuild_finalise ""
+ name MRF_3D_Iteration14
+ xpos 6835
+ ypos 632
+}
+set Nfefeb000 [stack 0]
+TimeOffset {
+ time ""
+ name TimeOffset37
+ xpos 6705
+ ypos 710
+}
+push $Nfefeb000
+push $Nfefeac00
+Dot {
+ name Dot37
+ xpos 7015
+ ypos 713
+}
+set Nfefeb400 [stack 0]
+BlinkScript {
+ inputs 3
+ recompileCount 21
+ ProgramGroup 1
+ KernelDescription "2 \"MAP\" iterate componentWise 4394dc0ac07de9e76b346a3681933f2714703ff0618f1611d7b9814cd0d68e37 4 \"src_benergy\" Read Point \"alpha\" Read Random \"prev_alpha\" Read Random \"dst_alpha\" Write Point 0 0 0"
+ kernelSource "kernel MAP : ImageComputationKernel<eComponentWise>\n\{\n  Image<eRead, eAccessPoint, eEdgeClamped> src_benergy; // the input image\n  Image<eRead, eAccessRandom, eEdgeClamped> alpha;\n\nImage<eRead, eAccessRandom, eEdgeClamped> prev_alpha;\n  Image<eWrite> dst_alpha;\n  \n  void process(int2 pos) \{\n    int x = pos.x;\n    int y = pos.y;\n\n    float lambda = 20.0f;\n    float El = src_benergy();\n\n    float Et = 60;\n\n    float Es_0 = 0;\n    for (int x_pos = -1; x_pos < 1; x_pos++)\{\n      for (int y_pos = -1; y_pos < 1; y_pos++)\{\n        if ((x_pos == -1 && y_pos ==0)||(x_pos == 1 && y_pos ==0)||(x_pos == 0 && y_pos == -1)||(x_pos == 0 && y_pos ==1))\{\n        int MRF_X = x + x_pos;\n        int MRF_Y = y + y_pos;\n        float current_point = alpha(MRF_X, MRF_Y);\n        float prev_point = prev_alpha(MRF_X, MRF_Y);\n        Es_0 += current_point + prev_point;\}      \n      \}\n    \}\n    float Es_1 = 0;\n    for (int x_pos = -1; x_pos < 1; x_pos++)\{\n      for (int y_pos = -1; y_pos < 1; y_pos++)\{\n        if ((x_pos == -1 && y_pos ==0)||(x_pos == 1 && y_pos ==0)||(x_pos == 0 && y_pos == -1)||(x_pos == 0 && y_pos ==1))\{\n        int MRF_X = x + x_pos;\n        int MRF_Y = y + y_pos;\n        float current_point = alpha(MRF_X, MRF_Y);\n        float prev_point = prev_alpha(MRF_X, MRF_Y);\n        Es_1 += fabs(current_point - 1.0f) + fabs(prev_point - 1.0f);\}      \n      \}\n    \}\n    \n    float E0 = El + lambda * Es_0;\n    float E1 = Et + lambda * Es_1;\n\n    if (E1 < E0)\n        \n        dst_alpha() = 1.0f;\n    else\n        dst_alpha() = 0.0f;\n        \n  \}\n    \n\};\n"
+ rebuild ""
+ rebuild_finalise ""
+ name MRF_3D_Iteration15
+ xpos 6835
+ ypos 704
+}
+set Nfefeb800 [stack 0]
+TimeOffset {
+ time ""
+ name TimeOffset38
+ xpos 6705
+ ypos 788
+}
+push $Nfefeb800
+push $Nfefeb400
+Dot {
+ name Dot38
+ xpos 7015
+ ypos 791
+}
+set Nfefebc00 [stack 0]
+BlinkScript {
+ inputs 3
+ recompileCount 21
+ ProgramGroup 1
+ KernelDescription "2 \"MAP\" iterate componentWise 4394dc0ac07de9e76b346a3681933f2714703ff0618f1611d7b9814cd0d68e37 4 \"src_benergy\" Read Point \"alpha\" Read Random \"prev_alpha\" Read Random \"dst_alpha\" Write Point 0 0 0"
+ kernelSource "kernel MAP : ImageComputationKernel<eComponentWise>\n\{\n  Image<eRead, eAccessPoint, eEdgeClamped> src_benergy; // the input image\n  Image<eRead, eAccessRandom, eEdgeClamped> alpha;\n\nImage<eRead, eAccessRandom, eEdgeClamped> prev_alpha;\n  Image<eWrite> dst_alpha;\n  \n  void process(int2 pos) \{\n    int x = pos.x;\n    int y = pos.y;\n\n    float lambda = 20.0f;\n    float El = src_benergy();\n\n    float Et = 60;\n\n    float Es_0 = 0;\n    for (int x_pos = -1; x_pos < 1; x_pos++)\{\n      for (int y_pos = -1; y_pos < 1; y_pos++)\{\n        if ((x_pos == -1 && y_pos ==0)||(x_pos == 1 && y_pos ==0)||(x_pos == 0 && y_pos == -1)||(x_pos == 0 && y_pos ==1))\{\n        int MRF_X = x + x_pos;\n        int MRF_Y = y + y_pos;\n        float current_point = alpha(MRF_X, MRF_Y);\n        float prev_point = prev_alpha(MRF_X, MRF_Y);\n        Es_0 += current_point + prev_point;\}      \n      \}\n    \}\n    float Es_1 = 0;\n    for (int x_pos = -1; x_pos < 1; x_pos++)\{\n      for (int y_pos = -1; y_pos < 1; y_pos++)\{\n        if ((x_pos == -1 && y_pos ==0)||(x_pos == 1 && y_pos ==0)||(x_pos == 0 && y_pos == -1)||(x_pos == 0 && y_pos ==1))\{\n        int MRF_X = x + x_pos;\n        int MRF_Y = y + y_pos;\n        float current_point = alpha(MRF_X, MRF_Y);\n        float prev_point = prev_alpha(MRF_X, MRF_Y);\n        Es_1 += fabs(current_point - 1.0f) + fabs(prev_point - 1.0f);\}      \n      \}\n    \}\n    \n    float E0 = El + lambda * Es_0;\n    float E1 = Et + lambda * Es_1;\n\n    if (E1 < E0)\n        \n        dst_alpha() = 1.0f;\n    else\n        dst_alpha() = 0.0f;\n        \n  \}\n    \n\};\n"
+ rebuild ""
+ rebuild_finalise ""
+ name MRF_3D_Iteration16
+ xpos 6835
+ ypos 782
+}
+set Nff030000 [stack 0]
+TimeOffset {
+ time ""
+ name TimeOffset39
+ xpos 6705
+ ypos 870
+}
+push $Nff030000
+push $Nfefebc00
+Dot {
+ name Dot39
+ xpos 7015
+ ypos 873
+}
+set Nff030400 [stack 0]
+BlinkScript {
+ inputs 3
+ recompileCount 21
+ ProgramGroup 1
+ KernelDescription "2 \"MAP\" iterate componentWise 4394dc0ac07de9e76b346a3681933f2714703ff0618f1611d7b9814cd0d68e37 4 \"src_benergy\" Read Point \"alpha\" Read Random \"prev_alpha\" Read Random \"dst_alpha\" Write Point 0 0 0"
+ kernelSource "kernel MAP : ImageComputationKernel<eComponentWise>\n\{\n  Image<eRead, eAccessPoint, eEdgeClamped> src_benergy; // the input image\n  Image<eRead, eAccessRandom, eEdgeClamped> alpha;\n\nImage<eRead, eAccessRandom, eEdgeClamped> prev_alpha;\n  Image<eWrite> dst_alpha;\n  \n  void process(int2 pos) \{\n    int x = pos.x;\n    int y = pos.y;\n\n    float lambda = 20.0f;\n    float El = src_benergy();\n\n    float Et = 60;\n\n    float Es_0 = 0;\n    for (int x_pos = -1; x_pos < 1; x_pos++)\{\n      for (int y_pos = -1; y_pos < 1; y_pos++)\{\n        if ((x_pos == -1 && y_pos ==0)||(x_pos == 1 && y_pos ==0)||(x_pos == 0 && y_pos == -1)||(x_pos == 0 && y_pos ==1))\{\n        int MRF_X = x + x_pos;\n        int MRF_Y = y + y_pos;\n        float current_point = alpha(MRF_X, MRF_Y);\n        float prev_point = prev_alpha(MRF_X, MRF_Y);\n        Es_0 += current_point + prev_point;\}      \n      \}\n    \}\n    float Es_1 = 0;\n    for (int x_pos = -1; x_pos < 1; x_pos++)\{\n      for (int y_pos = -1; y_pos < 1; y_pos++)\{\n        if ((x_pos == -1 && y_pos ==0)||(x_pos == 1 && y_pos ==0)||(x_pos == 0 && y_pos == -1)||(x_pos == 0 && y_pos ==1))\{\n        int MRF_X = x + x_pos;\n        int MRF_Y = y + y_pos;\n        float current_point = alpha(MRF_X, MRF_Y);\n        float prev_point = prev_alpha(MRF_X, MRF_Y);\n        Es_1 += fabs(current_point - 1.0f) + fabs(prev_point - 1.0f);\}      \n      \}\n    \}\n    \n    float E0 = El + lambda * Es_0;\n    float E1 = Et + lambda * Es_1;\n\n    if (E1 < E0)\n        \n        dst_alpha() = 1.0f;\n    else\n        dst_alpha() = 0.0f;\n        \n  \}\n    \n\};\n"
+ rebuild ""
+ rebuild_finalise ""
+ name MRF_3D_Iteration17
+ xpos 6835
+ ypos 864
+}
+set Nff030800 [stack 0]
+TimeOffset {
+ time ""
+ name TimeOffset40
+ xpos 6706
+ ypos 953
+}
+push $Nff030800
+push $Nff030400
+Dot {
+ name Dot40
+ xpos 7016
+ ypos 956
+}
+set Nff030c00 [stack 0]
+BlinkScript {
+ inputs 3
+ recompileCount 21
+ ProgramGroup 1
+ KernelDescription "2 \"MAP\" iterate componentWise 4394dc0ac07de9e76b346a3681933f2714703ff0618f1611d7b9814cd0d68e37 4 \"src_benergy\" Read Point \"alpha\" Read Random \"prev_alpha\" Read Random \"dst_alpha\" Write Point 0 0 0"
+ kernelSource "kernel MAP : ImageComputationKernel<eComponentWise>\n\{\n  Image<eRead, eAccessPoint, eEdgeClamped> src_benergy; // the input image\n  Image<eRead, eAccessRandom, eEdgeClamped> alpha;\n\nImage<eRead, eAccessRandom, eEdgeClamped> prev_alpha;\n  Image<eWrite> dst_alpha;\n  \n  void process(int2 pos) \{\n    int x = pos.x;\n    int y = pos.y;\n\n    float lambda = 20.0f;\n    float El = src_benergy();\n\n    float Et = 60;\n\n    float Es_0 = 0;\n    for (int x_pos = -1; x_pos < 1; x_pos++)\{\n      for (int y_pos = -1; y_pos < 1; y_pos++)\{\n        if ((x_pos == -1 && y_pos ==0)||(x_pos == 1 && y_pos ==0)||(x_pos == 0 && y_pos == -1)||(x_pos == 0 && y_pos ==1))\{\n        int MRF_X = x + x_pos;\n        int MRF_Y = y + y_pos;\n        float current_point = alpha(MRF_X, MRF_Y);\n        float prev_point = prev_alpha(MRF_X, MRF_Y);\n        Es_0 += current_point + prev_point;\}      \n      \}\n    \}\n    float Es_1 = 0;\n    for (int x_pos = -1; x_pos < 1; x_pos++)\{\n      for (int y_pos = -1; y_pos < 1; y_pos++)\{\n        if ((x_pos == -1 && y_pos ==0)||(x_pos == 1 && y_pos ==0)||(x_pos == 0 && y_pos == -1)||(x_pos == 0 && y_pos ==1))\{\n        int MRF_X = x + x_pos;\n        int MRF_Y = y + y_pos;\n        float current_point = alpha(MRF_X, MRF_Y);\n        float prev_point = prev_alpha(MRF_X, MRF_Y);\n        Es_1 += fabs(current_point - 1.0f) + fabs(prev_point - 1.0f);\}      \n      \}\n    \}\n    \n    float E0 = El + lambda * Es_0;\n    float E1 = Et + lambda * Es_1;\n\n    if (E1 < E0)\n        \n        dst_alpha() = 1.0f;\n    else\n        dst_alpha() = 0.0f;\n        \n  \}\n    \n\};\n"
+ rebuild ""
+ rebuild_finalise ""
+ name MRF_3D_Iteration18
+ xpos 6836
+ ypos 947
+}
+set Nff031000 [stack 0]
+TimeOffset {
+ time ""
+ name TimeOffset41
+ xpos 6706
+ ypos 1020
+}
+push $Nff031000
+push $Nff030c00
+Dot {
+ name Dot41
+ xpos 7016
+ ypos 1023
+}
+set Nff031400 [stack 0]
+BlinkScript {
+ inputs 3
+ recompileCount 21
+ ProgramGroup 1
+ KernelDescription "2 \"MAP\" iterate componentWise 4394dc0ac07de9e76b346a3681933f2714703ff0618f1611d7b9814cd0d68e37 4 \"src_benergy\" Read Point \"alpha\" Read Random \"prev_alpha\" Read Random \"dst_alpha\" Write Point 0 0 0"
+ kernelSource "kernel MAP : ImageComputationKernel<eComponentWise>\n\{\n  Image<eRead, eAccessPoint, eEdgeClamped> src_benergy; // the input image\n  Image<eRead, eAccessRandom, eEdgeClamped> alpha;\n\nImage<eRead, eAccessRandom, eEdgeClamped> prev_alpha;\n  Image<eWrite> dst_alpha;\n  \n  void process(int2 pos) \{\n    int x = pos.x;\n    int y = pos.y;\n\n    float lambda = 20.0f;\n    float El = src_benergy();\n\n    float Et = 60;\n\n    float Es_0 = 0;\n    for (int x_pos = -1; x_pos < 1; x_pos++)\{\n      for (int y_pos = -1; y_pos < 1; y_pos++)\{\n        if ((x_pos == -1 && y_pos ==0)||(x_pos == 1 && y_pos ==0)||(x_pos == 0 && y_pos == -1)||(x_pos == 0 && y_pos ==1))\{\n        int MRF_X = x + x_pos;\n        int MRF_Y = y + y_pos;\n        float current_point = alpha(MRF_X, MRF_Y);\n        float prev_point = prev_alpha(MRF_X, MRF_Y);\n        Es_0 += current_point + prev_point;\}      \n      \}\n    \}\n    float Es_1 = 0;\n    for (int x_pos = -1; x_pos < 1; x_pos++)\{\n      for (int y_pos = -1; y_pos < 1; y_pos++)\{\n        if ((x_pos == -1 && y_pos ==0)||(x_pos == 1 && y_pos ==0)||(x_pos == 0 && y_pos == -1)||(x_pos == 0 && y_pos ==1))\{\n        int MRF_X = x + x_pos;\n        int MRF_Y = y + y_pos;\n        float current_point = alpha(MRF_X, MRF_Y);\n        float prev_point = prev_alpha(MRF_X, MRF_Y);\n        Es_1 += fabs(current_point - 1.0f) + fabs(prev_point - 1.0f);\}      \n      \}\n    \}\n    \n    float E0 = El + lambda * Es_0;\n    float E1 = Et + lambda * Es_1;\n\n    if (E1 < E0)\n        \n        dst_alpha() = 1.0f;\n    else\n        dst_alpha() = 0.0f;\n        \n  \}\n    \n\};\n"
+ rebuild ""
+ rebuild_finalise ""
+ name MRF_3D_Iteration19
+ xpos 6836
+ ypos 1014
+}
+set Nff031800 [stack 0]
+TimeOffset {
+ time ""
+ name TimeOffset42
+ xpos 6706
+ ypos 1095
+}
+push $Nff031800
+push $Nff031400
+Dot {
+ name Dot74
+ xpos 7016
+ ypos 1098
+}
+BlinkScript {
+ inputs 3
+ recompileCount 21
+ ProgramGroup 1
+ KernelDescription "2 \"MAP\" iterate componentWise 4394dc0ac07de9e76b346a3681933f2714703ff0618f1611d7b9814cd0d68e37 4 \"src_benergy\" Read Point \"alpha\" Read Random \"prev_alpha\" Read Random \"dst_alpha\" Write Point 0 0 0"
+ kernelSource "kernel MAP : ImageComputationKernel<eComponentWise>\n\{\n  Image<eRead, eAccessPoint, eEdgeClamped> src_benergy; // the input image\n  Image<eRead, eAccessRandom, eEdgeClamped> alpha;\n\nImage<eRead, eAccessRandom, eEdgeClamped> prev_alpha;\n  Image<eWrite> dst_alpha;\n  \n  void process(int2 pos) \{\n    int x = pos.x;\n    int y = pos.y;\n\n    float lambda = 20.0f;\n    float El = src_benergy();\n\n    float Et = 60;\n\n    float Es_0 = 0;\n    for (int x_pos = -1; x_pos < 1; x_pos++)\{\n      for (int y_pos = -1; y_pos < 1; y_pos++)\{\n        if ((x_pos == -1 && y_pos ==0)||(x_pos == 1 && y_pos ==0)||(x_pos == 0 && y_pos == -1)||(x_pos == 0 && y_pos ==1))\{\n        int MRF_X = x + x_pos;\n        int MRF_Y = y + y_pos;\n        float current_point = alpha(MRF_X, MRF_Y);\n        float prev_point = prev_alpha(MRF_X, MRF_Y);\n        Es_0 += current_point + prev_point;\}      \n      \}\n    \}\n    float Es_1 = 0;\n    for (int x_pos = -1; x_pos < 1; x_pos++)\{\n      for (int y_pos = -1; y_pos < 1; y_pos++)\{\n        if ((x_pos == -1 && y_pos ==0)||(x_pos == 1 && y_pos ==0)||(x_pos == 0 && y_pos == -1)||(x_pos == 0 && y_pos ==1))\{\n        int MRF_X = x + x_pos;\n        int MRF_Y = y + y_pos;\n        float current_point = alpha(MRF_X, MRF_Y);\n        float prev_point = prev_alpha(MRF_X, MRF_Y);\n        Es_1 += fabs(current_point - 1.0f) + fabs(prev_point - 1.0f);\}      \n      \}\n    \}\n    \n    float E0 = El + lambda * Es_0;\n    float E1 = Et + lambda * Es_1;\n\n    if (E1 < E0)\n        \n        dst_alpha() = 1.0f;\n    else\n        dst_alpha() = 0.0f;\n        \n  \}\n    \n\};\n"
+ rebuild ""
+ rebuild_finalise ""
+ name MRF_3D_Iteration20
+ xpos 6836
+ ypos 1089
+}
+set Nff074000 [stack 0]
+Viewer {
+ frame 47
+ frame_range 46-50
+ monitorOutOutputTransform rec709
+ name Viewer12
+ xpos 6836
+ ypos 1186
+}
+push $Nfedc5400
+push $Nfedc5000
+Dot {
+ name Dot75
+ xpos 6581
+ ypos 561
+}
+set Nff09c800 [stack 0]
+BlinkScript {
+ inputs 2
+ recompileCount 21
+ ProgramGroup 1
+ KernelDescription "2 \"MAP2D\" iterate componentWise f5bf93f8bd4f901126cee239994b767790ea8e3b8e3726102e61940959434799 3 \"src_benergy\" Read Point \"alpha\" Read Random \"dst_alpha\" Write Point 0 0 0"
+ kernelSource "kernel MAP2D : ImageComputationKernel<eComponentWise>\n\{\n  Image<eRead, eAccessPoint, eEdgeClamped> src_benergy; // the input image\n  Image<eRead, eAccessRandom, eEdgeClamped> alpha;\n  Image<eWrite> dst_alpha;\n  \n  void process(int2 pos) \{\n    int x = pos.x;\n    int y = pos.y;\n\n    float lambda = 20.0f;\n    float El = src_benergy();\n\n    float Et = 60;\n\n    float Es_0 = 0;\n    for (int x_pos = -1; x_pos < 1; x_pos++)\{\n      for (int y_pos = -1; y_pos < 1; y_pos++)\{\n        if ((x_pos == -1 && y_pos ==0)||(x_pos == 1 && y_pos ==0)||(x_pos == 0 && y_pos == -1)||(x_pos == 0 && y_pos ==1))\{\n        int MRF_X = x + x_pos;\n        int MRF_Y = y + y_pos;\n        float current_point = alpha(MRF_X, MRF_Y);\n        Es_0 += current_point;\}      \n      \}\n    \}\n    float Es_1 = 0;\n    for (int x_pos = -1; x_pos < 1; x_pos++)\{\n      for (int y_pos = -1; y_pos < 1; y_pos++)\{\n        if ((x_pos == -1 && y_pos ==0)||(x_pos == 1 && y_pos ==0)||(x_pos == 0 && y_pos == -1)||(x_pos == 0 && y_pos ==1))\{\n        int MRF_X = x + x_pos;\n        int MRF_Y = y + y_pos;\n        float current_point = alpha(MRF_X, MRF_Y);\n        Es_1 += fabs(current_point - 1.0f);     \} \n      \}\n    \}\n    \n    float E0 = El + lambda * Es_0;\n    float E1 = Et + lambda * Es_1;\n\n    if (E1 < E0)\n        \n        dst_alpha() = 1.0f;\n    else\n        dst_alpha() = 0.0f;\n        \n  \}\n    \n\};\n"
+ rebuild ""
+ rebuild_finalise ""
+ name MRF_2D_Iteration14
+ xpos 6401
+ ypos 552
+}
+push $Nff09c800
+Dot {
+ name Dot76
+ xpos 6581
+ ypos 644
+}
+set Nff09d000 [stack 0]
+BlinkScript {
+ inputs 2
+ recompileCount 21
+ ProgramGroup 1
+ KernelDescription "2 \"MAP2D\" iterate componentWise f5bf93f8bd4f901126cee239994b767790ea8e3b8e3726102e61940959434799 3 \"src_benergy\" Read Point \"alpha\" Read Random \"dst_alpha\" Write Point 0 0 0"
+ kernelSource "kernel MAP2D : ImageComputationKernel<eComponentWise>\n\{\n  Image<eRead, eAccessPoint, eEdgeClamped> src_benergy; // the input image\n  Image<eRead, eAccessRandom, eEdgeClamped> alpha;\n  Image<eWrite> dst_alpha;\n  \n  void process(int2 pos) \{\n    int x = pos.x;\n    int y = pos.y;\n\n    float lambda = 20.0f;\n    float El = src_benergy();\n\n    float Et = 60;\n\n    float Es_0 = 0;\n    for (int x_pos = -1; x_pos < 1; x_pos++)\{\n      for (int y_pos = -1; y_pos < 1; y_pos++)\{\n        if ((x_pos == -1 && y_pos ==0)||(x_pos == 1 && y_pos ==0)||(x_pos == 0 && y_pos == -1)||(x_pos == 0 && y_pos ==1))\{\n        int MRF_X = x + x_pos;\n        int MRF_Y = y + y_pos;\n        float current_point = alpha(MRF_X, MRF_Y);\n        Es_0 += current_point;\}      \n      \}\n    \}\n    float Es_1 = 0;\n    for (int x_pos = -1; x_pos < 1; x_pos++)\{\n      for (int y_pos = -1; y_pos < 1; y_pos++)\{\n        if ((x_pos == -1 && y_pos ==0)||(x_pos == 1 && y_pos ==0)||(x_pos == 0 && y_pos == -1)||(x_pos == 0 && y_pos ==1))\{\n        int MRF_X = x + x_pos;\n        int MRF_Y = y + y_pos;\n        float current_point = alpha(MRF_X, MRF_Y);\n        Es_1 += fabs(current_point - 1.0f);     \} \n      \}\n    \}\n    \n    float E0 = El + lambda * Es_0;\n    float E1 = Et + lambda * Es_1;\n\n    if (E1 < E0)\n        \n        dst_alpha() = 1.0f;\n    else\n        dst_alpha() = 0.0f;\n        \n  \}\n    \n\};\n"
+ rebuild ""
+ rebuild_finalise ""
+ name MRF_2D_Iteration15
+ xpos 6401
+ ypos 635
+}
+push $Nff09d000
+Dot {
+ name Dot77
+ xpos 6581
+ ypos 733
+}
+set Nff09d800 [stack 0]
+BlinkScript {
+ inputs 2
+ recompileCount 21
+ ProgramGroup 1
+ KernelDescription "2 \"MAP2D\" iterate componentWise f5bf93f8bd4f901126cee239994b767790ea8e3b8e3726102e61940959434799 3 \"src_benergy\" Read Point \"alpha\" Read Random \"dst_alpha\" Write Point 0 0 0"
+ kernelSource "kernel MAP2D : ImageComputationKernel<eComponentWise>\n\{\n  Image<eRead, eAccessPoint, eEdgeClamped> src_benergy; // the input image\n  Image<eRead, eAccessRandom, eEdgeClamped> alpha;\n  Image<eWrite> dst_alpha;\n  \n  void process(int2 pos) \{\n    int x = pos.x;\n    int y = pos.y;\n\n    float lambda = 20.0f;\n    float El = src_benergy();\n\n    float Et = 60;\n\n    float Es_0 = 0;\n    for (int x_pos = -1; x_pos < 1; x_pos++)\{\n      for (int y_pos = -1; y_pos < 1; y_pos++)\{\n        if ((x_pos == -1 && y_pos ==0)||(x_pos == 1 && y_pos ==0)||(x_pos == 0 && y_pos == -1)||(x_pos == 0 && y_pos ==1))\{\n        int MRF_X = x + x_pos;\n        int MRF_Y = y + y_pos;\n        float current_point = alpha(MRF_X, MRF_Y);\n        Es_0 += current_point;\}      \n      \}\n    \}\n    float Es_1 = 0;\n    for (int x_pos = -1; x_pos < 1; x_pos++)\{\n      for (int y_pos = -1; y_pos < 1; y_pos++)\{\n        if ((x_pos == -1 && y_pos ==0)||(x_pos == 1 && y_pos ==0)||(x_pos == 0 && y_pos == -1)||(x_pos == 0 && y_pos ==1))\{\n        int MRF_X = x + x_pos;\n        int MRF_Y = y + y_pos;\n        float current_point = alpha(MRF_X, MRF_Y);\n        Es_1 += fabs(current_point - 1.0f);     \} \n      \}\n    \}\n    \n    float E0 = El + lambda * Es_0;\n    float E1 = Et + lambda * Es_1;\n\n    if (E1 < E0)\n        \n        dst_alpha() = 1.0f;\n    else\n        dst_alpha() = 0.0f;\n        \n  \}\n    \n\};\n"
+ rebuild ""
+ rebuild_finalise ""
+ name MRF_2D_Iteration16
+ xpos 6401
+ ypos 724
+}
+set Nff09dc00 [stack 0]
+push $Nff09d800
+Dot {
+ name Dot78
+ xpos 6581
+ ypos 814
+}
+set Nff0e8000 [stack 0]
+BlinkScript {
+ inputs 2
+ recompileCount 21
+ ProgramGroup 1
+ KernelDescription "2 \"MAP2D\" iterate componentWise f5bf93f8bd4f901126cee239994b767790ea8e3b8e3726102e61940959434799 3 \"src_benergy\" Read Point \"alpha\" Read Random \"dst_alpha\" Write Point 0 0 0"
+ kernelSource "kernel MAP2D : ImageComputationKernel<eComponentWise>\n\{\n  Image<eRead, eAccessPoint, eEdgeClamped> src_benergy; // the input image\n  Image<eRead, eAccessRandom, eEdgeClamped> alpha;\n  Image<eWrite> dst_alpha;\n  \n  void process(int2 pos) \{\n    int x = pos.x;\n    int y = pos.y;\n\n    float lambda = 20.0f;\n    float El = src_benergy();\n\n    float Et = 60;\n\n    float Es_0 = 0;\n    for (int x_pos = -1; x_pos < 1; x_pos++)\{\n      for (int y_pos = -1; y_pos < 1; y_pos++)\{\n        if ((x_pos == -1 && y_pos ==0)||(x_pos == 1 && y_pos ==0)||(x_pos == 0 && y_pos == -1)||(x_pos == 0 && y_pos ==1))\{\n        int MRF_X = x + x_pos;\n        int MRF_Y = y + y_pos;\n        float current_point = alpha(MRF_X, MRF_Y);\n        Es_0 += current_point;\}      \n      \}\n    \}\n    float Es_1 = 0;\n    for (int x_pos = -1; x_pos < 1; x_pos++)\{\n      for (int y_pos = -1; y_pos < 1; y_pos++)\{\n        if ((x_pos == -1 && y_pos ==0)||(x_pos == 1 && y_pos ==0)||(x_pos == 0 && y_pos == -1)||(x_pos == 0 && y_pos ==1))\{\n        int MRF_X = x + x_pos;\n        int MRF_Y = y + y_pos;\n        float current_point = alpha(MRF_X, MRF_Y);\n        Es_1 += fabs(current_point - 1.0f);     \} \n      \}\n    \}\n    \n    float E0 = El + lambda * Es_0;\n    float E1 = Et + lambda * Es_1;\n\n    if (E1 < E0)\n        \n        dst_alpha() = 1.0f;\n    else\n        dst_alpha() = 0.0f;\n        \n  \}\n    \n\};\n"
+ rebuild ""
+ rebuild_finalise ""
+ name MRF_2D_Iteration17
+ xpos 6401
+ ypos 805
+}
+push $Nff0e8000
+Dot {
+ name Dot79
+ xpos 6581
+ ypos 895
+}
+set Nff0e8800 [stack 0]
+BlinkScript {
+ inputs 2
+ recompileCount 21
+ ProgramGroup 1
+ KernelDescription "2 \"MAP2D\" iterate componentWise f5bf93f8bd4f901126cee239994b767790ea8e3b8e3726102e61940959434799 3 \"src_benergy\" Read Point \"alpha\" Read Random \"dst_alpha\" Write Point 0 0 0"
+ kernelSource "kernel MAP2D : ImageComputationKernel<eComponentWise>\n\{\n  Image<eRead, eAccessPoint, eEdgeClamped> src_benergy; // the input image\n  Image<eRead, eAccessRandom, eEdgeClamped> alpha;\n  Image<eWrite> dst_alpha;\n  \n  void process(int2 pos) \{\n    int x = pos.x;\n    int y = pos.y;\n\n    float lambda = 20.0f;\n    float El = src_benergy();\n\n    float Et = 60;\n\n    float Es_0 = 0;\n    for (int x_pos = -1; x_pos < 1; x_pos++)\{\n      for (int y_pos = -1; y_pos < 1; y_pos++)\{\n        if ((x_pos == -1 && y_pos ==0)||(x_pos == 1 && y_pos ==0)||(x_pos == 0 && y_pos == -1)||(x_pos == 0 && y_pos ==1))\{\n        int MRF_X = x + x_pos;\n        int MRF_Y = y + y_pos;\n        float current_point = alpha(MRF_X, MRF_Y);\n        Es_0 += current_point;\}      \n      \}\n    \}\n    float Es_1 = 0;\n    for (int x_pos = -1; x_pos < 1; x_pos++)\{\n      for (int y_pos = -1; y_pos < 1; y_pos++)\{\n        if ((x_pos == -1 && y_pos ==0)||(x_pos == 1 && y_pos ==0)||(x_pos == 0 && y_pos == -1)||(x_pos == 0 && y_pos ==1))\{\n        int MRF_X = x + x_pos;\n        int MRF_Y = y + y_pos;\n        float current_point = alpha(MRF_X, MRF_Y);\n        Es_1 += fabs(current_point - 1.0f);     \} \n      \}\n    \}\n    \n    float E0 = El + lambda * Es_0;\n    float E1 = Et + lambda * Es_1;\n\n    if (E1 < E0)\n        \n        dst_alpha() = 1.0f;\n    else\n        dst_alpha() = 0.0f;\n        \n  \}\n    \n\};\n"
+ rebuild ""
+ rebuild_finalise ""
+ name MRF_2D_Iteration18
+ xpos 6401
+ ypos 886
+}
+push $Nff0e8800
+Dot {
+ name Dot80
+ xpos 6581
+ ypos 973
+}
+set Nff0e9000 [stack 0]
+BlinkScript {
+ inputs 2
+ recompileCount 22
+ ProgramGroup 1
+ KernelDescription "2 \"MAP2D\" iterate componentWise f5bf93f8bd4f901126cee239994b767790ea8e3b8e3726102e61940959434799 3 \"src_benergy\" Read Point \"alpha\" Read Random \"dst_alpha\" Write Point 0 0 0"
+ kernelSource "kernel MAP2D : ImageComputationKernel<eComponentWise>\n\{\n  Image<eRead, eAccessPoint, eEdgeClamped> src_benergy; // the input image\n  Image<eRead, eAccessRandom, eEdgeClamped> alpha;\n  Image<eWrite> dst_alpha;\n  \n  void process(int2 pos) \{\n    int x = pos.x;\n    int y = pos.y;\n\n    float lambda = 20.0f;\n    float El = src_benergy();\n\n    float Et = 60;\n\n    float Es_0 = 0;\n    for (int x_pos = -1; x_pos < 1; x_pos++)\{\n      for (int y_pos = -1; y_pos < 1; y_pos++)\{\n        if ((x_pos == -1 && y_pos ==0)||(x_pos == 1 && y_pos ==0)||(x_pos == 0 && y_pos == -1)||(x_pos == 0 && y_pos ==1))\{\n        int MRF_X = x + x_pos;\n        int MRF_Y = y + y_pos;\n        float current_point = alpha(MRF_X, MRF_Y);\n        Es_0 += current_point;\}      \n      \}\n    \}\n    float Es_1 = 0;\n    for (int x_pos = -1; x_pos < 1; x_pos++)\{\n      for (int y_pos = -1; y_pos < 1; y_pos++)\{\n        if ((x_pos == -1 && y_pos ==0)||(x_pos == 1 && y_pos ==0)||(x_pos == 0 && y_pos == -1)||(x_pos == 0 && y_pos ==1))\{\n        int MRF_X = x + x_pos;\n        int MRF_Y = y + y_pos;\n        float current_point = alpha(MRF_X, MRF_Y);\n        Es_1 += fabs(current_point - 1.0f);     \} \n      \}\n    \}\n    \n    float E0 = El + lambda * Es_0;\n    float E1 = Et + lambda * Es_1;\n\n    if (E1 < E0)\n        \n        dst_alpha() = 1.0f;\n    else\n        dst_alpha() = 0.0f;\n        \n  \}\n    \n\};\n"
+ rebuild ""
+ rebuild_finalise ""
+ name MRF_2D_Iteration19
+ xpos 6401
+ ypos 964
+}
+push $Nff0e9000
+Dot {
+ name Dot81
+ xpos 6581
+ ypos 1058
+}
+set Nff0e9800 [stack 0]
+BlinkScript {
+ inputs 2
+ recompileCount 21
+ ProgramGroup 1
+ KernelDescription "2 \"MAP2D\" iterate componentWise f5bf93f8bd4f901126cee239994b767790ea8e3b8e3726102e61940959434799 3 \"src_benergy\" Read Point \"alpha\" Read Random \"dst_alpha\" Write Point 0 0 0"
+ kernelSource "kernel MAP2D : ImageComputationKernel<eComponentWise>\n\{\n  Image<eRead, eAccessPoint, eEdgeClamped> src_benergy; // the input image\n  Image<eRead, eAccessRandom, eEdgeClamped> alpha;\n  Image<eWrite> dst_alpha;\n  \n  void process(int2 pos) \{\n    int x = pos.x;\n    int y = pos.y;\n\n    float lambda = 20.0f;\n    float El = src_benergy();\n\n    float Et = 60;\n\n    float Es_0 = 0;\n    for (int x_pos = -1; x_pos < 1; x_pos++)\{\n      for (int y_pos = -1; y_pos < 1; y_pos++)\{\n        if ((x_pos == -1 && y_pos ==0)||(x_pos == 1 && y_pos ==0)||(x_pos == 0 && y_pos == -1)||(x_pos == 0 && y_pos ==1))\{\n        int MRF_X = x + x_pos;\n        int MRF_Y = y + y_pos;\n        float current_point = alpha(MRF_X, MRF_Y);\n        Es_0 += current_point;\}      \n      \}\n    \}\n    float Es_1 = 0;\n    for (int x_pos = -1; x_pos < 1; x_pos++)\{\n      for (int y_pos = -1; y_pos < 1; y_pos++)\{\n        if ((x_pos == -1 && y_pos ==0)||(x_pos == 1 && y_pos ==0)||(x_pos == 0 && y_pos == -1)||(x_pos == 0 && y_pos ==1))\{\n        int MRF_X = x + x_pos;\n        int MRF_Y = y + y_pos;\n        float current_point = alpha(MRF_X, MRF_Y);\n        Es_1 += fabs(current_point - 1.0f);     \} \n      \}\n    \}\n    \n    float E0 = El + lambda * Es_0;\n    float E1 = Et + lambda * Es_1;\n\n    if (E1 < E0)\n        \n        dst_alpha() = 1.0f;\n    else\n        dst_alpha() = 0.0f;\n        \n  \}\n    \n\};\n"
+ rebuild ""
+ rebuild_finalise ""
+ name MRF_2D_Iteration20
+ xpos 6401
+ ypos 1049
+}
+push $Nff0e9800
+Dot {
+ name Dot82
+ xpos 6581
+ ypos 1144
+}
+BlinkScript {
+ inputs 2
+ recompileCount 21
+ ProgramGroup 1
+ KernelDescription "2 \"MAP2D\" iterate componentWise f5bf93f8bd4f901126cee239994b767790ea8e3b8e3726102e61940959434799 3 \"src_benergy\" Read Point \"alpha\" Read Random \"dst_alpha\" Write Point 0 0 0"
+ kernelSource "kernel MAP2D : ImageComputationKernel<eComponentWise>\n\{\n  Image<eRead, eAccessPoint, eEdgeClamped> src_benergy; // the input image\n  Image<eRead, eAccessRandom, eEdgeClamped> alpha;\n  Image<eWrite> dst_alpha;\n  \n  void process(int2 pos) \{\n    int x = pos.x;\n    int y = pos.y;\n\n    float lambda = 20.0f;\n    float El = src_benergy();\n\n    float Et = 60;\n\n    float Es_0 = 0;\n    for (int x_pos = -1; x_pos < 1; x_pos++)\{\n      for (int y_pos = -1; y_pos < 1; y_pos++)\{\n        if ((x_pos == -1 && y_pos ==0)||(x_pos == 1 && y_pos ==0)||(x_pos == 0 && y_pos == -1)||(x_pos == 0 && y_pos ==1))\{\n        int MRF_X = x + x_pos;\n        int MRF_Y = y + y_pos;\n        float current_point = alpha(MRF_X, MRF_Y);\n        Es_0 += current_point;\}      \n      \}\n    \}\n    float Es_1 = 0;\n    for (int x_pos = -1; x_pos < 1; x_pos++)\{\n      for (int y_pos = -1; y_pos < 1; y_pos++)\{\n        if ((x_pos == -1 && y_pos ==0)||(x_pos == 1 && y_pos ==0)||(x_pos == 0 && y_pos == -1)||(x_pos == 0 && y_pos ==1))\{\n        int MRF_X = x + x_pos;\n        int MRF_Y = y + y_pos;\n        float current_point = alpha(MRF_X, MRF_Y);\n        Es_1 += fabs(current_point - 1.0f);     \} \n      \}\n    \}\n    \n    float E0 = El + lambda * Es_0;\n    float E1 = Et + lambda * Es_1;\n\n    if (E1 < E0)\n        \n        dst_alpha() = 1.0f;\n    else\n        dst_alpha() = 0.0f;\n        \n  \}\n    \n\};\n"
+ rebuild ""
+ rebuild_finalise ""
+ name MRF_2D_Iteration21
+ xpos 6401
+ ypos 1135
+}
+set Nff118400 [stack 0]
+Viewer {
+ frame 47
+ frame_range 46-50
+ monitorOutOutputTransform rec709
+ name Viewer13
+ xpos 6401
+ ypos 1249
+}
+BlinkScript {
+ inputs 0
+ recompileCount 19
+ ProgramGroup 1
+ KernelDescription "2 \"MAP\" iterate componentWise ee06aa8a226fb319fb5bc9dcbaf2a0e2222d3cf4c355a3698548f1e3bdb20d13 3 \"src_benergy\" Read Point \"alpha\" Read Random \"dst_alpha\" Write Point 0 0 0"
+ kernelSource "kernel MAP : ImageComputationKernel<eComponentWise>\n\{\n  Image<eRead, eAccessPoint, eEdgeClamped> src_benergy; // the input image\n  Image<eRead, eAccessRandom, eEdgeClamped> alpha;\n  Image<eWrite> dst_alpha;\n  \n  void process(int2 pos) \{\n    int x = pos.x;\n    int y = pos.y;\n\n    float lambda = 20.0f;\n    float El = src_benergy();\n\n    float Et = 60;\n\n    float Es_0 = 0;\n    for (int x_pos = -1; x_pos < 1; x_pos++)\{\n      for (int y_pos = -1; y_pos < 1; y_pos++)\{\n        if (x_pos != 0 || y_pos !=0)\{\n        int MRF_X = x + x_pos;\n        int MRF_Y = y + y_pos;\n        float current_point = alpha(MRF_X, MRF_Y);\n        Es_0 += current_point;\}      \n      \}\n    \}\n    float Es_1 = 0;\n    for (int x_pos = -1; x_pos < 1; x_pos++)\{\n      for (int y_pos = -1; y_pos < 1; y_pos++)\{\n        if (x_pos != 0 || y_pos !=0)\{\n        int MRF_X = x + x_pos;\n        int MRF_Y = y + y_pos;\n        float current_point = alpha(MRF_X, MRF_Y);\n        Es_1 += fabs(current_point - 1.0f);     \} \n      \}\n    \}\n    \n    float E0 = El + lambda * Es_0;\n    float E1 = Et + lambda * Es_1;\n\n    if (E1 < E0)\n        \n        dst_alpha() = 1.0f;\n    else\n        dst_alpha() = 0.0f;\n        \n  \}\n    \n\};\n"
+ rebuild ""
+ rebuild_finalise ""
+ name MRF_2D_Iteration22
+ xpos 6174
+ ypos 72
+}
+BlinkScript {
+ inputs 0
+ recompileCount 20
+ ProgramGroup 1
+ KernelDescription "2 \"MAP\" iterate componentWise 19793d2c5a658f075ef3ff757da9c433eaa71c179d26039b316c0739424d2253 4 \"src_benergy\" Read Point \"alpha\" Read Random \"prev_alpha\" Read Random \"dst_alpha\" Write Point 0 0 0"
+ kernelSource "kernel MAP : ImageComputationKernel<eComponentWise>\n\{\n  Image<eRead, eAccessPoint, eEdgeClamped> src_benergy; // the input image\n  Image<eRead, eAccessRandom, eEdgeClamped> alpha;\n\nImage<eRead, eAccessRandom, eEdgeClamped> prev_alpha;\n  Image<eWrite> dst_alpha;\n  \n  void process(int2 pos) \{\n    int x = pos.x;\n    int y = pos.y;\n\n    float lambda = 20.0f;\n    float El = src_benergy();\n\n    float Et = 60;\n\n    float Es_0 = 0;\n    for (int x_pos = -1; x_pos < 1; x_pos++)\{\n      for (int y_pos = -1; y_pos < 1; y_pos++)\{\n        if (x_pos != 0 || y_pos !=0)\{\n        int MRF_X = x + x_pos;\n        int MRF_Y = y + y_pos;\n        float current_point = alpha(MRF_X, MRF_Y);\n        float prev_point = prev_alpha(MRF_X, MRF_Y);\n        Es_0 += current_point + prev_point;\}      \n      \}\n    \}\n    float Es_1 = 0;\n    for (int x_pos = -1; x_pos < 1; x_pos++)\{\n      for (int y_pos = -1; y_pos < 1; y_pos++)\{\n        if (x_pos != 0 || y_pos !=0)\{\n        int MRF_X = x + x_pos;\n        int MRF_Y = y + y_pos;\n        float current_point = alpha(MRF_X, MRF_Y);\n        float prev_point = prev_alpha(MRF_X, MRF_Y);\n        Es_1 += fabs(current_point - 1.0f) + fabs(prev_point - 1.0f);\}      \n      \}\n    \}\n    \n    float E0 = El + lambda * Es_0;\n    float E1 = Et + lambda * Es_1;\n\n    if (E1 < E0)\n        \n        dst_alpha() = 1.0f;\n    else\n        dst_alpha() = 0.0f;\n        \n  \}\n    \n\};\n"
+ rebuild ""
+ rebuild_finalise ""
+ name MRF_3D_Iteration21
+ xpos 4797
+ ypos 227
+}
+push $Nfd970c00
+push $Nfd970800
+Dot {
+ name Dot19
+ xpos 4670
+ ypos 567
+}
+set Nfec3c000 [stack 0]
+BlinkScript {
+ inputs 2
+ recompileCount 22
+ ProgramGroup 1
+ KernelDescription "2 \"MAP2D\" iterate componentWise 21df4a1af35a02d9630705e32b63a8c715d822b5f95f2b5a9ab3ff5c08635d4c 3 \"src_benergy\" Read Point \"alpha\" Read Random \"dst_alpha\" Write Point 0 0 0"
+ kernelSource "kernel MAP2D : ImageComputationKernel<eComponentWise>\n\{\n  Image<eRead, eAccessPoint, eEdgeClamped> src_benergy;\n  Image<eRead, eAccessRandom, eEdgeClamped> alpha;\n  Image<eWrite> dst_alpha;\n  \n  void process(int2 pos) \{\n    int x = pos.x;\n    int y = pos.y;\n\n    float lambda = 20.0f;\n    float El = src_benergy();\n\n    float Et = 60;\n\n    float Es_0 = 0;\n    for (int x_pos = -1; x_pos < 1; x_pos++)\{\n      for (int y_pos = -1; y_pos < 1; y_pos++)\{\n        if (x_pos != 0 && y_pos != 0)\{\n        int MRF_X = x + x_pos;\n        int MRF_Y = y + y_pos;\n        float current_point = alpha(MRF_X, MRF_Y);\n        Es_0 += current_point;\}      \n      \}\n    \}\n    float Es_1 = 0;\n    for (int x_pos = -1; x_pos < 1; x_pos++)\{\n      for (int y_pos = -1; y_pos < 1; y_pos++)\{\n        if  (x_pos != 0 && y_pos != 0)\{\n        int MRF_X = x + x_pos;\n        int MRF_Y = y + y_pos;\n        float current_point = alpha(MRF_X, MRF_Y);\n        Es_1 += fabs(current_point - 1.0f);     \} \n      \}\n    \}\n    \n    float E0 = El + lambda * Es_0;\n    float E1 = Et + lambda * Es_1;\n\n    if (E1 < E0)\n        \n        dst_alpha() = 1.0f;\n    else\n        dst_alpha() = 0.0f;\n        \n  \}\n    \n\};\n"
+ rebuild ""
+ rebuild_finalise ""
+ name MRF_2D_Iteration3
+ xpos 4490
+ ypos 558
+}
+push $Nfec3c000
+Dot {
+ name Dot20
+ xpos 4670
+ ypos 650
+}
+set Nfec3c800 [stack 0]
+BlinkScript {
+ inputs 2
+ recompileCount 22
+ ProgramGroup 1
+ KernelDescription "2 \"MAP2D\" iterate componentWise 21df4a1af35a02d9630705e32b63a8c715d822b5f95f2b5a9ab3ff5c08635d4c 3 \"src_benergy\" Read Point \"alpha\" Read Random \"dst_alpha\" Write Point 0 0 0"
+ kernelSource "kernel MAP2D : ImageComputationKernel<eComponentWise>\n\{\n  Image<eRead, eAccessPoint, eEdgeClamped> src_benergy;\n  Image<eRead, eAccessRandom, eEdgeClamped> alpha;\n  Image<eWrite> dst_alpha;\n  \n  void process(int2 pos) \{\n    int x = pos.x;\n    int y = pos.y;\n\n    float lambda = 20.0f;\n    float El = src_benergy();\n\n    float Et = 60;\n\n    float Es_0 = 0;\n    for (int x_pos = -1; x_pos < 1; x_pos++)\{\n      for (int y_pos = -1; y_pos < 1; y_pos++)\{\n        if (x_pos != 0 && y_pos != 0)\{\n        int MRF_X = x + x_pos;\n        int MRF_Y = y + y_pos;\n        float current_point = alpha(MRF_X, MRF_Y);\n        Es_0 += current_point;\}      \n      \}\n    \}\n    float Es_1 = 0;\n    for (int x_pos = -1; x_pos < 1; x_pos++)\{\n      for (int y_pos = -1; y_pos < 1; y_pos++)\{\n        if  (x_pos != 0 && y_pos != 0)\{\n        int MRF_X = x + x_pos;\n        int MRF_Y = y + y_pos;\n        float current_point = alpha(MRF_X, MRF_Y);\n        Es_1 += fabs(current_point - 1.0f);     \} \n      \}\n    \}\n    \n    float E0 = El + lambda * Es_0;\n    float E1 = Et + lambda * Es_1;\n\n    if (E1 < E0)\n        \n        dst_alpha() = 1.0f;\n    else\n        dst_alpha() = 0.0f;\n        \n  \}\n    \n\};\n"
+ rebuild ""
+ rebuild_finalise ""
+ name MRF_2D_Iteration4
+ xpos 4490
+ ypos 641
+}
+push $Nfec3c800
+Dot {
+ name Dot21
+ xpos 4670
+ ypos 739
+}
+set Nfec3d000 [stack 0]
+BlinkScript {
+ inputs 2
+ recompileCount 22
+ ProgramGroup 1
+ KernelDescription "2 \"MAP2D\" iterate componentWise 21df4a1af35a02d9630705e32b63a8c715d822b5f95f2b5a9ab3ff5c08635d4c 3 \"src_benergy\" Read Point \"alpha\" Read Random \"dst_alpha\" Write Point 0 0 0"
+ kernelSource "kernel MAP2D : ImageComputationKernel<eComponentWise>\n\{\n  Image<eRead, eAccessPoint, eEdgeClamped> src_benergy;\n  Image<eRead, eAccessRandom, eEdgeClamped> alpha;\n  Image<eWrite> dst_alpha;\n  \n  void process(int2 pos) \{\n    int x = pos.x;\n    int y = pos.y;\n\n    float lambda = 20.0f;\n    float El = src_benergy();\n\n    float Et = 60;\n\n    float Es_0 = 0;\n    for (int x_pos = -1; x_pos < 1; x_pos++)\{\n      for (int y_pos = -1; y_pos < 1; y_pos++)\{\n        if (x_pos != 0 && y_pos != 0)\{\n        int MRF_X = x + x_pos;\n        int MRF_Y = y + y_pos;\n        float current_point = alpha(MRF_X, MRF_Y);\n        Es_0 += current_point;\}      \n      \}\n    \}\n    float Es_1 = 0;\n    for (int x_pos = -1; x_pos < 1; x_pos++)\{\n      for (int y_pos = -1; y_pos < 1; y_pos++)\{\n        if  (x_pos != 0 && y_pos != 0)\{\n        int MRF_X = x + x_pos;\n        int MRF_Y = y + y_pos;\n        float current_point = alpha(MRF_X, MRF_Y);\n        Es_1 += fabs(current_point - 1.0f);     \} \n      \}\n    \}\n    \n    float E0 = El + lambda * Es_0;\n    float E1 = Et + lambda * Es_1;\n\n    if (E1 < E0)\n        \n        dst_alpha() = 1.0f;\n    else\n        dst_alpha() = 0.0f;\n        \n  \}\n    \n\};\n"
+ rebuild ""
+ rebuild_finalise ""
+ name MRF_2D_Iteration5
+ selected true
+ xpos 4490
+ ypos 730
+}
+set Nfec3d400 [stack 0]
+Write {
+ file D:/DESKTOP/Motion/Haohan_Zhu/8pairwise/2D_8cliques_It5/#####.png
+ file_type png
+ first 46
+ last 50
+ checkHashOnRead false
+ version 126
+ name Write2
+ xpos 4156
+ ypos 889
+ postage_stamp true
+}
+push $Nfe9bc400
+Expression {
+ temp_name0 Rb
+ temp_expr0 0.3217
+ temp_name1 Gb
+ temp_expr1 0.6276
+ temp_name2 Bb
+ temp_expr2 0.5150
+ expr0 "(r - Rb)"
+ expr1 "(g - Gb)"
+ expr2 "(b - Bb)"
+ name remove_background3
+ xpos 4924
+ ypos 194
+}
+Expression {
+ temp_name0 R_gaus
+ temp_expr0 0.00193
+ temp_name1 G_gaus
+ temp_expr1 0.00021
+ temp_name2 B_gaus
+ temp_expr2 0.000251
+ expr0 r**2/R_gaus
+ expr1 g**2/G_gaus
+ expr2 b**2/B_gaus
+ name gaussian_distribution3
+ xpos 4924
+ ypos 248
+}
+set Nfeb20000 [stack 0]
+Expression {
+ temp_name0 Et
+ temp_expr0 60
+ expr0 "step(60, r + g + b)"
+ expr1 "step(60, r + g + b)"
+ expr2 "step(60, r + g + b)"
+ name Energy_threshold3
+ xpos 4924
+ ypos 311
+}
+set Nfeb20400 [stack 0]
+TimeOffset {
+ time ""
+ name TimeOffset2
+ xpos 4796
+ ypos 418
+}
+push $Nfeb20400
+push $Nfeb20000
+Expression {
+ expr0 r+g+b
+ channel1 {-rgba.red rgba.green -rgba.blue none}
+ expr1 r+g+b
+ channel2 {-rgba.red -rgba.green rgba.blue none}
+ expr2 r+g+b
+ name luminance3
+ xpos 5070
+ ypos 248
+}
+Dot {
+ name Dot31
+ xpos 5104
+ ypos 421
+}
+set Nfeb20c00 [stack 0]
+BlinkScript {
+ inputs 3
+ recompileCount 23
+ ProgramGroup 1
+ KernelDescription "2 \"MAP\" iterate componentWise 249f9c8bc31086021d691a228d11e5e118cc0ffb83ca65cd5a481dec773df2a5 4 \"src_benergy\" Read Point \"alpha\" Read Random \"prev_alpha\" Read Random \"dst_alpha\" Write Point 0 0 0"
+ kernelSource "kernel MAP : ImageComputationKernel<eComponentWise>\n\{\n  Image<eRead, eAccessPoint, eEdgeClamped> src_benergy; // the input image\n  Image<eRead, eAccessRandom, eEdgeClamped> alpha;\n\nImage<eRead, eAccessRandom, eEdgeClamped> prev_alpha;\n  Image<eWrite> dst_alpha;\n  \n  void process(int2 pos) \{\n    int x = pos.x;\n    int y = pos.y;\n\n    float lambda = 20.0f;\n    float El = src_benergy();\n\n    float Et = 60;\n\n    float Es_0 = 0;\n    for (int x_pos = -1; x_pos < 1; x_pos++)\{\n      for (int y_pos = -1; y_pos < 1; y_pos++)\{\n        if (x_pos != 0 && y_pos != 0)\{\n        int MRF_X = x + x_pos;\n        int MRF_Y = y + y_pos;\n        float current_point = alpha(MRF_X, MRF_Y);\n        float prev_point = prev_alpha(MRF_X, MRF_Y);\n        Es_0 += current_point + prev_point;\}      \n      \}\n    \}\n    float Es_1 = 0;\n    for (int x_pos = -1; x_pos < 1; x_pos++)\{\n      for (int y_pos = -1; y_pos < 1; y_pos++)\{\n        if (x_pos != 0 && y_pos != 0)\{\n        int MRF_X = x + x_pos;\n        int MRF_Y = y + y_pos;\n        float current_point = alpha(MRF_X, MRF_Y);\n        float prev_point = prev_alpha(MRF_X, MRF_Y);\n        Es_1 += fabs(current_point - 1.0f) + fabs(prev_point - 1.0f);\}      \n      \}\n    \}\n    \n    float E0 = El + lambda * Es_0;\n    float E1 = Et + lambda * Es_1;\n\n    if (E1 < E0)\n        \n        dst_alpha() = 1.0f;\n    else\n        dst_alpha() = 0.0f;\n        \n  \}\n    \n\};\n"
+ rebuild ""
+ rebuild_finalise ""
+ name MRF_3D_Iteration1
+ xpos 4924
+ ypos 412
+}
+set Nfeb21000 [stack 0]
+TimeOffset {
+ time ""
+ name TimeOffset3
+ xpos 4794
+ ypos 510
+}
+push $Nfeb21000
+push $Nfeb20c00
+Dot {
+ name Dot32
+ xpos 5104
+ ypos 513
+}
+set Nfeb21400 [stack 0]
+BlinkScript {
+ inputs 3
+ recompileCount 23
+ ProgramGroup 1
+ KernelDescription "2 \"MAP\" iterate componentWise 249f9c8bc31086021d691a228d11e5e118cc0ffb83ca65cd5a481dec773df2a5 4 \"src_benergy\" Read Point \"alpha\" Read Random \"prev_alpha\" Read Random \"dst_alpha\" Write Point 0 0 0"
+ kernelSource "kernel MAP : ImageComputationKernel<eComponentWise>\n\{\n  Image<eRead, eAccessPoint, eEdgeClamped> src_benergy; // the input image\n  Image<eRead, eAccessRandom, eEdgeClamped> alpha;\n\nImage<eRead, eAccessRandom, eEdgeClamped> prev_alpha;\n  Image<eWrite> dst_alpha;\n  \n  void process(int2 pos) \{\n    int x = pos.x;\n    int y = pos.y;\n\n    float lambda = 20.0f;\n    float El = src_benergy();\n\n    float Et = 60;\n\n    float Es_0 = 0;\n    for (int x_pos = -1; x_pos < 1; x_pos++)\{\n      for (int y_pos = -1; y_pos < 1; y_pos++)\{\n        if (x_pos != 0 && y_pos != 0)\{\n        int MRF_X = x + x_pos;\n        int MRF_Y = y + y_pos;\n        float current_point = alpha(MRF_X, MRF_Y);\n        float prev_point = prev_alpha(MRF_X, MRF_Y);\n        Es_0 += current_point + prev_point;\}      \n      \}\n    \}\n    float Es_1 = 0;\n    for (int x_pos = -1; x_pos < 1; x_pos++)\{\n      for (int y_pos = -1; y_pos < 1; y_pos++)\{\n        if (x_pos != 0 && y_pos != 0)\{\n        int MRF_X = x + x_pos;\n        int MRF_Y = y + y_pos;\n        float current_point = alpha(MRF_X, MRF_Y);\n        float prev_point = prev_alpha(MRF_X, MRF_Y);\n        Es_1 += fabs(current_point - 1.0f) + fabs(prev_point - 1.0f);\}      \n      \}\n    \}\n    \n    float E0 = El + lambda * Es_0;\n    float E1 = Et + lambda * Es_1;\n\n    if (E1 < E0)\n        \n        dst_alpha() = 1.0f;\n    else\n        dst_alpha() = 0.0f;\n        \n  \}\n    \n\};\n"
+ rebuild ""
+ rebuild_finalise ""
+ name MRF_3D_Iteration2
+ xpos 4924
+ ypos 504
+}
+set Nfeb21800 [stack 0]
+TimeOffset {
+ time ""
+ name TimeOffset4
+ xpos 4794
+ ypos 580
+}
+push $Nfeb21800
+push $Nfeb21400
+Dot {
+ name Dot33
+ xpos 5104
+ ypos 583
+}
+set Nfeb21c00 [stack 0]
+BlinkScript {
+ inputs 3
+ recompileCount 23
+ ProgramGroup 1
+ KernelDescription "2 \"MAP\" iterate componentWise 249f9c8bc31086021d691a228d11e5e118cc0ffb83ca65cd5a481dec773df2a5 4 \"src_benergy\" Read Point \"alpha\" Read Random \"prev_alpha\" Read Random \"dst_alpha\" Write Point 0 0 0"
+ kernelSource "kernel MAP : ImageComputationKernel<eComponentWise>\n\{\n  Image<eRead, eAccessPoint, eEdgeClamped> src_benergy; // the input image\n  Image<eRead, eAccessRandom, eEdgeClamped> alpha;\n\nImage<eRead, eAccessRandom, eEdgeClamped> prev_alpha;\n  Image<eWrite> dst_alpha;\n  \n  void process(int2 pos) \{\n    int x = pos.x;\n    int y = pos.y;\n\n    float lambda = 20.0f;\n    float El = src_benergy();\n\n    float Et = 60;\n\n    float Es_0 = 0;\n    for (int x_pos = -1; x_pos < 1; x_pos++)\{\n      for (int y_pos = -1; y_pos < 1; y_pos++)\{\n        if (x_pos != 0 && y_pos != 0)\{\n        int MRF_X = x + x_pos;\n        int MRF_Y = y + y_pos;\n        float current_point = alpha(MRF_X, MRF_Y);\n        float prev_point = prev_alpha(MRF_X, MRF_Y);\n        Es_0 += current_point + prev_point;\}      \n      \}\n    \}\n    float Es_1 = 0;\n    for (int x_pos = -1; x_pos < 1; x_pos++)\{\n      for (int y_pos = -1; y_pos < 1; y_pos++)\{\n        if (x_pos != 0 && y_pos != 0)\{\n        int MRF_X = x + x_pos;\n        int MRF_Y = y + y_pos;\n        float current_point = alpha(MRF_X, MRF_Y);\n        float prev_point = prev_alpha(MRF_X, MRF_Y);\n        Es_1 += fabs(current_point - 1.0f) + fabs(prev_point - 1.0f);\}      \n      \}\n    \}\n    \n    float E0 = El + lambda * Es_0;\n    float E1 = Et + lambda * Es_1;\n\n    if (E1 < E0)\n        \n        dst_alpha() = 1.0f;\n    else\n        dst_alpha() = 0.0f;\n        \n  \}\n    \n\};\n"
+ rebuild ""
+ rebuild_finalise ""
+ name MRF_3D_Iteration3
+ xpos 4924
+ ypos 574
+}
+set Nfeb6c000 [stack 0]
+TimeOffset {
+ time ""
+ name TimeOffset5
+ xpos 4794
+ ypos 644
+}
+push $Nfeb6c000
+push $Nfeb21c00
+Dot {
+ name Dot34
+ xpos 5104
+ ypos 647
+}
+set Nfeb6c400 [stack 0]
+BlinkScript {
+ inputs 3
+ recompileCount 23
+ ProgramGroup 1
+ KernelDescription "2 \"MAP\" iterate componentWise 249f9c8bc31086021d691a228d11e5e118cc0ffb83ca65cd5a481dec773df2a5 4 \"src_benergy\" Read Point \"alpha\" Read Random \"prev_alpha\" Read Random \"dst_alpha\" Write Point 0 0 0"
+ kernelSource "kernel MAP : ImageComputationKernel<eComponentWise>\n\{\n  Image<eRead, eAccessPoint, eEdgeClamped> src_benergy; // the input image\n  Image<eRead, eAccessRandom, eEdgeClamped> alpha;\n\nImage<eRead, eAccessRandom, eEdgeClamped> prev_alpha;\n  Image<eWrite> dst_alpha;\n  \n  void process(int2 pos) \{\n    int x = pos.x;\n    int y = pos.y;\n\n    float lambda = 20.0f;\n    float El = src_benergy();\n\n    float Et = 60;\n\n    float Es_0 = 0;\n    for (int x_pos = -1; x_pos < 1; x_pos++)\{\n      for (int y_pos = -1; y_pos < 1; y_pos++)\{\n        if (x_pos != 0 && y_pos != 0)\{\n        int MRF_X = x + x_pos;\n        int MRF_Y = y + y_pos;\n        float current_point = alpha(MRF_X, MRF_Y);\n        float prev_point = prev_alpha(MRF_X, MRF_Y);\n        Es_0 += current_point + prev_point;\}      \n      \}\n    \}\n    float Es_1 = 0;\n    for (int x_pos = -1; x_pos < 1; x_pos++)\{\n      for (int y_pos = -1; y_pos < 1; y_pos++)\{\n        if (x_pos != 0 && y_pos != 0)\{\n        int MRF_X = x + x_pos;\n        int MRF_Y = y + y_pos;\n        float current_point = alpha(MRF_X, MRF_Y);\n        float prev_point = prev_alpha(MRF_X, MRF_Y);\n        Es_1 += fabs(current_point - 1.0f) + fabs(prev_point - 1.0f);\}      \n      \}\n    \}\n    \n    float E0 = El + lambda * Es_0;\n    float E1 = Et + lambda * Es_1;\n\n    if (E1 < E0)\n        \n        dst_alpha() = 1.0f;\n    else\n        dst_alpha() = 0.0f;\n        \n  \}\n    \n\};\n"
+ rebuild ""
+ rebuild_finalise ""
+ name MRF_3D_Iteration4
+ xpos 4924
+ ypos 638
+}
+set Nfeb6c800 [stack 0]
+TimeOffset {
+ time ""
+ name TimeOffset6
+ xpos 4794
+ ypos 716
+}
+push $Nfeb6c800
+push $Nfeb6c400
+Dot {
+ name Dot42
+ xpos 5104
+ ypos 719
+}
+set Nfeb6cc00 [stack 0]
+BlinkScript {
+ inputs 3
+ recompileCount 23
+ ProgramGroup 1
+ KernelDescription "2 \"MAP\" iterate componentWise 249f9c8bc31086021d691a228d11e5e118cc0ffb83ca65cd5a481dec773df2a5 4 \"src_benergy\" Read Point \"alpha\" Read Random \"prev_alpha\" Read Random \"dst_alpha\" Write Point 0 0 0"
+ kernelSource "kernel MAP : ImageComputationKernel<eComponentWise>\n\{\n  Image<eRead, eAccessPoint, eEdgeClamped> src_benergy; // the input image\n  Image<eRead, eAccessRandom, eEdgeClamped> alpha;\n\nImage<eRead, eAccessRandom, eEdgeClamped> prev_alpha;\n  Image<eWrite> dst_alpha;\n  \n  void process(int2 pos) \{\n    int x = pos.x;\n    int y = pos.y;\n\n    float lambda = 20.0f;\n    float El = src_benergy();\n\n    float Et = 60;\n\n    float Es_0 = 0;\n    for (int x_pos = -1; x_pos < 1; x_pos++)\{\n      for (int y_pos = -1; y_pos < 1; y_pos++)\{\n        if (x_pos != 0 && y_pos != 0)\{\n        int MRF_X = x + x_pos;\n        int MRF_Y = y + y_pos;\n        float current_point = alpha(MRF_X, MRF_Y);\n        float prev_point = prev_alpha(MRF_X, MRF_Y);\n        Es_0 += current_point + prev_point;\}      \n      \}\n    \}\n    float Es_1 = 0;\n    for (int x_pos = -1; x_pos < 1; x_pos++)\{\n      for (int y_pos = -1; y_pos < 1; y_pos++)\{\n        if (x_pos != 0 && y_pos != 0)\{\n        int MRF_X = x + x_pos;\n        int MRF_Y = y + y_pos;\n        float current_point = alpha(MRF_X, MRF_Y);\n        float prev_point = prev_alpha(MRF_X, MRF_Y);\n        Es_1 += fabs(current_point - 1.0f) + fabs(prev_point - 1.0f);\}      \n      \}\n    \}\n    \n    float E0 = El + lambda * Es_0;\n    float E1 = Et + lambda * Es_1;\n\n    if (E1 < E0)\n        \n        dst_alpha() = 1.0f;\n    else\n        dst_alpha() = 0.0f;\n        \n  \}\n    \n\};\n"
+ rebuild ""
+ rebuild_finalise ""
+ name MRF_3D_Iteration5
+ xpos 4924
+ ypos 710
+}
+set Nfeb6d000 [stack 0]
+TimeOffset {
+ time ""
+ name TimeOffset15
+ xpos 4794
+ ypos 794
+}
+push $Nfeb6d000
+push $Nfeb6cc00
+Dot {
+ name Dot43
+ xpos 5104
+ ypos 797
+}
+set Nfeb6d400 [stack 0]
+BlinkScript {
+ inputs 3
+ recompileCount 23
+ ProgramGroup 1
+ KernelDescription "2 \"MAP\" iterate componentWise 249f9c8bc31086021d691a228d11e5e118cc0ffb83ca65cd5a481dec773df2a5 4 \"src_benergy\" Read Point \"alpha\" Read Random \"prev_alpha\" Read Random \"dst_alpha\" Write Point 0 0 0"
+ kernelSource "kernel MAP : ImageComputationKernel<eComponentWise>\n\{\n  Image<eRead, eAccessPoint, eEdgeClamped> src_benergy; // the input image\n  Image<eRead, eAccessRandom, eEdgeClamped> alpha;\n\nImage<eRead, eAccessRandom, eEdgeClamped> prev_alpha;\n  Image<eWrite> dst_alpha;\n  \n  void process(int2 pos) \{\n    int x = pos.x;\n    int y = pos.y;\n\n    float lambda = 20.0f;\n    float El = src_benergy();\n\n    float Et = 60;\n\n    float Es_0 = 0;\n    for (int x_pos = -1; x_pos < 1; x_pos++)\{\n      for (int y_pos = -1; y_pos < 1; y_pos++)\{\n        if (x_pos != 0 && y_pos != 0)\{\n        int MRF_X = x + x_pos;\n        int MRF_Y = y + y_pos;\n        float current_point = alpha(MRF_X, MRF_Y);\n        float prev_point = prev_alpha(MRF_X, MRF_Y);\n        Es_0 += current_point + prev_point;\}      \n      \}\n    \}\n    float Es_1 = 0;\n    for (int x_pos = -1; x_pos < 1; x_pos++)\{\n      for (int y_pos = -1; y_pos < 1; y_pos++)\{\n        if (x_pos != 0 && y_pos != 0)\{\n        int MRF_X = x + x_pos;\n        int MRF_Y = y + y_pos;\n        float current_point = alpha(MRF_X, MRF_Y);\n        float prev_point = prev_alpha(MRF_X, MRF_Y);\n        Es_1 += fabs(current_point - 1.0f) + fabs(prev_point - 1.0f);\}      \n      \}\n    \}\n    \n    float E0 = El + lambda * Es_0;\n    float E1 = Et + lambda * Es_1;\n\n    if (E1 < E0)\n        \n        dst_alpha() = 1.0f;\n    else\n        dst_alpha() = 0.0f;\n        \n  \}\n    \n\};\n"
+ rebuild ""
+ rebuild_finalise ""
+ name MRF_3D_Iteration6
+ xpos 4924
+ ypos 788
+}
+set Nfeb6d800 [stack 0]
+TimeOffset {
+ time ""
+ name TimeOffset16
+ xpos 4794
+ ypos 876
+}
+push $Nfeb6d800
+push $Nfeb6d400
+Dot {
+ name Dot44
+ xpos 5104
+ ypos 879
+}
+set Nfeb6dc00 [stack 0]
+BlinkScript {
+ inputs 3
+ recompileCount 23
+ ProgramGroup 1
+ KernelDescription "2 \"MAP\" iterate componentWise 249f9c8bc31086021d691a228d11e5e118cc0ffb83ca65cd5a481dec773df2a5 4 \"src_benergy\" Read Point \"alpha\" Read Random \"prev_alpha\" Read Random \"dst_alpha\" Write Point 0 0 0"
+ kernelSource "kernel MAP : ImageComputationKernel<eComponentWise>\n\{\n  Image<eRead, eAccessPoint, eEdgeClamped> src_benergy; // the input image\n  Image<eRead, eAccessRandom, eEdgeClamped> alpha;\n\nImage<eRead, eAccessRandom, eEdgeClamped> prev_alpha;\n  Image<eWrite> dst_alpha;\n  \n  void process(int2 pos) \{\n    int x = pos.x;\n    int y = pos.y;\n\n    float lambda = 20.0f;\n    float El = src_benergy();\n\n    float Et = 60;\n\n    float Es_0 = 0;\n    for (int x_pos = -1; x_pos < 1; x_pos++)\{\n      for (int y_pos = -1; y_pos < 1; y_pos++)\{\n        if (x_pos != 0 && y_pos != 0)\{\n        int MRF_X = x + x_pos;\n        int MRF_Y = y + y_pos;\n        float current_point = alpha(MRF_X, MRF_Y);\n        float prev_point = prev_alpha(MRF_X, MRF_Y);\n        Es_0 += current_point + prev_point;\}      \n      \}\n    \}\n    float Es_1 = 0;\n    for (int x_pos = -1; x_pos < 1; x_pos++)\{\n      for (int y_pos = -1; y_pos < 1; y_pos++)\{\n        if (x_pos != 0 && y_pos != 0)\{\n        int MRF_X = x + x_pos;\n        int MRF_Y = y + y_pos;\n        float current_point = alpha(MRF_X, MRF_Y);\n        float prev_point = prev_alpha(MRF_X, MRF_Y);\n        Es_1 += fabs(current_point - 1.0f) + fabs(prev_point - 1.0f);\}      \n      \}\n    \}\n    \n    float E0 = El + lambda * Es_0;\n    float E1 = Et + lambda * Es_1;\n\n    if (E1 < E0)\n        \n        dst_alpha() = 1.0f;\n    else\n        dst_alpha() = 0.0f;\n        \n  \}\n    \n\};\n"
+ rebuild ""
+ rebuild_finalise ""
+ name MRF_3D_Iteration7
+ xpos 4924
+ ypos 870
+}
+set Nfebb2000 [stack 0]
+TimeOffset {
+ time ""
+ name TimeOffset17
+ xpos 4795
+ ypos 959
+}
+push $Nfebb2000
+push $Nfeb6dc00
+Dot {
+ name Dot45
+ xpos 5105
+ ypos 962
+}
+set Nfebb2400 [stack 0]
+BlinkScript {
+ inputs 3
+ recompileCount 23
+ ProgramGroup 1
+ KernelDescription "2 \"MAP\" iterate componentWise 249f9c8bc31086021d691a228d11e5e118cc0ffb83ca65cd5a481dec773df2a5 4 \"src_benergy\" Read Point \"alpha\" Read Random \"prev_alpha\" Read Random \"dst_alpha\" Write Point 0 0 0"
+ kernelSource "kernel MAP : ImageComputationKernel<eComponentWise>\n\{\n  Image<eRead, eAccessPoint, eEdgeClamped> src_benergy; // the input image\n  Image<eRead, eAccessRandom, eEdgeClamped> alpha;\n\nImage<eRead, eAccessRandom, eEdgeClamped> prev_alpha;\n  Image<eWrite> dst_alpha;\n  \n  void process(int2 pos) \{\n    int x = pos.x;\n    int y = pos.y;\n\n    float lambda = 20.0f;\n    float El = src_benergy();\n\n    float Et = 60;\n\n    float Es_0 = 0;\n    for (int x_pos = -1; x_pos < 1; x_pos++)\{\n      for (int y_pos = -1; y_pos < 1; y_pos++)\{\n        if (x_pos != 0 && y_pos != 0)\{\n        int MRF_X = x + x_pos;\n        int MRF_Y = y + y_pos;\n        float current_point = alpha(MRF_X, MRF_Y);\n        float prev_point = prev_alpha(MRF_X, MRF_Y);\n        Es_0 += current_point + prev_point;\}      \n      \}\n    \}\n    float Es_1 = 0;\n    for (int x_pos = -1; x_pos < 1; x_pos++)\{\n      for (int y_pos = -1; y_pos < 1; y_pos++)\{\n        if (x_pos != 0 && y_pos != 0)\{\n        int MRF_X = x + x_pos;\n        int MRF_Y = y + y_pos;\n        float current_point = alpha(MRF_X, MRF_Y);\n        float prev_point = prev_alpha(MRF_X, MRF_Y);\n        Es_1 += fabs(current_point - 1.0f) + fabs(prev_point - 1.0f);\}      \n      \}\n    \}\n    \n    float E0 = El + lambda * Es_0;\n    float E1 = Et + lambda * Es_1;\n\n    if (E1 < E0)\n        \n        dst_alpha() = 1.0f;\n    else\n        dst_alpha() = 0.0f;\n        \n  \}\n    \n\};\n"
+ rebuild ""
+ rebuild_finalise ""
+ name MRF_3D_Iteration8
+ xpos 4925
+ ypos 953
+}
+set Nfebb2800 [stack 0]
+TimeOffset {
+ time ""
+ name TimeOffset18
+ xpos 4795
+ ypos 1026
+}
+push $Nfebb2800
+push $Nfebb2400
+Dot {
+ name Dot46
+ xpos 5105
+ ypos 1029
+}
+set Nfebb2c00 [stack 0]
+BlinkScript {
+ inputs 3
+ recompileCount 22
+ ProgramGroup 1
+ KernelDescription "2 \"MAP\" iterate componentWise 249f9c8bc31086021d691a228d11e5e118cc0ffb83ca65cd5a481dec773df2a5 4 \"src_benergy\" Read Point \"alpha\" Read Random \"prev_alpha\" Read Random \"dst_alpha\" Write Point 0 0 0"
+ kernelSource "kernel MAP : ImageComputationKernel<eComponentWise>\n\{\n  Image<eRead, eAccessPoint, eEdgeClamped> src_benergy; // the input image\n  Image<eRead, eAccessRandom, eEdgeClamped> alpha;\n\nImage<eRead, eAccessRandom, eEdgeClamped> prev_alpha;\n  Image<eWrite> dst_alpha;\n  \n  void process(int2 pos) \{\n    int x = pos.x;\n    int y = pos.y;\n\n    float lambda = 20.0f;\n    float El = src_benergy();\n\n    float Et = 60;\n\n    float Es_0 = 0;\n    for (int x_pos = -1; x_pos < 1; x_pos++)\{\n      for (int y_pos = -1; y_pos < 1; y_pos++)\{\n        if (x_pos != 0 && y_pos != 0)\{\n        int MRF_X = x + x_pos;\n        int MRF_Y = y + y_pos;\n        float current_point = alpha(MRF_X, MRF_Y);\n        float prev_point = prev_alpha(MRF_X, MRF_Y);\n        Es_0 += current_point + prev_point;\}      \n      \}\n    \}\n    float Es_1 = 0;\n    for (int x_pos = -1; x_pos < 1; x_pos++)\{\n      for (int y_pos = -1; y_pos < 1; y_pos++)\{\n        if (x_pos != 0 && y_pos != 0)\{\n        int MRF_X = x + x_pos;\n        int MRF_Y = y + y_pos;\n        float current_point = alpha(MRF_X, MRF_Y);\n        float prev_point = prev_alpha(MRF_X, MRF_Y);\n        Es_1 += fabs(current_point - 1.0f) + fabs(prev_point - 1.0f);\}      \n      \}\n    \}\n    \n    float E0 = El + lambda * Es_0;\n    float E1 = Et + lambda * Es_1;\n\n    if (E1 < E0)\n        \n        dst_alpha() = 1.0f;\n    else\n        dst_alpha() = 0.0f;\n        \n  \}\n    \n\};\n"
+ rebuild ""
+ rebuild_finalise ""
+ name MRF_3D_Iteration9
+ xpos 4925
+ ypos 1020
+}
+set Nfebb3000 [stack 0]
+TimeOffset {
+ time ""
+ name TimeOffset19
+ xpos 4795
+ ypos 1101
+}
+push $Nfebb3000
+push $Nfebb2c00
+Dot {
+ name Dot47
+ xpos 5105
+ ypos 1104
+}
+BlinkScript {
+ inputs 3
+ recompileCount 22
+ ProgramGroup 1
+ KernelDescription "2 \"MAP\" iterate componentWise 249f9c8bc31086021d691a228d11e5e118cc0ffb83ca65cd5a481dec773df2a5 4 \"src_benergy\" Read Point \"alpha\" Read Random \"prev_alpha\" Read Random \"dst_alpha\" Write Point 0 0 0"
+ kernelSource "kernel MAP : ImageComputationKernel<eComponentWise>\n\{\n  Image<eRead, eAccessPoint, eEdgeClamped> src_benergy; // the input image\n  Image<eRead, eAccessRandom, eEdgeClamped> alpha;\n\nImage<eRead, eAccessRandom, eEdgeClamped> prev_alpha;\n  Image<eWrite> dst_alpha;\n  \n  void process(int2 pos) \{\n    int x = pos.x;\n    int y = pos.y;\n\n    float lambda = 20.0f;\n    float El = src_benergy();\n\n    float Et = 60;\n\n    float Es_0 = 0;\n    for (int x_pos = -1; x_pos < 1; x_pos++)\{\n      for (int y_pos = -1; y_pos < 1; y_pos++)\{\n        if (x_pos != 0 && y_pos != 0)\{\n        int MRF_X = x + x_pos;\n        int MRF_Y = y + y_pos;\n        float current_point = alpha(MRF_X, MRF_Y);\n        float prev_point = prev_alpha(MRF_X, MRF_Y);\n        Es_0 += current_point + prev_point;\}      \n      \}\n    \}\n    float Es_1 = 0;\n    for (int x_pos = -1; x_pos < 1; x_pos++)\{\n      for (int y_pos = -1; y_pos < 1; y_pos++)\{\n        if (x_pos != 0 && y_pos != 0)\{\n        int MRF_X = x + x_pos;\n        int MRF_Y = y + y_pos;\n        float current_point = alpha(MRF_X, MRF_Y);\n        float prev_point = prev_alpha(MRF_X, MRF_Y);\n        Es_1 += fabs(current_point - 1.0f) + fabs(prev_point - 1.0f);\}      \n      \}\n    \}\n    \n    float E0 = El + lambda * Es_0;\n    float E1 = Et + lambda * Es_1;\n\n    if (E1 < E0)\n        \n        dst_alpha() = 1.0f;\n    else\n        dst_alpha() = 0.0f;\n        \n  \}\n    \n\};\n"
+ rebuild ""
+ rebuild_finalise ""
+ name MRF_3D_Iteration10
+ xpos 4925
+ ypos 1095
+}
+set Nfebb3800 [stack 0]
+Write {
+ file D:/DESKTOP/Motion/Haohan_Zhu/8pairwise/3D_8Cliques_it10/#####.png
+ file_type png
+ checkHashOnRead false
+ in_colorspace scene_linear
+ out_colorspace scene_linear
+ name Write4
+ xpos 4687
+ ypos 1168
+}
+push $Nfeb6d000
+Write {
+ file D:/DESKTOP/Motion/Haohan_Zhu/8pairwise/3D_8Cliques_it5/#####.png
+ file_type png
+ first 46
+ last 50
+ checkHashOnRead false
+ version 126
+ name Write3
+ xpos 4694
+ ypos 761
+ postage_stamp true
+}
+push $Nfea5cc00
+Write {
+ file D:/DESKTOP/Motion/Haohan_Zhu/8pairwise/3D_8Cliques_MC_it5/#####.png
+ file_type png
+ first 46
+ last 50
+ checkHashOnRead false
+ version 126
+ name Write5
+ xpos 5167
+ ypos 813
+ postage_stamp true
+}
+push $Nfea9f400
+Write {
+ file D:/DESKTOP/Motion/Haohan_Zhu/8pairwise/3D_8Cliques_MC_it10/#####.png
+ file_type png
+ first 46
+ last 50
+ checkHashOnRead false
+ version 126
+ name Write6
+ xpos 5169
+ ypos 1043
+ postage_stamp true
+}
+push $Nfee38c00
+Dot {
+ name Dot9
+ xpos 7279
+ ypos 82
+}
+Expression {
+ temp_name0 Rb
+ temp_expr0 0.3217
+ temp_name1 Gb
+ temp_expr1 0.6276
+ temp_name2 Bb
+ temp_expr2 0.5150
+ expr0 "(r - Rb)"
+ expr1 "(g - Gb)"
+ expr2 "(b - Bb)"
+ name remove_background5
+ xpos 7245
+ ypos 173
+}
+Expression {
+ temp_name0 R_gaus
+ temp_expr0 0.00193
+ temp_name1 G_gaus
+ temp_expr1 0.00021
+ temp_name2 B_gaus
+ temp_expr2 0.000251
+ expr0 r**2/R_gaus
+ expr1 g**2/G_gaus
+ expr2 b**2/B_gaus
+ name gaussian_distribution5
+ xpos 7245
+ ypos 227
+}
+set Nfee39800 [stack 0]
+Expression {
+ temp_name0 Et
+ temp_expr0 60
+ expr0 "step(60, r + g + b)"
+ expr1 "step(60, r + g + b)"
+ expr2 "step(60, r + g + b)"
+ name Energy_threshold5
+ xpos 7245
+ ypos 290
+}
+set Nfee39c00 [stack 0]
+TimeOffset {
+ time ""
+ name TimeOffset1
+ xpos 7245
+ ypos 384
+}
+push $Nfee39c00
+VectorGenerator {
+ motionEstimation Regularized
+ name VectorGenerator1
+ xpos 7363
+ ypos 377
+}
+ShuffleCopy {
+ inputs 2
+ in2 motion
+ red red
+ green green
+ blue blue
+ black blue2
+ white alpha2
+ out2 backward
+ name ShuffleCopy1
+ xpos 7321
+ ypos 471
+}
+IDistort {
+ uv backward
+ filter Simon
+ name IDistort2
+ xpos 7321
+ ypos 519
+}
+set Nfee90800 [stack 0]
+TimeOffset {
+ time ""
+ name TimeOffset7
+ xpos 7193
+ ypos 585
+}
+push $Nfee90800
+push $Nfee39800
+Expression {
+ expr0 r+g+b
+ channel1 {-rgba.red rgba.green -rgba.blue none}
+ expr1 r+g+b
+ channel2 {-rgba.red -rgba.green rgba.blue none}
+ expr2 r+g+b
+ name luminance5
+ xpos 7467
+ ypos 227
+}
+Dot {
+ name Dot10
+ xpos 7501
+ ypos 588
+}
+set Nfee91000 [stack 0]
+BlinkScript {
+ inputs 3
+ recompileCount 23
+ ProgramGroup 1
+ KernelDescription "2 \"MAP\" iterate componentWise 4394dc0ac07de9e76b346a3681933f2714703ff0618f1611d7b9814cd0d68e37 4 \"src_benergy\" Read Point \"alpha\" Read Random \"prev_alpha\" Read Random \"dst_alpha\" Write Point 0 0 0"
+ kernelSource "kernel MAP : ImageComputationKernel<eComponentWise>\n\{\n  Image<eRead, eAccessPoint, eEdgeClamped> src_benergy; // the input image\n  Image<eRead, eAccessRandom, eEdgeClamped> alpha;\n\nImage<eRead, eAccessRandom, eEdgeClamped> prev_alpha;\n  Image<eWrite> dst_alpha;\n  \n  void process(int2 pos) \{\n    int x = pos.x;\n    int y = pos.y;\n\n    float lambda = 20.0f;\n    float El = src_benergy();\n\n    float Et = 60;\n\n    float Es_0 = 0;\n    for (int x_pos = -1; x_pos < 1; x_pos++)\{\n      for (int y_pos = -1; y_pos < 1; y_pos++)\{\n        if ((x_pos == -1 && y_pos ==0)||(x_pos == 1 && y_pos ==0)||(x_pos == 0 && y_pos == -1)||(x_pos == 0 && y_pos ==1))\{\n        int MRF_X = x + x_pos;\n        int MRF_Y = y + y_pos;\n        float current_point = alpha(MRF_X, MRF_Y);\n        float prev_point = prev_alpha(MRF_X, MRF_Y);\n        Es_0 += current_point + prev_point;\}      \n      \}\n    \}\n    float Es_1 = 0;\n    for (int x_pos = -1; x_pos < 1; x_pos++)\{\n      for (int y_pos = -1; y_pos < 1; y_pos++)\{\n        if ((x_pos == -1 && y_pos ==0)||(x_pos == 1 && y_pos ==0)||(x_pos == 0 && y_pos == -1)||(x_pos == 0 && y_pos ==1))\{\n        int MRF_X = x + x_pos;\n        int MRF_Y = y + y_pos;\n        float current_point = alpha(MRF_X, MRF_Y);\n        float prev_point = prev_alpha(MRF_X, MRF_Y);\n        Es_1 += fabs(current_point - 1.0f) + fabs(prev_point - 1.0f);\}      \n      \}\n    \}\n    \n    float E0 = El + lambda * Es_0;\n    float E1 = Et + lambda * Es_1;\n\n    if (E1 < E0)\n        \n        dst_alpha() = 1.0f;\n    else\n        dst_alpha() = 0.0f;\n        \n  \}\n    \n\};\n"
+ rebuild ""
+ rebuild_finalise ""
+ name MC_and_MRF_3D_Iteration11
+ xpos 7321
+ ypos 579
+}
+set Nfee91400 [stack 0]
+TimeOffset {
+ time ""
+ name TimeOffset8
+ xpos 7197
+ ypos 652
+}
+push $Nfee91400
+push $Nfee91000
+Dot {
+ name Dot11
+ xpos 7501
+ ypos 655
+}
+set Nfee91800 [stack 0]
+BlinkScript {
+ inputs 3
+ recompileCount 23
+ ProgramGroup 1
+ KernelDescription "2 \"MAP\" iterate componentWise 4394dc0ac07de9e76b346a3681933f2714703ff0618f1611d7b9814cd0d68e37 4 \"src_benergy\" Read Point \"alpha\" Read Random \"prev_alpha\" Read Random \"dst_alpha\" Write Point 0 0 0"
+ kernelSource "kernel MAP : ImageComputationKernel<eComponentWise>\n\{\n  Image<eRead, eAccessPoint, eEdgeClamped> src_benergy; // the input image\n  Image<eRead, eAccessRandom, eEdgeClamped> alpha;\n\nImage<eRead, eAccessRandom, eEdgeClamped> prev_alpha;\n  Image<eWrite> dst_alpha;\n  \n  void process(int2 pos) \{\n    int x = pos.x;\n    int y = pos.y;\n\n    float lambda = 20.0f;\n    float El = src_benergy();\n\n    float Et = 60;\n\n    float Es_0 = 0;\n    for (int x_pos = -1; x_pos < 1; x_pos++)\{\n      for (int y_pos = -1; y_pos < 1; y_pos++)\{\n        if ((x_pos == -1 && y_pos ==0)||(x_pos == 1 && y_pos ==0)||(x_pos == 0 && y_pos == -1)||(x_pos == 0 && y_pos ==1))\{\n        int MRF_X = x + x_pos;\n        int MRF_Y = y + y_pos;\n        float current_point = alpha(MRF_X, MRF_Y);\n        float prev_point = prev_alpha(MRF_X, MRF_Y);\n        Es_0 += current_point + prev_point;\}      \n      \}\n    \}\n    float Es_1 = 0;\n    for (int x_pos = -1; x_pos < 1; x_pos++)\{\n      for (int y_pos = -1; y_pos < 1; y_pos++)\{\n        if ((x_pos == -1 && y_pos ==0)||(x_pos == 1 && y_pos ==0)||(x_pos == 0 && y_pos == -1)||(x_pos == 0 && y_pos ==1))\{\n        int MRF_X = x + x_pos;\n        int MRF_Y = y + y_pos;\n        float current_point = alpha(MRF_X, MRF_Y);\n        float prev_point = prev_alpha(MRF_X, MRF_Y);\n        Es_1 += fabs(current_point - 1.0f) + fabs(prev_point - 1.0f);\}      \n      \}\n    \}\n    \n    float E0 = El + lambda * Es_0;\n    float E1 = Et + lambda * Es_1;\n\n    if (E1 < E0)\n        \n        dst_alpha() = 1.0f;\n    else\n        dst_alpha() = 0.0f;\n        \n  \}\n    \n\};\n"
+ rebuild ""
+ rebuild_finalise ""
+ name MC_and_MRF_3D_Iteration12
+ xpos 7321
+ ypos 646
+}
+set Nfee91c00 [stack 0]
+TimeOffset {
+ time ""
+ name TimeOffset9
+ xpos 7192
+ ypos 713
+}
+push $Nfee91c00
+push $Nfee91800
+Dot {
+ name Dot12
+ xpos 7501
+ ypos 716
+}
+set Nfeee2000 [stack 0]
+BlinkScript {
+ inputs 3
+ recompileCount 23
+ ProgramGroup 1
+ KernelDescription "2 \"MAP\" iterate componentWise 4394dc0ac07de9e76b346a3681933f2714703ff0618f1611d7b9814cd0d68e37 4 \"src_benergy\" Read Point \"alpha\" Read Random \"prev_alpha\" Read Random \"dst_alpha\" Write Point 0 0 0"
+ kernelSource "kernel MAP : ImageComputationKernel<eComponentWise>\n\{\n  Image<eRead, eAccessPoint, eEdgeClamped> src_benergy; // the input image\n  Image<eRead, eAccessRandom, eEdgeClamped> alpha;\n\nImage<eRead, eAccessRandom, eEdgeClamped> prev_alpha;\n  Image<eWrite> dst_alpha;\n  \n  void process(int2 pos) \{\n    int x = pos.x;\n    int y = pos.y;\n\n    float lambda = 20.0f;\n    float El = src_benergy();\n\n    float Et = 60;\n\n    float Es_0 = 0;\n    for (int x_pos = -1; x_pos < 1; x_pos++)\{\n      for (int y_pos = -1; y_pos < 1; y_pos++)\{\n        if ((x_pos == -1 && y_pos ==0)||(x_pos == 1 && y_pos ==0)||(x_pos == 0 && y_pos == -1)||(x_pos == 0 && y_pos ==1))\{\n        int MRF_X = x + x_pos;\n        int MRF_Y = y + y_pos;\n        float current_point = alpha(MRF_X, MRF_Y);\n        float prev_point = prev_alpha(MRF_X, MRF_Y);\n        Es_0 += current_point + prev_point;\}      \n      \}\n    \}\n    float Es_1 = 0;\n    for (int x_pos = -1; x_pos < 1; x_pos++)\{\n      for (int y_pos = -1; y_pos < 1; y_pos++)\{\n        if ((x_pos == -1 && y_pos ==0)||(x_pos == 1 && y_pos ==0)||(x_pos == 0 && y_pos == -1)||(x_pos == 0 && y_pos ==1))\{\n        int MRF_X = x + x_pos;\n        int MRF_Y = y + y_pos;\n        float current_point = alpha(MRF_X, MRF_Y);\n        float prev_point = prev_alpha(MRF_X, MRF_Y);\n        Es_1 += fabs(current_point - 1.0f) + fabs(prev_point - 1.0f);\}      \n      \}\n    \}\n    \n    float E0 = El + lambda * Es_0;\n    float E1 = Et + lambda * Es_1;\n\n    if (E1 < E0)\n        \n        dst_alpha() = 1.0f;\n    else\n        dst_alpha() = 0.0f;\n        \n  \}\n    \n\};\n"
+ rebuild ""
+ rebuild_finalise ""
+ name MC_and_MRF_3D_Iteration13
+ xpos 7321
+ ypos 707
+}
+set Nfeee2400 [stack 0]
+TimeOffset {
+ time ""
+ name TimeOffset10
+ xpos 7198
+ ypos 782
+}
+push $Nfeee2400
+push $Nfeee2000
+Dot {
+ name Dot13
+ xpos 7501
+ ypos 785
+}
+set Nfeee2800 [stack 0]
+BlinkScript {
+ inputs 3
+ recompileCount 23
+ ProgramGroup 1
+ KernelDescription "2 \"MAP\" iterate componentWise 4394dc0ac07de9e76b346a3681933f2714703ff0618f1611d7b9814cd0d68e37 4 \"src_benergy\" Read Point \"alpha\" Read Random \"prev_alpha\" Read Random \"dst_alpha\" Write Point 0 0 0"
+ kernelSource "kernel MAP : ImageComputationKernel<eComponentWise>\n\{\n  Image<eRead, eAccessPoint, eEdgeClamped> src_benergy; // the input image\n  Image<eRead, eAccessRandom, eEdgeClamped> alpha;\n\nImage<eRead, eAccessRandom, eEdgeClamped> prev_alpha;\n  Image<eWrite> dst_alpha;\n  \n  void process(int2 pos) \{\n    int x = pos.x;\n    int y = pos.y;\n\n    float lambda = 20.0f;\n    float El = src_benergy();\n\n    float Et = 60;\n\n    float Es_0 = 0;\n    for (int x_pos = -1; x_pos < 1; x_pos++)\{\n      for (int y_pos = -1; y_pos < 1; y_pos++)\{\n        if ((x_pos == -1 && y_pos ==0)||(x_pos == 1 && y_pos ==0)||(x_pos == 0 && y_pos == -1)||(x_pos == 0 && y_pos ==1))\{\n        int MRF_X = x + x_pos;\n        int MRF_Y = y + y_pos;\n        float current_point = alpha(MRF_X, MRF_Y);\n        float prev_point = prev_alpha(MRF_X, MRF_Y);\n        Es_0 += current_point + prev_point;\}      \n      \}\n    \}\n    float Es_1 = 0;\n    for (int x_pos = -1; x_pos < 1; x_pos++)\{\n      for (int y_pos = -1; y_pos < 1; y_pos++)\{\n        if ((x_pos == -1 && y_pos ==0)||(x_pos == 1 && y_pos ==0)||(x_pos == 0 && y_pos == -1)||(x_pos == 0 && y_pos ==1))\{\n        int MRF_X = x + x_pos;\n        int MRF_Y = y + y_pos;\n        float current_point = alpha(MRF_X, MRF_Y);\n        float prev_point = prev_alpha(MRF_X, MRF_Y);\n        Es_1 += fabs(current_point - 1.0f) + fabs(prev_point - 1.0f);\}      \n      \}\n    \}\n    \n    float E0 = El + lambda * Es_0;\n    float E1 = Et + lambda * Es_1;\n\n    if (E1 < E0)\n        \n        dst_alpha() = 1.0f;\n    else\n        dst_alpha() = 0.0f;\n        \n  \}\n    \n\};\n"
+ rebuild ""
+ rebuild_finalise ""
+ name MC_and_MRF_3D_Iteration14
+ xpos 7321
+ ypos 776
+}
+set Nfeee2c00 [stack 0]
+TimeOffset {
+ time ""
+ name TimeOffset11
+ xpos 7200
+ ypos 852
+}
+push $Nfeee2c00
+push $Nfeee2800
+Dot {
+ name Dot14
+ xpos 7501
+ ypos 855
+}
+set Nfeee3000 [stack 0]
+BlinkScript {
+ inputs 3
+ recompileCount 23
+ ProgramGroup 1
+ KernelDescription "2 \"MAP\" iterate componentWise 4394dc0ac07de9e76b346a3681933f2714703ff0618f1611d7b9814cd0d68e37 4 \"src_benergy\" Read Point \"alpha\" Read Random \"prev_alpha\" Read Random \"dst_alpha\" Write Point 0 0 0"
+ kernelSource "kernel MAP : ImageComputationKernel<eComponentWise>\n\{\n  Image<eRead, eAccessPoint, eEdgeClamped> src_benergy; // the input image\n  Image<eRead, eAccessRandom, eEdgeClamped> alpha;\n\nImage<eRead, eAccessRandom, eEdgeClamped> prev_alpha;\n  Image<eWrite> dst_alpha;\n  \n  void process(int2 pos) \{\n    int x = pos.x;\n    int y = pos.y;\n\n    float lambda = 20.0f;\n    float El = src_benergy();\n\n    float Et = 60;\n\n    float Es_0 = 0;\n    for (int x_pos = -1; x_pos < 1; x_pos++)\{\n      for (int y_pos = -1; y_pos < 1; y_pos++)\{\n        if ((x_pos == -1 && y_pos ==0)||(x_pos == 1 && y_pos ==0)||(x_pos == 0 && y_pos == -1)||(x_pos == 0 && y_pos ==1))\{\n        int MRF_X = x + x_pos;\n        int MRF_Y = y + y_pos;\n        float current_point = alpha(MRF_X, MRF_Y);\n        float prev_point = prev_alpha(MRF_X, MRF_Y);\n        Es_0 += current_point + prev_point;\}      \n      \}\n    \}\n    float Es_1 = 0;\n    for (int x_pos = -1; x_pos < 1; x_pos++)\{\n      for (int y_pos = -1; y_pos < 1; y_pos++)\{\n        if ((x_pos == -1 && y_pos ==0)||(x_pos == 1 && y_pos ==0)||(x_pos == 0 && y_pos == -1)||(x_pos == 0 && y_pos ==1))\{\n        int MRF_X = x + x_pos;\n        int MRF_Y = y + y_pos;\n        float current_point = alpha(MRF_X, MRF_Y);\n        float prev_point = prev_alpha(MRF_X, MRF_Y);\n        Es_1 += fabs(current_point - 1.0f) + fabs(prev_point - 1.0f);\}      \n      \}\n    \}\n    \n    float E0 = El + lambda * Es_0;\n    float E1 = Et + lambda * Es_1;\n\n    if (E1 < E0)\n        \n        dst_alpha() = 1.0f;\n    else\n        dst_alpha() = 0.0f;\n        \n  \}\n    \n\};\n"
+ rebuild ""
+ rebuild_finalise ""
+ name MC_and_MRF_3D_Iteration15
+ xpos 7321
+ ypos 846
+}
+set Nfeee3400 [stack 0]
+TimeOffset {
+ time ""
+ name TimeOffset12
+ xpos 7195
+ ypos 928
+}
+push $Nfeee3400
+push $Nfeee3000
+Dot {
+ name Dot15
+ xpos 7501
+ ypos 931
+}
+set Nfeee3800 [stack 0]
+BlinkScript {
+ inputs 3
+ recompileCount 23
+ ProgramGroup 1
+ KernelDescription "2 \"MAP\" iterate componentWise 4394dc0ac07de9e76b346a3681933f2714703ff0618f1611d7b9814cd0d68e37 4 \"src_benergy\" Read Point \"alpha\" Read Random \"prev_alpha\" Read Random \"dst_alpha\" Write Point 0 0 0"
+ kernelSource "kernel MAP : ImageComputationKernel<eComponentWise>\n\{\n  Image<eRead, eAccessPoint, eEdgeClamped> src_benergy; // the input image\n  Image<eRead, eAccessRandom, eEdgeClamped> alpha;\n\nImage<eRead, eAccessRandom, eEdgeClamped> prev_alpha;\n  Image<eWrite> dst_alpha;\n  \n  void process(int2 pos) \{\n    int x = pos.x;\n    int y = pos.y;\n\n    float lambda = 20.0f;\n    float El = src_benergy();\n\n    float Et = 60;\n\n    float Es_0 = 0;\n    for (int x_pos = -1; x_pos < 1; x_pos++)\{\n      for (int y_pos = -1; y_pos < 1; y_pos++)\{\n        if ((x_pos == -1 && y_pos ==0)||(x_pos == 1 && y_pos ==0)||(x_pos == 0 && y_pos == -1)||(x_pos == 0 && y_pos ==1))\{\n        int MRF_X = x + x_pos;\n        int MRF_Y = y + y_pos;\n        float current_point = alpha(MRF_X, MRF_Y);\n        float prev_point = prev_alpha(MRF_X, MRF_Y);\n        Es_0 += current_point + prev_point;\}      \n      \}\n    \}\n    float Es_1 = 0;\n    for (int x_pos = -1; x_pos < 1; x_pos++)\{\n      for (int y_pos = -1; y_pos < 1; y_pos++)\{\n        if ((x_pos == -1 && y_pos ==0)||(x_pos == 1 && y_pos ==0)||(x_pos == 0 && y_pos == -1)||(x_pos == 0 && y_pos ==1))\{\n        int MRF_X = x + x_pos;\n        int MRF_Y = y + y_pos;\n        float current_point = alpha(MRF_X, MRF_Y);\n        float prev_point = prev_alpha(MRF_X, MRF_Y);\n        Es_1 += fabs(current_point - 1.0f) + fabs(prev_point - 1.0f);\}      \n      \}\n    \}\n    \n    float E0 = El + lambda * Es_0;\n    float E1 = Et + lambda * Es_1;\n\n    if (E1 < E0)\n        \n        dst_alpha() = 1.0f;\n    else\n        dst_alpha() = 0.0f;\n        \n  \}\n    \n\};\n"
+ rebuild ""
+ rebuild_finalise ""
+ name MC_and_MRF_3D_Iteration16
+ xpos 7321
+ ypos 922
+}
+set Nfeee3c00 [stack 0]
+TimeOffset {
+ time ""
+ name TimeOffset13
+ xpos 7192
+ ypos 1019
+}
+push $Nfeee3c00
+push $Nfeee3800
+Dot {
+ name Dot17
+ xpos 7502
+ ypos 1022
+}
+set Nfef24000 [stack 0]
+BlinkScript {
+ inputs 3
+ recompileCount 23
+ ProgramGroup 1
+ KernelDescription "2 \"MAP\" iterate componentWise 4394dc0ac07de9e76b346a3681933f2714703ff0618f1611d7b9814cd0d68e37 4 \"src_benergy\" Read Point \"alpha\" Read Random \"prev_alpha\" Read Random \"dst_alpha\" Write Point 0 0 0"
+ kernelSource "kernel MAP : ImageComputationKernel<eComponentWise>\n\{\n  Image<eRead, eAccessPoint, eEdgeClamped> src_benergy; // the input image\n  Image<eRead, eAccessRandom, eEdgeClamped> alpha;\n\nImage<eRead, eAccessRandom, eEdgeClamped> prev_alpha;\n  Image<eWrite> dst_alpha;\n  \n  void process(int2 pos) \{\n    int x = pos.x;\n    int y = pos.y;\n\n    float lambda = 20.0f;\n    float El = src_benergy();\n\n    float Et = 60;\n\n    float Es_0 = 0;\n    for (int x_pos = -1; x_pos < 1; x_pos++)\{\n      for (int y_pos = -1; y_pos < 1; y_pos++)\{\n        if ((x_pos == -1 && y_pos ==0)||(x_pos == 1 && y_pos ==0)||(x_pos == 0 && y_pos == -1)||(x_pos == 0 && y_pos ==1))\{\n        int MRF_X = x + x_pos;\n        int MRF_Y = y + y_pos;\n        float current_point = alpha(MRF_X, MRF_Y);\n        float prev_point = prev_alpha(MRF_X, MRF_Y);\n        Es_0 += current_point + prev_point;\}      \n      \}\n    \}\n    float Es_1 = 0;\n    for (int x_pos = -1; x_pos < 1; x_pos++)\{\n      for (int y_pos = -1; y_pos < 1; y_pos++)\{\n        if ((x_pos == -1 && y_pos ==0)||(x_pos == 1 && y_pos ==0)||(x_pos == 0 && y_pos == -1)||(x_pos == 0 && y_pos ==1))\{\n        int MRF_X = x + x_pos;\n        int MRF_Y = y + y_pos;\n        float current_point = alpha(MRF_X, MRF_Y);\n        float prev_point = prev_alpha(MRF_X, MRF_Y);\n        Es_1 += fabs(current_point - 1.0f) + fabs(prev_point - 1.0f);\}      \n      \}\n    \}\n    \n    float E0 = El + lambda * Es_0;\n    float E1 = Et + lambda * Es_1;\n\n    if (E1 < E0)\n        \n        dst_alpha() = 1.0f;\n    else\n        dst_alpha() = 0.0f;\n        \n  \}\n    \n\};\n"
+ rebuild ""
+ rebuild_finalise ""
+ name MC_and_MRF_3D_Iteration17
+ xpos 7321
+ ypos 1013
+}
+set Nfef24400 [stack 0]
+TimeOffset {
+ time ""
+ name TimeOffset14
+ xpos 7193
+ ypos 1098
+}
+push $Nfef24400
+push $Nfef24000
+Dot {
+ name Dot18
+ xpos 7502
+ ypos 1101
+}
+set Nfef24800 [stack 0]
+BlinkScript {
+ inputs 3
+ recompileCount 23
+ ProgramGroup 1
+ KernelDescription "2 \"MAP\" iterate componentWise 4394dc0ac07de9e76b346a3681933f2714703ff0618f1611d7b9814cd0d68e37 4 \"src_benergy\" Read Point \"alpha\" Read Random \"prev_alpha\" Read Random \"dst_alpha\" Write Point 0 0 0"
+ kernelSource "kernel MAP : ImageComputationKernel<eComponentWise>\n\{\n  Image<eRead, eAccessPoint, eEdgeClamped> src_benergy; // the input image\n  Image<eRead, eAccessRandom, eEdgeClamped> alpha;\n\nImage<eRead, eAccessRandom, eEdgeClamped> prev_alpha;\n  Image<eWrite> dst_alpha;\n  \n  void process(int2 pos) \{\n    int x = pos.x;\n    int y = pos.y;\n\n    float lambda = 20.0f;\n    float El = src_benergy();\n\n    float Et = 60;\n\n    float Es_0 = 0;\n    for (int x_pos = -1; x_pos < 1; x_pos++)\{\n      for (int y_pos = -1; y_pos < 1; y_pos++)\{\n        if ((x_pos == -1 && y_pos ==0)||(x_pos == 1 && y_pos ==0)||(x_pos == 0 && y_pos == -1)||(x_pos == 0 && y_pos ==1))\{\n        int MRF_X = x + x_pos;\n        int MRF_Y = y + y_pos;\n        float current_point = alpha(MRF_X, MRF_Y);\n        float prev_point = prev_alpha(MRF_X, MRF_Y);\n        Es_0 += current_point + prev_point;\}      \n      \}\n    \}\n    float Es_1 = 0;\n    for (int x_pos = -1; x_pos < 1; x_pos++)\{\n      for (int y_pos = -1; y_pos < 1; y_pos++)\{\n        if ((x_pos == -1 && y_pos ==0)||(x_pos == 1 && y_pos ==0)||(x_pos == 0 && y_pos == -1)||(x_pos == 0 && y_pos ==1))\{\n        int MRF_X = x + x_pos;\n        int MRF_Y = y + y_pos;\n        float current_point = alpha(MRF_X, MRF_Y);\n        float prev_point = prev_alpha(MRF_X, MRF_Y);\n        Es_1 += fabs(current_point - 1.0f) + fabs(prev_point - 1.0f);\}      \n      \}\n    \}\n    \n    float E0 = El + lambda * Es_0;\n    float E1 = Et + lambda * Es_1;\n\n    if (E1 < E0)\n        \n        dst_alpha() = 1.0f;\n    else\n        dst_alpha() = 0.0f;\n        \n  \}\n    \n\};\n"
+ rebuild ""
+ rebuild_finalise ""
+ name MC_and_MRF_3D_Iteration18
+ xpos 7321
+ ypos 1092
+}
+set Nfef24c00 [stack 0]
+TimeOffset {
+ time ""
+ name TimeOffset31
+ xpos 7193
+ ypos 1171
+}
+push $Nfef24c00
+push $Nfef24800
+Dot {
+ name Dot26
+ xpos 7502
+ ypos 1174
+}
+set Nfef25000 [stack 0]
+BlinkScript {
+ inputs 3
+ recompileCount 23
+ ProgramGroup 1
+ KernelDescription "2 \"MAP\" iterate componentWise 4394dc0ac07de9e76b346a3681933f2714703ff0618f1611d7b9814cd0d68e37 4 \"src_benergy\" Read Point \"alpha\" Read Random \"prev_alpha\" Read Random \"dst_alpha\" Write Point 0 0 0"
+ kernelSource "kernel MAP : ImageComputationKernel<eComponentWise>\n\{\n  Image<eRead, eAccessPoint, eEdgeClamped> src_benergy; // the input image\n  Image<eRead, eAccessRandom, eEdgeClamped> alpha;\n\nImage<eRead, eAccessRandom, eEdgeClamped> prev_alpha;\n  Image<eWrite> dst_alpha;\n  \n  void process(int2 pos) \{\n    int x = pos.x;\n    int y = pos.y;\n\n    float lambda = 20.0f;\n    float El = src_benergy();\n\n    float Et = 60;\n\n    float Es_0 = 0;\n    for (int x_pos = -1; x_pos < 1; x_pos++)\{\n      for (int y_pos = -1; y_pos < 1; y_pos++)\{\n        if ((x_pos == -1 && y_pos ==0)||(x_pos == 1 && y_pos ==0)||(x_pos == 0 && y_pos == -1)||(x_pos == 0 && y_pos ==1))\{\n        int MRF_X = x + x_pos;\n        int MRF_Y = y + y_pos;\n        float current_point = alpha(MRF_X, MRF_Y);\n        float prev_point = prev_alpha(MRF_X, MRF_Y);\n        Es_0 += current_point + prev_point;\}      \n      \}\n    \}\n    float Es_1 = 0;\n    for (int x_pos = -1; x_pos < 1; x_pos++)\{\n      for (int y_pos = -1; y_pos < 1; y_pos++)\{\n        if ((x_pos == -1 && y_pos ==0)||(x_pos == 1 && y_pos ==0)||(x_pos == 0 && y_pos == -1)||(x_pos == 0 && y_pos ==1))\{\n        int MRF_X = x + x_pos;\n        int MRF_Y = y + y_pos;\n        float current_point = alpha(MRF_X, MRF_Y);\n        float prev_point = prev_alpha(MRF_X, MRF_Y);\n        Es_1 += fabs(current_point - 1.0f) + fabs(prev_point - 1.0f);\}      \n      \}\n    \}\n    \n    float E0 = El + lambda * Es_0;\n    float E1 = Et + lambda * Es_1;\n\n    if (E1 < E0)\n        \n        dst_alpha() = 1.0f;\n    else\n        dst_alpha() = 0.0f;\n        \n  \}\n    \n\};\n"
+ rebuild ""
+ rebuild_finalise ""
+ name MC_and_MRF_3D_Iteration19
+ xpos 7321
+ ypos 1165
+}
+set Nfef25400 [stack 0]
+TimeOffset {
+ time ""
+ name TimeOffset32
+ xpos 7191
+ ypos 1244
+}
+push $Nfef25400
+push $Nfef25000
+Dot {
+ name Dot27
+ xpos 7502
+ ypos 1247
+}
+BlinkScript {
+ inputs 3
+ recompileCount 23
+ ProgramGroup 1
+ KernelDescription "2 \"MAP\" iterate componentWise 4394dc0ac07de9e76b346a3681933f2714703ff0618f1611d7b9814cd0d68e37 4 \"src_benergy\" Read Point \"alpha\" Read Random \"prev_alpha\" Read Random \"dst_alpha\" Write Point 0 0 0"
+ kernelSource "kernel MAP : ImageComputationKernel<eComponentWise>\n\{\n  Image<eRead, eAccessPoint, eEdgeClamped> src_benergy; // the input image\n  Image<eRead, eAccessRandom, eEdgeClamped> alpha;\n\nImage<eRead, eAccessRandom, eEdgeClamped> prev_alpha;\n  Image<eWrite> dst_alpha;\n  \n  void process(int2 pos) \{\n    int x = pos.x;\n    int y = pos.y;\n\n    float lambda = 20.0f;\n    float El = src_benergy();\n\n    float Et = 60;\n\n    float Es_0 = 0;\n    for (int x_pos = -1; x_pos < 1; x_pos++)\{\n      for (int y_pos = -1; y_pos < 1; y_pos++)\{\n        if ((x_pos == -1 && y_pos ==0)||(x_pos == 1 && y_pos ==0)||(x_pos == 0 && y_pos == -1)||(x_pos == 0 && y_pos ==1))\{\n        int MRF_X = x + x_pos;\n        int MRF_Y = y + y_pos;\n        float current_point = alpha(MRF_X, MRF_Y);\n        float prev_point = prev_alpha(MRF_X, MRF_Y);\n        Es_0 += current_point + prev_point;\}      \n      \}\n    \}\n    float Es_1 = 0;\n    for (int x_pos = -1; x_pos < 1; x_pos++)\{\n      for (int y_pos = -1; y_pos < 1; y_pos++)\{\n        if ((x_pos == -1 && y_pos ==0)||(x_pos == 1 && y_pos ==0)||(x_pos == 0 && y_pos == -1)||(x_pos == 0 && y_pos ==1))\{\n        int MRF_X = x + x_pos;\n        int MRF_Y = y + y_pos;\n        float current_point = alpha(MRF_X, MRF_Y);\n        float prev_point = prev_alpha(MRF_X, MRF_Y);\n        Es_1 += fabs(current_point - 1.0f) + fabs(prev_point - 1.0f);\}      \n      \}\n    \}\n    \n    float E0 = El + lambda * Es_0;\n    float E1 = Et + lambda * Es_1;\n\n    if (E1 < E0)\n        \n        dst_alpha() = 1.0f;\n    else\n        dst_alpha() = 0.0f;\n        \n  \}\n    \n\};\n"
+ rebuild ""
+ rebuild_finalise ""
+ name MC_and_MRF_3D_Iteration20
+ xpos 7321
+ ypos 1238
+}
+set Nfef25c00 [stack 0]
+Write {
+ file D:/DESKTOP/Motion/Haohan_Zhu/4pairwise/3D_4Cliques_MC_it10/#####.png
+ file_type png
+ first 46
+ last 50
+ checkHashOnRead false
+ version 126
+ name Write12
+ xpos 7063
+ ypos 1271
+ postage_stamp true
+}
+push $Nfeee3400
+Write {
+ file D:/DESKTOP/Motion/Haohan_Zhu/4pairwise/3D_4Cliques_MC_it5/#####.png
+ file_type png
+ first 46
+ last 50
+ checkHashOnRead false
+ version 126
+ name Write11
+ xpos 7103
+ ypos 882
+ postage_stamp true
+}
+push $Nff074000
+Write {
+ file D:/DESKTOP/Motion/Haohan_Zhu/4pairwise/3D_4Cliques_it10/#####.png
+ file_type png
+ checkHashOnRead false
+ in_colorspace scene_linear
+ out_colorspace scene_linear
+ name Write10
+ xpos 6621
+ ypos 1170
+}
+push $Nfefeb800
+Write {
+ file D:/DESKTOP/Motion/Haohan_Zhu/4pairwise/3D_4Cliques_it5/#####.png
+ file_type png
+ first 46
+ last 50
+ checkHashOnRead false
+ version 126
+ name Write9
+ xpos 6599
+ ypos 746
+ postage_stamp true
+}
+push $Nff118400
+Write {
+ file D:/DESKTOP/Motion/Haohan_Zhu/4pairwise/2D_4cliques_It10/#####.png
+ file_type png
+ first 46
+ last 50
+ checkHashOnRead false
+ version 126
+ name Write8
+ xpos 6203
+ ypos 1112
+ postage_stamp true
+}
+push $Nff09dc00
+Write {
+ file D:/DESKTOP/Motion/Haohan_Zhu/4pairwise/2D_4cliques_It5/#####.png
+ file_type png
+ first 46
+ last 50
+ checkHashOnRead false
+ version 126
+ name Write7
+ xpos 6164
+ ypos 855
+ postage_stamp true
+}
+push $Nfef25c00
+Viewer {
+ frame 47
+ frame_range 46-50
+ monitorOutOutputTransform rec709
+ name Viewer7
+ xpos 7321
+ ypos 1315
+}
+Read {
+ inputs 0
+ file_type tiff
+ file D:/DESKTOP/Motion/Haohan_Zhu/Tobago_HD(2).tif
+ format "2048 1080 0 0 2048 1080 1 2K_DCP"
+ origset true
+ name Read10
+ xpos 8423
+ ypos 146
+}
+Transform {
+ translate {12 -252}
+ center {1024 778}
+ name Transform1
+ xpos 8423
+ ypos 275
+}
+Reformat {
+ inputs 0
+ format "2048 1080 0 0 2048 1080 1 2K_DCP"
+ name Reformat1
+ xpos 8600
+ ypos 338
+}
+Merge2 {
+ inputs 2
+ name Merge2
+ xpos 8423
+ ypos 375
+}
+set N44973800 [stack 0]
+Read {
+ inputs 0
+ file_type tiff
+ file D:/DESKTOP/Motion/Haohan_Zhu/frames/Hula.#####.tiff
+ format "2048 1080 0 0 2048 1080 1 2K_DCP"
+ first 46
+ last 50
+ origfirst 46
+ origlast 50
+ origset true
+ colorspace sRGB
+ name Read9
+ xpos 8172
+ ypos 135
+}
+set N9e6ec400 [stack 0]
+Keyer {
+ range {0.9020226762 0.9552852201 1 1}
+ name Keyer1
+ xpos 8172
+ ypos 252
+}
+Premult {
+ name Premult1
+ xpos 8172
+ ypos 296
+}
+set N902a3800 [stack 0]
+Roto {
+ inputs 0
+ output alpha
+ curves {{{v x3f99999a}
+  {f 0}
+  {n
+   {layer Root
+    {f 2097152}
+    {t x44800000 x44428000}
+    {a pt1x 0 pt1y 0 pt2x 0 pt2y 0 pt3x 0 pt3y 0 pt4x 0 pt4y 0 ptex00 0 ptex01 0 ptex02 0 ptex03 0 ptex10 0 ptex11 0 ptex12 0 ptex13 0 ptex20 0 ptex21 0 ptex22 0 ptex23 0 ptex30 0 ptex31 0 ptex32 0 ptex33 0 ptof1x 0 ptof1y 0 ptof2x 0 ptof2y 0 ptof3x 0 ptof3y 0 ptof4x 0 ptof4y 0 pterr 0 ptrefset 0 ptmot x40800000 ptref 0}
+    {curvegroup Bezier1 512 bezier
+     {{cc
+       {f 8192}
+       {px
+        {x42380000 x423c0000 x42400000 x42440000 x42480000}
+        {{0
+       {x 4
+        {0 -}}}
+      {0
+       {x 4
+        {0 -}}}}
+        {{{x 2
+        {x44ac8000 -}}
+       {x44aa0199 -}
+       {x44aea330 x4252e660 1 x4252e660 1}
+       {x44b5c332 x426c8d30 1 0 1}}
+      {{x 2
+        {x41f00000 -}}
+       {x42310000 x422b0000 1 x422b0000 1}
+       {x43434ccc x42fda662 1 x42fda662 1}
+       {x4394f331 x42b4f991 1 0 1}}}
+        {{0
+       {x 4
+        {0 -}}}
+      {0
+       {x 4
+        {0 -}}}}
+        {{0
+       {x 4
+        {0 -}}}
+      {0
+       {x 4
+        {0 -}}}}
+        {{{x44c91cce 0 1 xc2c4a658 1}
+       {x44bdb668 xc299e670 1 xc299e670 1}
+       {x44b74ccd -}
+       {x44b5e000 -}
+       {x44ab3002 xc3003fe8 1 0 1}}
+      {{x43206664 0 1 x428e7ffa 1}
+       {x436a7ffc x429f999c 1 x429f999c 1}
+       {x439d2665 -}
+       {x43a00000 -}
+       {x442ca001 x440af002 1 0 1}}}
+        {{0
+       {x 4
+        {0 -}}}
+      {0
+       {x 4
+        {0 -}}}}
+        {{0
+       {x 4
+        {0 -}}}
+      {0
+       {x 4
+        {0 -}}}}
+        {{{x44a48ccd 0 1 x4108cc80 1}
+       {x44a54333 -}
+       {x44a54334 -}
+       {x44a32000 -}
+       {x44937334 xc33c1990 1 0 1}}
+      {{x4445d99a 0 1 xc1cd3320 1}
+       {x44419334 -}
+       {x44446ccd -}
+       {x44430000 -}
+       {x444a2000 x422b0000 1 0 1}}}
+        {{0
+       {x 4
+        {0 -}}}
+      {0
+       {x 4
+        {0 -}}}}
+        {{0
+       {x 4
+        {0 -}}}
+      {0
+       {x 4
+        {0 -}}}}
+        {{{x448b9003 0 1 x422aff70 1}
+       {x448f2000 -}
+       {x44896ccf -}
+       {x44880002 xc21f9980 1 xc21f9980 1}
+       {x44852668 xc1640080 1 0 1}}
+      {{x443e6001 0 1 x422affe8 1}
+       {x44458000 -}
+       {x4442a666 -}
+       {x443b8667 xc1faccd0 1 xc1faccd0 1}
+       {x4435d333 xc1943358 1 0 1}}}
+        {{0
+       {x 4
+        {0 -}}}
+      {0
+       {x 4
+        {0 -}}}}
+        {{0
+       {x 4
+        {0 -}}}
+      {0
+       {x 4
+        {0 -}}}}
+        {{{x4489f333 0 1 xc208cc20 1}
+       {x4487199d -}
+       {x4487cfff -}
+       {x44893ccd xc1cd32e0 1 xc1cd32e0 1}
+       {x4484f669 xc219e608 1 0 1}}
+      {{x 3
+        {x4414c000 -}}
+       {x44135333 xc0b66640 1 xc0b66640 1}
+       {x4411e667 xc0b665e0 1 0 1}}}
+        {{0
+       {x 4
+        {0 -}}}
+      {0
+       {x 4
+        {0 -}}}}
+        {{0
+       {x 4
+        {0 -}}}
+      {0
+       {x 4
+        {0 -}}}}
+        {{{x4494eccc 0 1 xc1cd32c0 1}
+       {x4492c99a -}
+       {x44921333 -}
+       {x44938000 xc2589990 1 xc2589990 1}
+       {x448af335 xc2970ca4 1 0 1}}
+      {{x43f28cc9 -}
+       {x43f56666 x4188cd70 1 x4188cd70 1}
+       {x43f28ccb -}
+       {x44034000 -}
+       {x43f84002 xc22affe8 1 0 1}}}
+        {{0
+       {x 4
+        {0 -}}}
+      {0
+       {x 4
+        {0 -}}}}
+        {{0
+       {x 4
+        {0 -}}}
+      {0
+       {x 4
+        {0 -}}}}
+        {{{x4488cccf 0 1 x416400e0 1}
+       {x448af003 x41b66620 1 x41b66620 1}
+       {x448ba666 -}
+       {x448e8000 -}
+       {x448a399c xc24d32c0 1 0 1}}
+      {{x43c5d99b 0 1 x41cd32f0 1}
+       {x43ce6665 -}
+       {x 2
+        {x43c30000 -}}
+       {x43c02665 xc108cd10 1 0 1}}}
+        {{0
+       {x 4
+        {0 -}}}
+      {0
+       {x 4
+        {0 -}}}}
+        {{0
+       {x 4
+        {0 -}}}
+      {0
+       {x 4
+        {0 -}}}}
+        {{{x44877333 0 1 xc1cd3200 1}
+       {x44855003 -}
+       {x44849999 -}
+       {x4486bccd xc21f99b0 1 xc21f99b0 1}
+       {x447dccca xc2943354 1 0 1}}
+      {{x438c599a 0 1 xc108cce0 1}
+       {x43898000 -}
+       {x435a0000 -}
+       {x43898000 -}
+       {x43544ccc xc2bc199c 1 0 1}}}
+        {{0
+       {x 4
+        {0 -}}}
+      {0
+       {x 4
+        {0 -}}}}
+        {{0
+       {x 4
+        {0 -}}}
+      {x41200000
+       {x 4
+        {x41200000 -}}}}
+        {{{x44866336 0 1 xc188cce0 1}
+       {x4484f669 -}
+       {x4489f332 -}
+       {x44871999 xc1e3ffa0 1 xc1e3ffa0 1}
+       {x44844003 xc19f9870 1 0 1}}
+      {{x4327b334 -}
+       {x43220000 xc188cce0 1 xc188cce0 1}
+       {x42d20000 xc188cce0 1 xc188cce0 1}
+       {x42c69998 -}
+       {x42d20000 x4108cce0 1 0 1}}}
+        {{0
+       {x 4
+        {0 -}}}
+      {xc1200000
+       {x 4
+        {xc1200000 -}}}}
+        {{0
+       {x 4
+        {0 -}}}
+      {0
+       {x 4
+        {0 -}}}}
+        {{x44898000
+       {x 3
+        {x44898000 -}}
+       {x44848333 xc26f6670 1 0 1}}
+      {xc0a00000
+       {x 3
+        {xc0a00000 -}}
+       {x41419a00 x41cd3380 1 0 1}}}
+        {{0
+       {x 4
+        {0 -}}}
+      {0
+       {x 4
+        {0 -}}}}
+        {{xc0a00000
+       {x 4
+        {xc0a00000 -}}}
+      {0
+       {x 4
+        {0 -}}}}
+        {{x448ac000
+       {x 4
+        {x448ac000 -}}}
+      {xc2960000
+       {x 4
+        {xc2960000 -}}}}
+        {{x40a00000
+       {x 4
+        {x40a00000 -}}}
+      {0
+       {x 4
+        {0 -}}}}
+        {{xc1200000
+       {x 4
+        {xc1200000 -}}}
+      {0
+       {x 4
+        {0 -}}}}
+        {{x4496a000
+       {x 2
+        {x4496a000 -}}
+       {x44a09998 -}
+       {x4496a000 xc2ef6640 1 0 1}}
+      {xc2200000
+       {x 2
+        {xc2200000 -}}
+       {xc2c20000 -}
+       {xc2200000 x42ab0000 1 0 1}}}
+        {{x41200000
+       {x 4
+        {x41200000 -}}}
+      {0
+       {x 4
+        {0 -}}}}
+        {{xc1200000
+       {x 4
+        {xc1200000 -}}}
+      {0
+       {x 4
+        {0 -}}}}
+        {{x44a64000
+       {x 2
+        {x44a64000 -}}
+       {x44a41ccd xc1640040 1 xc1640040 1}
+       {x44a2afff xc11f9a60 1 0 1}}
+      {xc25c0000
+       {x 2
+        {xc25c0000 -}}
+       {x40f66680 x421f9990 1 x421f9990 1}
+       {x41c66640 x40b66580 1 0 1}}}
+        {{x41200000
+       {x 4
+        {x41200000 -}}}
+      {0
+       {x 4
+        {0 -}}}}}}     idem}
+     {tx x423c0000 x4496b89e x438bcec5}
+     {a osw x41200000 osf 0 str 1 spx x44800000 spy x44428000 sb 1 ltn x423c0000 ltm x423c0000 tt x40800000}}}}}}
+ toolbox {selectAll {
+  { selectAll str 1 ssx 1 ssy 1 sf 1 }
+  { createBezier str 1 ssx 1 ssy 1 sf 1 sb 1 tt 4 }
+  { createBezierCusped str 1 ssx 1 ssy 1 sf 1 sb 1 }
+  { createBSpline str 1 ssx 1 ssy 1 sf 1 sb 1 }
+  { createEllipse str 1 ssx 1 ssy 1 sf 1 sb 1 }
+  { createRectangle str 1 ssx 1 ssy 1 sf 1 sb 1 }
+  { createRectangleCusped str 1 ssx 1 ssy 1 sf 1 sb 1 }
+  { brush str 1 ssx 1 ssy 1 sf 1 sb 1 }
+  { eraser src 2 str 1 ssx 1 ssy 1 sf 1 sb 1 }
+  { clone src 1 str 1 ssx 1 ssy 1 sf 1 sb 1 }
+  { reveal src 3 str 1 ssx 1 ssy 1 sf 1 sb 1 }
+  { dodge src 1 str 1 ssx 1 ssy 1 sf 1 sb 1 }
+  { burn src 1 str 1 ssx 1 ssy 1 sf 1 sb 1 }
+  { blur src 1 str 1 ssx 1 ssy 1 sf 1 sb 1 }
+  { sharpen src 1 str 1 ssx 1 ssy 1 sf 1 sb 1 }
+  { smear src 1 str 1 ssx 1 ssy 1 sf 1 sb 1 }
+} }
+ toolbar_brush_hardness 0.200000003
+ toolbar_source_transform_scale {1 1}
+ toolbar_source_transform_center {1024 778}
+ colorOverlay {0 0 0 0}
+ lifetime_type "all frames"
+ lifetime_start 47
+ lifetime_end 47
+ motionblur_shutter_offset_type centred
+ source_black_outside true
+ name Roto1
+ xpos 8294
+ ypos 292
+}
+push $N9e6ec400
+Dot {
+ name Dot65
+ xpos 8021
+ ypos 174
+}
+Dot {
+ name Dot64
+ xpos 8021
+ ypos 365
+}
+push $N902a3800
+Merge2 {
+ inputs 2+1
+ name Merge1
+ xpos 8172
+ ypos 362
+}
+push $N44973800
+Merge2 {
+ inputs 2
+ name Merge3
+ xpos 8329
+ ypos 443
+}
+Viewer {
+ inputs 3
+ frame 47
+ frame_range 46-50
+ input_number 1
+ monitorOutOutputTransform rec709
+ name Viewer11
+ xpos 8297
+ ypos 489
+}
+push $Nfebb3800
+Viewer {
+ frame 47
+ frame_range 46-50
+ monitorOutOutputTransform rec709
+ name Viewer4
+ xpos 4925
+ ypos 1192
+}
+push $N97a8e400
+Viewer {
+ frame 47
+ frame_range 46-50
+ monitorOutOutputTransform rec709
+ name Viewer15
+ xpos 4627
+ ypos 155
+}
+push $Nfec3d400
+push $Nfec3d000
+Dot {
+ name Dot22
+ xpos 4670
+ ypos 820
+}
+set Nfec3d800 [stack 0]
+BlinkScript {
+ inputs 2
+ recompileCount 22
+ ProgramGroup 1
+ KernelDescription "2 \"MAP2D\" iterate componentWise 21df4a1af35a02d9630705e32b63a8c715d822b5f95f2b5a9ab3ff5c08635d4c 3 \"src_benergy\" Read Point \"alpha\" Read Random \"dst_alpha\" Write Point 0 0 0"
+ kernelSource "kernel MAP2D : ImageComputationKernel<eComponentWise>\n\{\n  Image<eRead, eAccessPoint, eEdgeClamped> src_benergy;\n  Image<eRead, eAccessRandom, eEdgeClamped> alpha;\n  Image<eWrite> dst_alpha;\n  \n  void process(int2 pos) \{\n    int x = pos.x;\n    int y = pos.y;\n\n    float lambda = 20.0f;\n    float El = src_benergy();\n\n    float Et = 60;\n\n    float Es_0 = 0;\n    for (int x_pos = -1; x_pos < 1; x_pos++)\{\n      for (int y_pos = -1; y_pos < 1; y_pos++)\{\n        if (x_pos != 0 && y_pos != 0)\{\n        int MRF_X = x + x_pos;\n        int MRF_Y = y + y_pos;\n        float current_point = alpha(MRF_X, MRF_Y);\n        Es_0 += current_point;\}      \n      \}\n    \}\n    float Es_1 = 0;\n    for (int x_pos = -1; x_pos < 1; x_pos++)\{\n      for (int y_pos = -1; y_pos < 1; y_pos++)\{\n        if  (x_pos != 0 && y_pos != 0)\{\n        int MRF_X = x + x_pos;\n        int MRF_Y = y + y_pos;\n        float current_point = alpha(MRF_X, MRF_Y);\n        Es_1 += fabs(current_point - 1.0f);     \} \n      \}\n    \}\n    \n    float E0 = El + lambda * Es_0;\n    float E1 = Et + lambda * Es_1;\n\n    if (E1 < E0)\n        \n        dst_alpha() = 1.0f;\n    else\n        dst_alpha() = 0.0f;\n        \n  \}\n    \n\};\n"
+ rebuild ""
+ rebuild_finalise ""
+ name MRF_2D_Iteration6
+ xpos 4490
+ ypos 811
+}
+push $Nfec3d800
+Dot {
+ name Dot23
+ xpos 4670
+ ypos 901
+}
+set Nfec6a000 [stack 0]
+BlinkScript {
+ inputs 2
+ recompileCount 22
+ ProgramGroup 1
+ KernelDescription "2 \"MAP2D\" iterate componentWise 21df4a1af35a02d9630705e32b63a8c715d822b5f95f2b5a9ab3ff5c08635d4c 3 \"src_benergy\" Read Point \"alpha\" Read Random \"dst_alpha\" Write Point 0 0 0"
+ kernelSource "kernel MAP2D : ImageComputationKernel<eComponentWise>\n\{\n  Image<eRead, eAccessPoint, eEdgeClamped> src_benergy;\n  Image<eRead, eAccessRandom, eEdgeClamped> alpha;\n  Image<eWrite> dst_alpha;\n  \n  void process(int2 pos) \{\n    int x = pos.x;\n    int y = pos.y;\n\n    float lambda = 20.0f;\n    float El = src_benergy();\n\n    float Et = 60;\n\n    float Es_0 = 0;\n    for (int x_pos = -1; x_pos < 1; x_pos++)\{\n      for (int y_pos = -1; y_pos < 1; y_pos++)\{\n        if (x_pos != 0 && y_pos != 0)\{\n        int MRF_X = x + x_pos;\n        int MRF_Y = y + y_pos;\n        float current_point = alpha(MRF_X, MRF_Y);\n        Es_0 += current_point;\}      \n      \}\n    \}\n    float Es_1 = 0;\n    for (int x_pos = -1; x_pos < 1; x_pos++)\{\n      for (int y_pos = -1; y_pos < 1; y_pos++)\{\n        if  (x_pos != 0 && y_pos != 0)\{\n        int MRF_X = x + x_pos;\n        int MRF_Y = y + y_pos;\n        float current_point = alpha(MRF_X, MRF_Y);\n        Es_1 += fabs(current_point - 1.0f);     \} \n      \}\n    \}\n    \n    float E0 = El + lambda * Es_0;\n    float E1 = Et + lambda * Es_1;\n\n    if (E1 < E0)\n        \n        dst_alpha() = 1.0f;\n    else\n        dst_alpha() = 0.0f;\n        \n  \}\n    \n\};\n"
+ rebuild ""
+ rebuild_finalise ""
+ name MRF_2D_Iteration7
+ xpos 4490
+ ypos 892
+}
+push $Nfec6a000
+Dot {
+ name Dot24
+ xpos 4670
+ ypos 979
+}
+set Nfec6a800 [stack 0]
+BlinkScript {
+ inputs 2
+ recompileCount 23
+ ProgramGroup 1
+ KernelDescription "2 \"MAP2D\" iterate componentWise 21df4a1af35a02d9630705e32b63a8c715d822b5f95f2b5a9ab3ff5c08635d4c 3 \"src_benergy\" Read Point \"alpha\" Read Random \"dst_alpha\" Write Point 0 0 0"
+ kernelSource "kernel MAP2D : ImageComputationKernel<eComponentWise>\n\{\n  Image<eRead, eAccessPoint, eEdgeClamped> src_benergy;\n  Image<eRead, eAccessRandom, eEdgeClamped> alpha;\n  Image<eWrite> dst_alpha;\n  \n  void process(int2 pos) \{\n    int x = pos.x;\n    int y = pos.y;\n\n    float lambda = 20.0f;\n    float El = src_benergy();\n\n    float Et = 60;\n\n    float Es_0 = 0;\n    for (int x_pos = -1; x_pos < 1; x_pos++)\{\n      for (int y_pos = -1; y_pos < 1; y_pos++)\{\n        if (x_pos != 0 && y_pos != 0)\{\n        int MRF_X = x + x_pos;\n        int MRF_Y = y + y_pos;\n        float current_point = alpha(MRF_X, MRF_Y);\n        Es_0 += current_point;\}      \n      \}\n    \}\n    float Es_1 = 0;\n    for (int x_pos = -1; x_pos < 1; x_pos++)\{\n      for (int y_pos = -1; y_pos < 1; y_pos++)\{\n        if  (x_pos != 0 && y_pos != 0)\{\n        int MRF_X = x + x_pos;\n        int MRF_Y = y + y_pos;\n        float current_point = alpha(MRF_X, MRF_Y);\n        Es_1 += fabs(current_point - 1.0f);     \} \n      \}\n    \}\n    \n    float E0 = El + lambda * Es_0;\n    float E1 = Et + lambda * Es_1;\n\n    if (E1 < E0)\n        \n        dst_alpha() = 1.0f;\n    else\n        dst_alpha() = 0.0f;\n        \n  \}\n    \n\};\n"
+ rebuild ""
+ rebuild_finalise ""
+ name MRF_2D_Iteration8
+ xpos 4490
+ ypos 970
+}
+push $Nfec6a800
+Dot {
+ name Dot25
+ xpos 4670
+ ypos 1064
+}
+set Nfec6b000 [stack 0]
+BlinkScript {
+ inputs 2
+ recompileCount 22
+ ProgramGroup 1
+ KernelDescription "2 \"MAP2D\" iterate componentWise 21df4a1af35a02d9630705e32b63a8c715d822b5f95f2b5a9ab3ff5c08635d4c 3 \"src_benergy\" Read Point \"alpha\" Read Random \"dst_alpha\" Write Point 0 0 0"
+ kernelSource "kernel MAP2D : ImageComputationKernel<eComponentWise>\n\{\n  Image<eRead, eAccessPoint, eEdgeClamped> src_benergy;\n  Image<eRead, eAccessRandom, eEdgeClamped> alpha;\n  Image<eWrite> dst_alpha;\n  \n  void process(int2 pos) \{\n    int x = pos.x;\n    int y = pos.y;\n\n    float lambda = 20.0f;\n    float El = src_benergy();\n\n    float Et = 60;\n\n    float Es_0 = 0;\n    for (int x_pos = -1; x_pos < 1; x_pos++)\{\n      for (int y_pos = -1; y_pos < 1; y_pos++)\{\n        if (x_pos != 0 && y_pos != 0)\{\n        int MRF_X = x + x_pos;\n        int MRF_Y = y + y_pos;\n        float current_point = alpha(MRF_X, MRF_Y);\n        Es_0 += current_point;\}      \n      \}\n    \}\n    float Es_1 = 0;\n    for (int x_pos = -1; x_pos < 1; x_pos++)\{\n      for (int y_pos = -1; y_pos < 1; y_pos++)\{\n        if  (x_pos != 0 && y_pos != 0)\{\n        int MRF_X = x + x_pos;\n        int MRF_Y = y + y_pos;\n        float current_point = alpha(MRF_X, MRF_Y);\n        Es_1 += fabs(current_point - 1.0f);     \} \n      \}\n    \}\n    \n    float E0 = El + lambda * Es_0;\n    float E1 = Et + lambda * Es_1;\n\n    if (E1 < E0)\n        \n        dst_alpha() = 1.0f;\n    else\n        dst_alpha() = 0.0f;\n        \n  \}\n    \n\};\n"
+ rebuild ""
+ rebuild_finalise ""
+ name MRF_2D_Iteration9
+ xpos 4490
+ ypos 1055
+}
+push $Nfec6b000
+Dot {
+ name Dot30
+ xpos 4670
+ ypos 1150
+}
+BlinkScript {
+ inputs 2
+ recompileCount 23
+ ProgramGroup 1
+ KernelDescription "2 \"MAP2D\" iterate componentWise 21df4a1af35a02d9630705e32b63a8c715d822b5f95f2b5a9ab3ff5c08635d4c 3 \"src_benergy\" Read Point \"alpha\" Read Random \"dst_alpha\" Write Point 0 0 0"
+ kernelSource "kernel MAP2D : ImageComputationKernel<eComponentWise>\n\{\n  Image<eRead, eAccessPoint, eEdgeClamped> src_benergy;\n  Image<eRead, eAccessRandom, eEdgeClamped> alpha;\n  Image<eWrite> dst_alpha;\n  \n  void process(int2 pos) \{\n    int x = pos.x;\n    int y = pos.y;\n\n    float lambda = 20.0f;\n    float El = src_benergy();\n\n    float Et = 60;\n\n    float Es_0 = 0;\n    for (int x_pos = -1; x_pos < 1; x_pos++)\{\n      for (int y_pos = -1; y_pos < 1; y_pos++)\{\n        if (x_pos != 0 && y_pos != 0)\{\n        int MRF_X = x + x_pos;\n        int MRF_Y = y + y_pos;\n        float current_point = alpha(MRF_X, MRF_Y);\n        Es_0 += current_point;\}      \n      \}\n    \}\n    float Es_1 = 0;\n    for (int x_pos = -1; x_pos < 1; x_pos++)\{\n      for (int y_pos = -1; y_pos < 1; y_pos++)\{\n        if  (x_pos != 0 && y_pos != 0)\{\n        int MRF_X = x + x_pos;\n        int MRF_Y = y + y_pos;\n        float current_point = alpha(MRF_X, MRF_Y);\n        Es_1 += fabs(current_point - 1.0f);     \} \n      \}\n    \}\n    \n    float E0 = El + lambda * Es_0;\n    float E1 = Et + lambda * Es_1;\n\n    if (E1 < E0)\n        \n        dst_alpha() = 1.0f;\n    else\n        dst_alpha() = 0.0f;\n        \n  \}\n    \n\};\n"
+ rebuild ""
+ rebuild_finalise ""
+ name MRF_2D_Iteration10
+ xpos 4490
+ ypos 1141
+}
+set Nfec6bc00 [stack 0]
+Write {
+ file D:/DESKTOP/Motion/Haohan_Zhu/8pairwise/2D_8cliques_It10/#####.png
+ file_type png
+ first 46
+ last 50
+ checkHashOnRead false
+ version 126
+ name Write1
+ xpos 4328
+ ypos 934
+ postage_stamp true
+}
+push $Nfec6bc00
+Read {
+ inputs 0
+ file_type tiff
+ file D:/DESKTOP/Motion/Haohan_Zhu/Hula.00047.tiff
+ format "2048 1080 0 0 2048 1080 1 2K_DCP"
+ origset true
+ colorspace linear
+ name Read11
+ xpos 4196
+ ypos 1021
+}
+Read {
+ inputs 0
+ file_type tiff
+ file D:/DESKTOP/Motion/Haohan_Zhu/Tobago_HD(2).tif
+ format "2048 1080 0 0 2048 1080 1 2K_DCP"
+ first 46
+ last 50
+ origfirst 46
+ origlast 50
+ origset true
+ colorspace sRGB
+ name Read12
+ xpos 4043
+ ypos 1057
+}
+Merge2 {
+ inputs 2+1
+ operation min
+ bbox intersection
+ name Merge4
+ xpos 4249
+ ypos 1174
+}
+Viewer {
+ frame 47
+ frame_range 46-50
+ channels {rgba.red rgba.green rgba.blue rgba.alpha}
+ monitorOutOutputTransform rec709
+ name Viewer14
+ xpos 4275
+ ypos 1252
+}
+push $Nfec6bc00
+Viewer {
+ frame 47
+ frame_range 46-50
+ monitorOutOutputTransform rec709
+ name Viewer1
+ xpos 4490
+ ypos 1255
+}
+push $Nfebb3800
+push $Nfec6bc00
+Viewer {
+ inputs 2
+ frame_range 46-50
+ input_number 1
+ monitorOutOutputTransform rec709
+ name Viewer16
+ xpos 4668
+ ypos 1270
+}
+push $Nff074000
+push $Nff118400
+Viewer {
+ inputs 2
+ frame_range 46-50
+ monitorOutOutputTransform rec709
+ name Viewer17
+ xpos 6560
+ ypos 1309
+}
+push $Nfed45400
+Write {
+ file D:/DESKTOP/Motion/Haohan_Zhu/MLK/#####.png
+ file_type png
+ checkHashOnRead false
+ version 1
+ name Write13
+ xpos 6651
+ ypos 187
+}
+push $Nfecc7800
+Write {
+ file D:/DESKTOP/Motion/Haohan_Zhu/MLK/#####.png
+ file_type png
+ checkHashOnRead false
+ version 3
+ name Write14
+ xpos 6515
+ ypos 154
+}
+push $Nfef25c00
+push $Nff074000
+Viewer {
+ inputs 2
+ frame_range 46-50
+ monitorOutOutputTransform rec709
+ name Viewer18
+ xpos 6965
+ ypos 1364
+}
+push $Nfea9f400
+push $Nfebb3800
+Viewer {
+ inputs 2
+ frame_range 46-50
+ input_number 1
+ monitorOutOutputTransform rec709
+ name Viewer19
+ xpos 5104
+ ypos 1328
+}
+push $Nfec6bc00
+Read {
+ inputs 0
+ file_type tiff
+ file D:/DESKTOP/Motion/Haohan_Zhu/frames/Hula.#####.tiff
+ format "2048 1080 0 0 2048 1080 1 2K_DCP"
+ first 46
+ last 50
+ origfirst 46
+ origlast 50
+ origset true
+ colorspace linear
+ name Read13
+ xpos 8590
+ ypos 425
+}
+Expression {
+ temp_name0 Rb
+ temp_expr0 0.3217
+ temp_name1 Gb
+ temp_expr1 0.6276
+ temp_name2 Bb
+ temp_expr2 0.5150
+ expr0 "(r - Rb)"
+ expr1 "(g - Gb)"
+ expr2 "(b - Bb)"
+ name remove_background6
+ xpos 8590
+ ypos 572
+}
+Expression {
+ temp_name0 R_gaus
+ temp_expr0 0.00193
+ temp_name1 G_gaus
+ temp_expr1 0.00021
+ temp_name2 B_gaus
+ temp_expr2 0.000251
+ expr0 r**2/R_gaus
+ expr1 g**2/G_gaus
+ expr2 b**2/B_gaus
+ name gaussian_distribution6
+ xpos 8590
+ ypos 626
+}
+set N2b0b9400 [stack 0]
+Expression {
+ temp_name0 Et
+ temp_expr0 60
+ expr0 "step(60, r + g + b)"
+ expr1 "step(60, r + g + b)"
+ expr2 "step(60, r + g + b)"
+ name Energy_threshold6
+ xpos 8590
+ ypos 689
+}
+push $N2b0b9400
+Expression {
+ expr0 r+g+b
+ channel1 {-rgba.red rgba.green -rgba.blue none}
+ expr1 r+g+b
+ channel2 {-rgba.red -rgba.green rgba.blue none}
+ expr2 r+g+b
+ name luminance6
+ xpos 8736
+ ypos 626
+}
+Dot {
+ name Dot68
+ xpos 8770
+ ypos 799
+}
+set N10992800 [stack 0]
+BlinkScript {
+ inputs 2
+ recompileCount 24
+ ProgramGroup 1
+ KernelDescription "2 \"MAP2D\" iterate componentWise 3e2d7bb1de2fd815ba62239692836023c41f61447a031e3b6fc2603f9f71e888 3 \"src_benergy\" Read Point \"alpha\" Read Random \"dst_alpha\" Write Point 0 0 0"
+ kernelSource "kernel MAP2D : ImageComputationKernel<eComponentWise>\n\{\n  Image<eRead, eAccessPoint, eEdgeClamped> src_benergy;\n  Image<eRead, eAccessRandom, eEdgeClamped> alpha;\n  Image<eWrite> dst_alpha;\n  \n  void process(int2 pos) \{\n    int x = pos.x;\n    int y = pos.y;\n\n    float lambda = 100.0f;\n    float El = src_benergy();\n\n    float Et = 60;\n\n    float Es_0 = 0;\n    for (int x_pos = -1; x_pos < 1; x_pos++)\{\n      for (int y_pos = -1; y_pos < 1; y_pos++)\{\n        if (x_pos != 0 && y_pos != 0)\{\n        int MRF_X = x + x_pos;\n        int MRF_Y = y + y_pos;\n        float current_point = alpha(MRF_X, MRF_Y);\n        Es_0 += current_point;\}      \n      \}\n    \}\n    float Es_1 = 0;\n    for (int x_pos = -1; x_pos < 1; x_pos++)\{\n      for (int y_pos = -1; y_pos < 1; y_pos++)\{\n        if  (x_pos != 0 && y_pos != 0)\{\n        int MRF_X = x + x_pos;\n        int MRF_Y = y + y_pos;\n        float current_point = alpha(MRF_X, MRF_Y);\n        Es_1 += fabs(current_point - 1.0f);     \} \n      \}\n    \}\n    \n    float E0 = El + lambda * Es_0;\n    float E1 = Et + lambda * Es_1;\n\n    if (E1 < E0)\n        \n        dst_alpha() = 1.0f;\n    else\n        dst_alpha() = 0.0f;\n        \n  \}\n    \n\};\n"
+ rebuild ""
+ rebuild_finalise ""
+ name MRF_2D_Iteration23
+ xpos 8590
+ ypos 790
+}
+push $N10992800
+Dot {
+ name Dot69
+ xpos 8770
+ ypos 871
+}
+set N10993000 [stack 0]
+BlinkScript {
+ inputs 2
+ recompileCount 23
+ ProgramGroup 1
+ KernelDescription "2 \"MAP2D\" iterate componentWise 3e2d7bb1de2fd815ba62239692836023c41f61447a031e3b6fc2603f9f71e888 3 \"src_benergy\" Read Point \"alpha\" Read Random \"dst_alpha\" Write Point 0 0 0"
+ kernelSource "kernel MAP2D : ImageComputationKernel<eComponentWise>\n\{\n  Image<eRead, eAccessPoint, eEdgeClamped> src_benergy;\n  Image<eRead, eAccessRandom, eEdgeClamped> alpha;\n  Image<eWrite> dst_alpha;\n  \n  void process(int2 pos) \{\n    int x = pos.x;\n    int y = pos.y;\n\n    float lambda = 100.0f;\n    float El = src_benergy();\n\n    float Et = 60;\n\n    float Es_0 = 0;\n    for (int x_pos = -1; x_pos < 1; x_pos++)\{\n      for (int y_pos = -1; y_pos < 1; y_pos++)\{\n        if (x_pos != 0 && y_pos != 0)\{\n        int MRF_X = x + x_pos;\n        int MRF_Y = y + y_pos;\n        float current_point = alpha(MRF_X, MRF_Y);\n        Es_0 += current_point;\}      \n      \}\n    \}\n    float Es_1 = 0;\n    for (int x_pos = -1; x_pos < 1; x_pos++)\{\n      for (int y_pos = -1; y_pos < 1; y_pos++)\{\n        if  (x_pos != 0 && y_pos != 0)\{\n        int MRF_X = x + x_pos;\n        int MRF_Y = y + y_pos;\n        float current_point = alpha(MRF_X, MRF_Y);\n        Es_1 += fabs(current_point - 1.0f);     \} \n      \}\n    \}\n    \n    float E0 = El + lambda * Es_0;\n    float E1 = Et + lambda * Es_1;\n\n    if (E1 < E0)\n        \n        dst_alpha() = 1.0f;\n    else\n        dst_alpha() = 0.0f;\n        \n  \}\n    \n\};\n"
+ rebuild ""
+ rebuild_finalise ""
+ name MRF_2D_Iteration24
+ xpos 8590
+ ypos 862
+}
+push $N10993000
+Dot {
+ name Dot72
+ xpos 8770
+ ypos 943
+}
+set N1068c400 [stack 0]
+BlinkScript {
+ inputs 2
+ recompileCount 23
+ ProgramGroup 1
+ KernelDescription "2 \"MAP2D\" iterate componentWise 3e2d7bb1de2fd815ba62239692836023c41f61447a031e3b6fc2603f9f71e888 3 \"src_benergy\" Read Point \"alpha\" Read Random \"dst_alpha\" Write Point 0 0 0"
+ kernelSource "kernel MAP2D : ImageComputationKernel<eComponentWise>\n\{\n  Image<eRead, eAccessPoint, eEdgeClamped> src_benergy;\n  Image<eRead, eAccessRandom, eEdgeClamped> alpha;\n  Image<eWrite> dst_alpha;\n  \n  void process(int2 pos) \{\n    int x = pos.x;\n    int y = pos.y;\n\n    float lambda = 100.0f;\n    float El = src_benergy();\n\n    float Et = 60;\n\n    float Es_0 = 0;\n    for (int x_pos = -1; x_pos < 1; x_pos++)\{\n      for (int y_pos = -1; y_pos < 1; y_pos++)\{\n        if (x_pos != 0 && y_pos != 0)\{\n        int MRF_X = x + x_pos;\n        int MRF_Y = y + y_pos;\n        float current_point = alpha(MRF_X, MRF_Y);\n        Es_0 += current_point;\}      \n      \}\n    \}\n    float Es_1 = 0;\n    for (int x_pos = -1; x_pos < 1; x_pos++)\{\n      for (int y_pos = -1; y_pos < 1; y_pos++)\{\n        if  (x_pos != 0 && y_pos != 0)\{\n        int MRF_X = x + x_pos;\n        int MRF_Y = y + y_pos;\n        float current_point = alpha(MRF_X, MRF_Y);\n        Es_1 += fabs(current_point - 1.0f);     \} \n      \}\n    \}\n    \n    float E0 = El + lambda * Es_0;\n    float E1 = Et + lambda * Es_1;\n\n    if (E1 < E0)\n        \n        dst_alpha() = 1.0f;\n    else\n        dst_alpha() = 0.0f;\n        \n  \}\n    \n\};\n"
+ rebuild ""
+ rebuild_finalise ""
+ name MRF_2D_Iteration25
+ xpos 8590
+ ypos 934
+}
+push $N1068c400
+Dot {
+ name Dot73
+ xpos 8770
+ ypos 1026
+}
+set N1068cc00 [stack 0]
+BlinkScript {
+ inputs 2
+ recompileCount 23
+ ProgramGroup 1
+ KernelDescription "2 \"MAP2D\" iterate componentWise 3e2d7bb1de2fd815ba62239692836023c41f61447a031e3b6fc2603f9f71e888 3 \"src_benergy\" Read Point \"alpha\" Read Random \"dst_alpha\" Write Point 0 0 0"
+ kernelSource "kernel MAP2D : ImageComputationKernel<eComponentWise>\n\{\n  Image<eRead, eAccessPoint, eEdgeClamped> src_benergy;\n  Image<eRead, eAccessRandom, eEdgeClamped> alpha;\n  Image<eWrite> dst_alpha;\n  \n  void process(int2 pos) \{\n    int x = pos.x;\n    int y = pos.y;\n\n    float lambda = 100.0f;\n    float El = src_benergy();\n\n    float Et = 60;\n\n    float Es_0 = 0;\n    for (int x_pos = -1; x_pos < 1; x_pos++)\{\n      for (int y_pos = -1; y_pos < 1; y_pos++)\{\n        if (x_pos != 0 && y_pos != 0)\{\n        int MRF_X = x + x_pos;\n        int MRF_Y = y + y_pos;\n        float current_point = alpha(MRF_X, MRF_Y);\n        Es_0 += current_point;\}      \n      \}\n    \}\n    float Es_1 = 0;\n    for (int x_pos = -1; x_pos < 1; x_pos++)\{\n      for (int y_pos = -1; y_pos < 1; y_pos++)\{\n        if  (x_pos != 0 && y_pos != 0)\{\n        int MRF_X = x + x_pos;\n        int MRF_Y = y + y_pos;\n        float current_point = alpha(MRF_X, MRF_Y);\n        Es_1 += fabs(current_point - 1.0f);     \} \n      \}\n    \}\n    \n    float E0 = El + lambda * Es_0;\n    float E1 = Et + lambda * Es_1;\n\n    if (E1 < E0)\n        \n        dst_alpha() = 1.0f;\n    else\n        dst_alpha() = 0.0f;\n        \n  \}\n    \n\};\n"
+ rebuild ""
+ rebuild_finalise ""
+ name MRF_2D_Iteration26
+ xpos 8590
+ ypos 1017
+}
+push $N1068cc00
+Dot {
+ name Dot83
+ xpos 8770
+ ypos 1115
+}
+set N1068d400 [stack 0]
+BlinkScript {
+ inputs 2
+ recompileCount 23
+ ProgramGroup 1
+ KernelDescription "2 \"MAP2D\" iterate componentWise 3e2d7bb1de2fd815ba62239692836023c41f61447a031e3b6fc2603f9f71e888 3 \"src_benergy\" Read Point \"alpha\" Read Random \"dst_alpha\" Write Point 0 0 0"
+ kernelSource "kernel MAP2D : ImageComputationKernel<eComponentWise>\n\{\n  Image<eRead, eAccessPoint, eEdgeClamped> src_benergy;\n  Image<eRead, eAccessRandom, eEdgeClamped> alpha;\n  Image<eWrite> dst_alpha;\n  \n  void process(int2 pos) \{\n    int x = pos.x;\n    int y = pos.y;\n\n    float lambda = 100.0f;\n    float El = src_benergy();\n\n    float Et = 60;\n\n    float Es_0 = 0;\n    for (int x_pos = -1; x_pos < 1; x_pos++)\{\n      for (int y_pos = -1; y_pos < 1; y_pos++)\{\n        if (x_pos != 0 && y_pos != 0)\{\n        int MRF_X = x + x_pos;\n        int MRF_Y = y + y_pos;\n        float current_point = alpha(MRF_X, MRF_Y);\n        Es_0 += current_point;\}      \n      \}\n    \}\n    float Es_1 = 0;\n    for (int x_pos = -1; x_pos < 1; x_pos++)\{\n      for (int y_pos = -1; y_pos < 1; y_pos++)\{\n        if  (x_pos != 0 && y_pos != 0)\{\n        int MRF_X = x + x_pos;\n        int MRF_Y = y + y_pos;\n        float current_point = alpha(MRF_X, MRF_Y);\n        Es_1 += fabs(current_point - 1.0f);     \} \n      \}\n    \}\n    \n    float E0 = El + lambda * Es_0;\n    float E1 = Et + lambda * Es_1;\n\n    if (E1 < E0)\n        \n        dst_alpha() = 1.0f;\n    else\n        dst_alpha() = 0.0f;\n        \n  \}\n    \n\};\n"
+ rebuild ""
+ rebuild_finalise ""
+ name MRF_2D_Iteration27
+ xpos 8590
+ ypos 1106
+}
+push $N1068d400
+Dot {
+ name Dot84
+ xpos 8770
+ ypos 1196
+}
+set N1068dc00 [stack 0]
+BlinkScript {
+ inputs 2
+ recompileCount 23
+ ProgramGroup 1
+ KernelDescription "2 \"MAP2D\" iterate componentWise 3e2d7bb1de2fd815ba62239692836023c41f61447a031e3b6fc2603f9f71e888 3 \"src_benergy\" Read Point \"alpha\" Read Random \"dst_alpha\" Write Point 0 0 0"
+ kernelSource "kernel MAP2D : ImageComputationKernel<eComponentWise>\n\{\n  Image<eRead, eAccessPoint, eEdgeClamped> src_benergy;\n  Image<eRead, eAccessRandom, eEdgeClamped> alpha;\n  Image<eWrite> dst_alpha;\n  \n  void process(int2 pos) \{\n    int x = pos.x;\n    int y = pos.y;\n\n    float lambda = 100.0f;\n    float El = src_benergy();\n\n    float Et = 60;\n\n    float Es_0 = 0;\n    for (int x_pos = -1; x_pos < 1; x_pos++)\{\n      for (int y_pos = -1; y_pos < 1; y_pos++)\{\n        if (x_pos != 0 && y_pos != 0)\{\n        int MRF_X = x + x_pos;\n        int MRF_Y = y + y_pos;\n        float current_point = alpha(MRF_X, MRF_Y);\n        Es_0 += current_point;\}      \n      \}\n    \}\n    float Es_1 = 0;\n    for (int x_pos = -1; x_pos < 1; x_pos++)\{\n      for (int y_pos = -1; y_pos < 1; y_pos++)\{\n        if  (x_pos != 0 && y_pos != 0)\{\n        int MRF_X = x + x_pos;\n        int MRF_Y = y + y_pos;\n        float current_point = alpha(MRF_X, MRF_Y);\n        Es_1 += fabs(current_point - 1.0f);     \} \n      \}\n    \}\n    \n    float E0 = El + lambda * Es_0;\n    float E1 = Et + lambda * Es_1;\n\n    if (E1 < E0)\n        \n        dst_alpha() = 1.0f;\n    else\n        dst_alpha() = 0.0f;\n        \n  \}\n    \n\};\n"
+ rebuild ""
+ rebuild_finalise ""
+ name MRF_2D_Iteration28
+ xpos 8590
+ ypos 1187
+}
+push $N1068dc00
+Dot {
+ name Dot85
+ xpos 8770
+ ypos 1277
+}
+set Nfbc8400 [stack 0]
+BlinkScript {
+ inputs 2
+ recompileCount 23
+ ProgramGroup 1
+ KernelDescription "2 \"MAP2D\" iterate componentWise 3e2d7bb1de2fd815ba62239692836023c41f61447a031e3b6fc2603f9f71e888 3 \"src_benergy\" Read Point \"alpha\" Read Random \"dst_alpha\" Write Point 0 0 0"
+ kernelSource "kernel MAP2D : ImageComputationKernel<eComponentWise>\n\{\n  Image<eRead, eAccessPoint, eEdgeClamped> src_benergy;\n  Image<eRead, eAccessRandom, eEdgeClamped> alpha;\n  Image<eWrite> dst_alpha;\n  \n  void process(int2 pos) \{\n    int x = pos.x;\n    int y = pos.y;\n\n    float lambda = 100.0f;\n    float El = src_benergy();\n\n    float Et = 60;\n\n    float Es_0 = 0;\n    for (int x_pos = -1; x_pos < 1; x_pos++)\{\n      for (int y_pos = -1; y_pos < 1; y_pos++)\{\n        if (x_pos != 0 && y_pos != 0)\{\n        int MRF_X = x + x_pos;\n        int MRF_Y = y + y_pos;\n        float current_point = alpha(MRF_X, MRF_Y);\n        Es_0 += current_point;\}      \n      \}\n    \}\n    float Es_1 = 0;\n    for (int x_pos = -1; x_pos < 1; x_pos++)\{\n      for (int y_pos = -1; y_pos < 1; y_pos++)\{\n        if  (x_pos != 0 && y_pos != 0)\{\n        int MRF_X = x + x_pos;\n        int MRF_Y = y + y_pos;\n        float current_point = alpha(MRF_X, MRF_Y);\n        Es_1 += fabs(current_point - 1.0f);     \} \n      \}\n    \}\n    \n    float E0 = El + lambda * Es_0;\n    float E1 = Et + lambda * Es_1;\n\n    if (E1 < E0)\n        \n        dst_alpha() = 1.0f;\n    else\n        dst_alpha() = 0.0f;\n        \n  \}\n    \n\};\n"
+ rebuild ""
+ rebuild_finalise ""
+ name MRF_2D_Iteration29
+ xpos 8590
+ ypos 1268
+}
+push $Nfbc8400
+Dot {
+ name Dot86
+ xpos 8770
+ ypos 1355
+}
+set Nfbc8c00 [stack 0]
+BlinkScript {
+ inputs 2
+ recompileCount 24
+ ProgramGroup 1
+ KernelDescription "2 \"MAP2D\" iterate componentWise 3e2d7bb1de2fd815ba62239692836023c41f61447a031e3b6fc2603f9f71e888 3 \"src_benergy\" Read Point \"alpha\" Read Random \"dst_alpha\" Write Point 0 0 0"
+ kernelSource "kernel MAP2D : ImageComputationKernel<eComponentWise>\n\{\n  Image<eRead, eAccessPoint, eEdgeClamped> src_benergy;\n  Image<eRead, eAccessRandom, eEdgeClamped> alpha;\n  Image<eWrite> dst_alpha;\n  \n  void process(int2 pos) \{\n    int x = pos.x;\n    int y = pos.y;\n\n    float lambda = 100.0f;\n    float El = src_benergy();\n\n    float Et = 60;\n\n    float Es_0 = 0;\n    for (int x_pos = -1; x_pos < 1; x_pos++)\{\n      for (int y_pos = -1; y_pos < 1; y_pos++)\{\n        if (x_pos != 0 && y_pos != 0)\{\n        int MRF_X = x + x_pos;\n        int MRF_Y = y + y_pos;\n        float current_point = alpha(MRF_X, MRF_Y);\n        Es_0 += current_point;\}      \n      \}\n    \}\n    float Es_1 = 0;\n    for (int x_pos = -1; x_pos < 1; x_pos++)\{\n      for (int y_pos = -1; y_pos < 1; y_pos++)\{\n        if  (x_pos != 0 && y_pos != 0)\{\n        int MRF_X = x + x_pos;\n        int MRF_Y = y + y_pos;\n        float current_point = alpha(MRF_X, MRF_Y);\n        Es_1 += fabs(current_point - 1.0f);     \} \n      \}\n    \}\n    \n    float E0 = El + lambda * Es_0;\n    float E1 = Et + lambda * Es_1;\n\n    if (E1 < E0)\n        \n        dst_alpha() = 1.0f;\n    else\n        dst_alpha() = 0.0f;\n        \n  \}\n    \n\};\n"
+ rebuild ""
+ rebuild_finalise ""
+ name MRF_2D_Iteration30
+ xpos 8590
+ ypos 1346
+}
+push $Nfbc8c00
+Dot {
+ name Dot87
+ xpos 8770
+ ypos 1440
+}
+set Nfbc9400 [stack 0]
+BlinkScript {
+ inputs 2
+ recompileCount 23
+ ProgramGroup 1
+ KernelDescription "2 \"MAP2D\" iterate componentWise 3e2d7bb1de2fd815ba62239692836023c41f61447a031e3b6fc2603f9f71e888 3 \"src_benergy\" Read Point \"alpha\" Read Random \"dst_alpha\" Write Point 0 0 0"
+ kernelSource "kernel MAP2D : ImageComputationKernel<eComponentWise>\n\{\n  Image<eRead, eAccessPoint, eEdgeClamped> src_benergy;\n  Image<eRead, eAccessRandom, eEdgeClamped> alpha;\n  Image<eWrite> dst_alpha;\n  \n  void process(int2 pos) \{\n    int x = pos.x;\n    int y = pos.y;\n\n    float lambda = 100.0f;\n    float El = src_benergy();\n\n    float Et = 60;\n\n    float Es_0 = 0;\n    for (int x_pos = -1; x_pos < 1; x_pos++)\{\n      for (int y_pos = -1; y_pos < 1; y_pos++)\{\n        if (x_pos != 0 && y_pos != 0)\{\n        int MRF_X = x + x_pos;\n        int MRF_Y = y + y_pos;\n        float current_point = alpha(MRF_X, MRF_Y);\n        Es_0 += current_point;\}      \n      \}\n    \}\n    float Es_1 = 0;\n    for (int x_pos = -1; x_pos < 1; x_pos++)\{\n      for (int y_pos = -1; y_pos < 1; y_pos++)\{\n        if  (x_pos != 0 && y_pos != 0)\{\n        int MRF_X = x + x_pos;\n        int MRF_Y = y + y_pos;\n        float current_point = alpha(MRF_X, MRF_Y);\n        Es_1 += fabs(current_point - 1.0f);     \} \n      \}\n    \}\n    \n    float E0 = El + lambda * Es_0;\n    float E1 = Et + lambda * Es_1;\n\n    if (E1 < E0)\n        \n        dst_alpha() = 1.0f;\n    else\n        dst_alpha() = 0.0f;\n        \n  \}\n    \n\};\n"
+ rebuild ""
+ rebuild_finalise ""
+ name MRF_2D_Iteration31
+ xpos 8590
+ ypos 1431
+}
+push $Nfbc9400
+Dot {
+ name Dot88
+ xpos 8770
+ ypos 1526
+}
+BlinkScript {
+ inputs 2
+ recompileCount 24
+ ProgramGroup 1
+ KernelDescription "2 \"MAP2D\" iterate componentWise 3e2d7bb1de2fd815ba62239692836023c41f61447a031e3b6fc2603f9f71e888 3 \"src_benergy\" Read Point \"alpha\" Read Random \"dst_alpha\" Write Point 0 0 0"
+ kernelSource "kernel MAP2D : ImageComputationKernel<eComponentWise>\n\{\n  Image<eRead, eAccessPoint, eEdgeClamped> src_benergy;\n  Image<eRead, eAccessRandom, eEdgeClamped> alpha;\n  Image<eWrite> dst_alpha;\n  \n  void process(int2 pos) \{\n    int x = pos.x;\n    int y = pos.y;\n\n    float lambda = 100.0f;\n    float El = src_benergy();\n\n    float Et = 60;\n\n    float Es_0 = 0;\n    for (int x_pos = -1; x_pos < 1; x_pos++)\{\n      for (int y_pos = -1; y_pos < 1; y_pos++)\{\n        if (x_pos != 0 && y_pos != 0)\{\n        int MRF_X = x + x_pos;\n        int MRF_Y = y + y_pos;\n        float current_point = alpha(MRF_X, MRF_Y);\n        Es_0 += current_point;\}      \n      \}\n    \}\n    float Es_1 = 0;\n    for (int x_pos = -1; x_pos < 1; x_pos++)\{\n      for (int y_pos = -1; y_pos < 1; y_pos++)\{\n        if  (x_pos != 0 && y_pos != 0)\{\n        int MRF_X = x + x_pos;\n        int MRF_Y = y + y_pos;\n        float current_point = alpha(MRF_X, MRF_Y);\n        Es_1 += fabs(current_point - 1.0f);     \} \n      \}\n    \}\n    \n    float E0 = El + lambda * Es_0;\n    float E1 = Et + lambda * Es_1;\n\n    if (E1 < E0)\n        \n        dst_alpha() = 1.0f;\n    else\n        dst_alpha() = 0.0f;\n        \n  \}\n    \n\};\n"
+ rebuild ""
+ rebuild_finalise ""
+ name MRF_2D_Iteration32
+ xpos 8590
+ ypos 1517
+}
+Viewer {
+ inputs 2
+ frame_range 46-50
+ input_number 1
+ monitorOutOutputTransform rec709
+ name Viewer20
+ xpos 6037
+ ypos 1703
+}
